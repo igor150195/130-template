@@ -1,0 +1,744 @@
+.shop2-order-options.shop2-delivery, .shop2-delivery {
+    margin: 0 0 30px;
+
+    @media all and (max-width: 767px) {
+        margin: 0 0 20px;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 0 0 30px;
+        border: none;
+        font-size: 22px;
+        line-height: 1.1;
+        color: var(--on_gr_bg_acc_text);
+        font-family: var(--font1);
+        font-weight: var(--font1_700);
+
+        @media all and (max-width: 1260px) {
+            font-size: 20px;
+        }
+
+        @media all and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 1.1;
+            padding: 0 0 10px;
+        }
+    }
+    
+    >.options-list {
+        margin: 0 0 30px;
+        font-size: inherit;
+
+        @media all and (max-width: 767px) {
+            margin: 0 0 20px;
+        }
+
+        @media screen and (max-width: 639px) {
+            padding: 0;
+        }
+
+        .option-type {
+            position: relative;
+            border-color: var(--on_gr_bg_border_4);
+
+            .option-label {
+                position: relative;
+                padding: 20px 30px;
+
+                @media screen and (max-width: 639px) {
+                    padding: 12px;
+                }
+
+                input[type="radio"] {
+                    padding: 0;
+                    opacity: 0;
+                    width: $radioSize;
+                    height: $radioSize;
+                    margin-right: $radioMargin;
+                    display: inline-block;
+                    vertical-align: middle;
+                    visibility: hidden;
+                    -webkit-appearance: none;
+
+                    @media all and (max-width: 1260px) {
+                        width: $radioSizeTablet;
+                        height: $radioSizeTablet;
+                        margin-right: $radioMarginTablet;
+                    }
+
+                    @media all and (max-width: 767px) {
+                        width: $radioSizeMobile;
+                        height: $radioSizeMobile;
+                        margin-right: $radioMarginMobile;
+                    }
+
+                    &:checked + span {
+                        color: $radioColorChecked;
+
+                        &:before {
+                            border: $radioBorderChecked;
+                            box-shadow: $radioShadowChecked;
+                            background: $radioBgChecked;
+                        }
+                    }
+                }
+
+
+                span {
+                    position: relative;
+                    padding: 0;
+                    font: $radioFont;
+                    color: $radioColor;
+                    max-width: calc(100% - #{$radioSize} - #{$radioMargin});
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    @media all and (max-width: 1260px) {
+                        max-width: calc(100% - #{$radioSizeTablet} - #{$radioMarginTablet});
+                    }
+
+                    @media all and (max-width: 767px) {
+                        max-width: calc(100% - #{$radioSizeMobile} - #{$radioMarginMobile});
+                    }
+
+                    &:before {
+                        position: absolute;
+                        top: 50%;
+                        left: -($radioSize + $radioMargin);
+                        width: $radioSize;
+                        height: $radioSize;
+                        content: '';
+                        margin-top: -($radioSize - $radioSize/2);
+                        border: $radioBorder;
+                        background: $radioBg;
+                        box-shadow: $radioShadow;
+                        border-radius: $radioRadius;
+                        transition: background-color .2s, box-shadow .2s;
+
+                        @media all and (max-width: 1260px) {
+                            left: -($radioSizeTablet + $radioMarginTablet);
+                            width: $radioSizeTablet;
+                            height: $radioSizeTablet;
+                            margin-top: -($radioSizeTablet - $radioSizeTablet/2);
+                        }
+
+                        @media all and (max-width: 767px) {
+                            left: -($radioSizeMobile + $radioMarginMobile);
+                            width: $radioSizeMobile;
+                            height: $radioSizeMobile;
+                            margin-top: -($radioSizeMobile - $radioSizeMobile/2);
+                        }
+                    }
+                }
+            }
+
+            &.active-type {
+                margin-top: -1px;
+                background: var(--gr_bg);
+                border-radius: var(--gr_inner_radius);
+                border: 1px solid var(--gr_primary_6);
+                box-shadow: 0 0 0 4px var(--gr_bg);
+
+                &:last-child {
+                    border: 1px solid var(--gr_primary_6);
+                }
+
+                &:first-child {
+                    border: 1px solid var(--gr_primary_6);
+                    margin-top: 0;
+                }
+            }
+
+            &:first-child {
+                border-top: none;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .option-details {
+            color: var(--on_gr_bg_sec_text);
+            overflow: visible;
+            padding: 0 30px 30px 30px;
+
+            @media screen and (max-width: 639px) {
+                padding: 0 20px 20px 20px;
+            }
+
+            .option-item {
+                max-width: 400px;
+                margin: 0 0 20px;
+
+                @media all and (max-width: 767px) {
+                    margin: 0 0 15px;
+                }
+
+                label {
+                    display: block;
+
+                    >span {
+                        display: block;
+                    }
+                }
+            }
+
+            .option-item + label + div {
+                margin-top: 40px;
+            }
+        }
+
+        .shop2-btn {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+
+
+    .shop2-order-form.shop2-order-form--offset-left {
+        margin: 0;
+        
+        .form-item {
+            margin: 0 0 20px;
+
+            @media all and (max-width: 767px) {
+                margin: 0 0 15px;
+            }
+
+            &__captcha {
+                margin: 0;
+                padding: 0;
+                font-size: 0;
+
+                strong {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            
+            >label {
+                display: block;
+                max-width: 400px;
+            }
+        }
+    }
+
+    .text-center {
+        text-align: left !important;
+        
+        .shop2-btn {
+        	@extend .gr-btn-2-style;
+        	@extend .gr-large-btn-desktop;
+			@extend .gr-large-btn-tablet;
+			@extend .gr-large-btn-mobile;
+			
+			@media all and (max-width: 767px) {
+				width: 100%;
+			}
+        }
+    }
+}
+
+
+.shop2-order-options {
+    >.options-list {
+        margin: 0 0 30px;
+        font-size: inherit;
+
+        @media all and (max-width: 767px) {
+            margin: 0 0 20px;
+        }
+
+        @media screen and (max-width: 639px) {
+            padding: 0;
+        }
+
+        .option-type {
+            position: relative;
+            border-color: var(--on_gr_bg_border_4);
+
+            .option-label {
+                position: relative;
+                padding: 20px 30px;
+
+                @media screen and (max-width: 639px) {
+                    padding: 12px;
+                }
+
+                >input[type="radio"] {
+                    width: $radioSize;
+                    height: $radioSize;
+                    padding: 0;
+                    opacity: 0;
+                    margin-right: $radioMargin;
+                    display: inline-block;
+                    vertical-align: middle;
+                    visibility: hidden;
+                    -webkit-appearance: none;
+
+                    @media all and (max-width: 1260px) {
+                        width: $radioSizeTablet;
+                        height: $radioSizeTablet;
+                        margin-right: $radioMarginTablet;
+                    }
+
+                    @media all and (max-width: 767px) {
+                        width: $radioSizeMobile;
+                        height: $radioSizeMobile;
+                        margin-right: $radioMarginMobile;
+                    }
+
+                    &:checked + span {
+                        color: $radioColorChecked;
+
+                        &:before {
+                            border: $radioBorderChecked;
+                            box-shadow: $radioShadowChecked;
+                            background: $radioBgChecked;
+                        }
+                    }
+                }
+
+
+                .label-name {
+                    position: relative;
+                    padding: 0;
+                    font: $radioFont;
+                    color: $radioColor;
+                    max-width: calc(100% - #{$radioSize} - #{$radioMargin});
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    @media all and (max-width: 1260px) {
+                        max-width: calc(100% - #{$radioSizeTablet} - #{$radioMarginTablet});
+                    }
+
+                    @media all and (max-width: 767px) {
+                        max-width: calc(100% - #{$radioSizeMobile} - #{$radioMarginMobile});
+                    }
+
+                    &:before {
+                        position: absolute;
+                        top: 50%;
+                        left: -($radioSize + $radioMargin);
+                        width: $radioSize;
+                        height: $radioSize;
+                        content: '';
+                        margin-top: -($radioSize - $radioSize/2);
+                        border: $radioBorder;
+                        background: $radioBg;
+                        box-shadow: $radioShadow;
+                        border-radius: $radioRadius;
+                        transition: background-color .2s, box-shadow .2s;
+
+                        @media all and (max-width: 1260px) {
+                            left: -($radioSizeTablet + $radioMarginTablet);
+                            width: $radioSizeTablet;
+                            height: $radioSizeTablet;
+                            margin-top: -($radioSizeTablet - $radioSizeTablet/2);
+                        }
+
+                        @media all and (max-width: 767px) {
+                            left: -($radioSizeMobile + $radioMarginMobile);
+                            width: $radioSizeMobile;
+                            height: $radioSizeMobile;
+                            margin-top: -($radioSizeMobile - $radioSizeMobile/2);
+                        }
+                    }
+                }
+
+                .label-icons {
+                    margin: 0;
+                    padding: 20px 0 0;
+
+                    img {
+                        margin: 0 10px 15px 0;
+                    }
+
+                    .payment_methods-column {
+                        margin: 0 10px 0 0;
+                        vertical-align: top;
+
+                        >label {
+                            padding-top: 0;
+                            margin: 0 10px 15px 0;
+                        }
+
+                        .mg-styler-label--radio {
+                            &:before {
+                                top: 50%;
+                                transform: translateY(-50%) scale(.8, .8);
+                            }
+                        }
+
+                        img {
+                            margin: 0 10px 0 0;
+                        }
+                    }
+                }
+            }
+
+            &.active-type {
+                margin-top: -1px;
+                background: var(--gr_bg);
+                border-radius: var(--gr_inner_radius);
+                border: 1px solid var(--gr_primary_6);
+                box-shadow: 0 0 0 4px var(--gr_bg);
+
+                &:last-child {
+                    border: 1px solid var(--gr_primary_6);
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                    border: 1px solid var(--gr_primary_6);
+                }
+            }
+
+            &:first-child {
+                border-top: none;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .option-details {
+            color: var(--on_gr_bg_sec_text);
+            overflow: visible;
+            padding: 0 30px 30px 30px;
+
+            @media screen and (max-width: 639px) {
+                padding: 0 20px 20px 20px;
+            }
+
+            .option-item {
+                max-width: 400px;
+                margin: 0 0 20px;
+
+                @media all and (max-width: 767px) {
+                    margin: 0 0 15px;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+
+                    & + label {
+                        display: block;
+                        margin-top: 20px;
+                    }
+                }
+
+                label {
+                    display: block;
+
+                    >span {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .shop2-btn {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+
+    .text-center {
+        text-align: left !important;
+    }
+}
+
+
+.shop2-order-form {
+    & ~ {
+        .form-item.form-item-submit {
+            max-width: 400px;
+            padding-top: 10px;
+
+            button {
+                width: 100%;
+                @extend .gr-btn-1;
+
+                &.shop2-btn {
+                    @extend .gr-large-btn-desktop;
+                    @extend .gr-large-btn-tablet;
+                    @extend .gr-large-btn-mobile;
+                    
+                    @media all and (max-width: 767px) {
+						width: 100%;
+					}
+                }
+            }
+        }
+    }
+    .form-item {
+        font-size: 0;
+        max-width: 400px;
+        
+        & > label {
+            display: block;
+        }
+        
+        &.form-item-submit {
+            padding-top: 10px;
+            text-align: left;
+            max-width: 100%;
+        }
+    }
+}
+
+
+.shop2-payments-order {
+    margin: 0 0 20px;
+
+    .shop2-payment-type,
+    .payment_methods-column label {
+        cursor: pointer;
+        align-items: center;
+        display: inline-flex;
+
+        &:hover {
+            span {
+                color: $radioColorHover;
+
+                &:before {
+                    border: $radioBorderHover;
+                    box-shadow: $radioShadowHover;
+                    background: $radioBgHover;
+                }
+            }
+
+            input[type="radio"]:checked + span {
+                color: $radioColorCheckedHover;
+
+                &:before {
+                    border: $radioBorderCheckedHover;
+                    box-shadow: $radioShadowCheckedHover;
+                    background: $radioBgCheckedHover;
+                }
+            }
+        }
+        
+        
+        input[type="radio"] {
+            width: $radioSize;
+            height: $radioSize;
+            padding: 0;
+            opacity: 0;
+            margin-right: $radioMargin;
+            display: inline-block;
+            vertical-align: middle;
+            visibility: hidden;
+            -webkit-appearance: none;
+
+            @media all and (max-width: 1260px) {
+                width: $radioSizeTablet;
+                height: $radioSizeTablet;
+                margin-right: $radioMarginTablet;
+            }
+
+            @media all and (max-width: 767px) {
+                width: $radioSizeMobile;
+                height: $radioSizeMobile;
+                margin-right: $radioMarginMobile;
+            }
+
+            &:checked + span {
+                color: $radioColorChecked;
+
+                &:before {
+                    border: $radioBorderChecked;
+                    box-shadow: $radioShadowChecked;
+                    background: $radioBgChecked;
+                }
+            }
+        }
+
+        span {
+            position: relative;
+            font: $radioFont;
+            color: $radioColor;
+            max-width: calc(100% - #{$radioSize} - #{$radioMargin});
+            display: inline-block;
+            vertical-align: middle;
+
+            @media all and (max-width: 1260px) {
+                max-width: calc(100% - #{$radioSizeTablet} - #{$radioMarginTablet});
+            }
+
+            @media all and (max-width: 767px) {
+                max-width: calc(100% - #{$radioSizeMobile} - #{$radioMarginMobile});
+            }
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: -($radioSize + $radioMargin);
+                width: $radioSize;
+                height: $radioSize;
+                content: '';
+                margin-top: -($radioSize - $radioSize/2);
+                border: $radioBorder;
+                background: $radioBg;
+                box-shadow: $radioShadow;
+                border-radius: $radioRadius;
+                transition: background-color .2s, box-shadow .2s;
+
+                @media all and (max-width: 1260px) {
+                    left: -($radioSizeTablet + $radioMarginTablet);
+                    width: $radioSizeTablet;
+                    height: $radioSizeTablet;
+                    margin-top: -($radioSizeTablet - $radioSizeTablet/2);
+                }
+
+                @media all and (max-width: 767px) {
+                    left: -($radioSizeMobile + $radioMarginMobile);
+                    width: $radioSizeMobile;
+                    height: $radioSizeMobile;
+                    margin-top: -($radioSizeMobile - $radioSizeMobile/2);
+                }
+            }
+        }
+    }
+
+    label {
+        margin: 0 10px 10px 0;
+    }
+
+    .label-icons {
+        margin: 5px 0 20px;
+
+        img {
+            margin: 5px 5px 5px 0;
+        }
+    }
+
+    & + .text-right {
+        text-align: left !important;
+    }
+}
+
+#shop2-order-delivery .shop2-delivery--item__tab {
+    background: #fff;
+}
+#shop2-order-delivery .options-list .shop2-delivery--item__tab .label .delivery-items .option-type .option-details {
+    padding-bottom: 30px;
+}
+#shop2-order-delivery .shop2-delivery--item__tab:last-child {
+    margin-bottom: 40px;
+}
+
+
+// EDOST
+.shop2-edost {
+    margin: 0; 
+
+    .shop2-edost-variant {
+        color: var(--on_gr_bg_sec_text);
+        padding: 8px 0;
+        border-bottom: 1px solid var(--on_gr_bg_border_4);
+
+        > label {
+            padding: 5px 0;
+            font-size: 15px;
+
+            .shop2-edost-control {
+                min-width: 120px;
+            }            
+        }
+    }
+
+    .shop2-edost-office {
+        padding: 15px;
+        background: var(--gr_bg);
+        margin: 15px 0 10px 100px;
+        box-shadow: inset 0 0 0 1px var(--on_gr_bg_border_4);
+        font: 400 14px/ normal var(--font1);
+
+        @media screen and (max-width: 639px) {
+            font-size: 12px;
+            margin: 5px 0 5px;
+        }
+
+        &>label {
+            display: flex;
+            align-items: center;
+        }
+
+        .shop2-edost-control {
+            min-width: $radioSize;
+            width: $radioSize;
+            padding: 0;
+            margin-right: 10px;
+        }
+    }
+
+    .shop2-edost-control {
+        min-width: 120px;
+        position: relative;
+        min-height: $radioSize;
+        margin: 0;
+        padding-left: $radioSize + $radioMargin;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            margin-right: $radioMargin;
+            margin-top: -($radioSize/2);
+            width: $radioSize;
+            height: $radioSize;
+            border: $radioBorder;
+            box-shadow: $radioShadow;
+            background: $radioBg;
+            border-radius: $radioRadius;
+            transition: background-color .2s, box-shadow .2s;
+        }
+
+        &:hover {
+            &:before {
+                border: $radioBorderHover;
+                box-shadow: $radioShadowHover;
+                background: $radioBgHover;
+            }   
+        }
+
+        &.active {
+
+            &:before {
+                border: $radioBorderChecked;
+                box-shadow: $radioShadowChecked;
+                background: $radioBgChecked;
+            }
+
+            &:hover {
+                &:before {
+                    border: $radioBorderCheckedHover;
+                    box-shadow: $radioShadowCheckedHover;
+                    background: $radioBgCheckedHover;
+                }
+            }
+        }
+
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-appearance: none;
+        }
+
+        img {
+            margin: 0;
+        }
+    }
+}
+// EDOST

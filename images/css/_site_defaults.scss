@@ -1,0 +1,159 @@
+@import "global:/s3/makeup/sass/defaults/normalize-3.0.3.scss";
+@import "global:/s3/makeup/sass/defaults/print.scss";
+@import "global:/s3/makeup/sass/defaults/classes.scss";
+
+.remodal {
+    @media screen and (min-width: 640px) {
+        max-width: 400px;
+    }
+}
+
+.remodal-wrapper {
+    padding: 0;
+}
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.reset-indents {
+    @include reset-indents;
+}
+
+.reset-font {
+    @include reset-font;
+}
+
+.clear-list {
+    @include clear-list;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.clear {
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0;
+}
+
+.clear-self::after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '';
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+ins {
+    text-decoration: none;
+}
+
+.thumb,
+.YMaps,
+.ymaps-map {
+    color:#000;
+}
+
+.table {
+    display: table;
+
+    .tr {
+        display: table-row;
+
+        .td {
+            display: table-cell;
+        }
+    }
+}
+
+.table0, 
+.table1,
+.table2 {
+    border-collapse: collapse;
+
+    td {
+        padding: $tablePadding;
+    }
+}
+
+.table1, .table2 {
+    border: $tableBorder;
+
+    td, th {
+        border: $tableBorder;
+    }
+}
+
+.table2 th {
+    padding: $tablePadding;
+    color:$tableThColor;
+    background:$tableThBackground;
+}
+
+.menu-default, 
+.menu-default ul, 
+.menu-default li {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+img,
+textarea,
+object,
+object embed,
+.table-wrapper {
+    max-width: 100%;
+}
+
+.table-wrapper {
+    overflow: auto;
+}
+
+img {
+    height: auto;
+}
+
+table img {
+    max-width: none;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-locale: auto;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+a {
+    text-decoration: underline;
+    color: var(--on_gr_bg_link);
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    img {
+        border-color: var(--on_gr_bg_border_4);
+    }
+}

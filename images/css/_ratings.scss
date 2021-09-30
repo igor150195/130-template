@@ -1,0 +1,98 @@
+// Рейтинг
+
+.tpl-stars {
+	position: relative;
+    height: 10px;
+    width: 60px;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    &:before {
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	right: 0;
+    	bottom: 0;
+
+    	font-size: 10px;
+    	line-height: 1;
+		content: "\e903";
+    	font-family: 'icomoon';
+		color: var(--gr_disable);
+    }
+    
+    .tpl-rating {
+    	position: relative;
+    	overflow: hidden;
+        height: 10px;
+        background-image: none;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+
+        &:before {
+        	position: absolute;
+	    	top: 0;
+	    	left: 0;
+	    	right: 0;
+	    	bottom: 0;
+
+	    	font-size: 10px;
+	    	line-height: 1;
+			content: "\e903";
+	    	font-family: 'icomoon';
+			color: var(--gr_attention);
+        }
+    }
+}
+
+.tpl-form .tpl-stars {
+	background: none;
+	width: 120px;
+	height: 20px;
+
+	&.tpl-active {
+		background: none;
+	}
+
+	&:before {
+		display: none;
+	}
+
+	span {
+		position: relative;
+		width: 20px;
+		height: 20px;
+		margin-right: 4px;
+		background-image: none;
+		background-position: 0 0;
+        background-repeat: no-repeat;
+
+        background-image: none;
+
+        &:before {
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	right: 0;
+        	bottom: 0;
+
+        	text-align: center;
+        	font-size: 19px;
+        	line-height: 1;
+			content: "\e905";
+        	font-family: 'icomoon';
+			color: var(--gr_disable);
+        }
+
+		&.tpl-active {
+			background-image: none;
+			background-position: 0 0;
+        	background-repeat: no-repeat;
+
+        	&:before {
+        		color: var(--gr_attention);
+        	}
+		}
+	}
+}

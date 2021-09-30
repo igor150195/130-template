@@ -1,0 +1,41 @@
+.gr-shop-print {
+	margin-top: 15px;
+	
+	&__btn {
+		
+		a {
+			cursor: pointer;
+			font-size: 14px;
+			line-height: 1.14;
+			@extend .gr-btn-icon-left;
+			
+			transition: $transition;
+			color: var(--on_gr_bg_acc_text);
+			font-family: var(--font1);
+			font-weight: var(--font1_400);
+			text-decoration: none;
+			display: inline-flex;
+			align-items: center;
+			padding: 7px 0 8px;
+			
+			ins {
+				border-bottom: 1px dashed var(--on_gr_bg_border_12);
+			}
+			
+			svg {
+				fill: var(--on_gr_bg_icon);
+				transition: $transition;
+			}
+			
+			&:hover {
+				ins {
+					border-bottom-color: var(--on_gr_bg_acc_text_5);
+				}
+				
+				svg {
+					fill: var(--gr_accent);
+				}
+			}
+		}
+	}
+}

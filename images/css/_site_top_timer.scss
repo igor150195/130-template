@@ -1,0 +1,346 @@
+$timer_max_width: 1024px;
+$timer_min_height: 80px;
+
+$timer_bg: var(--gr_bg);
+$timer_bg_inverse: var(--gr_primary);
+
+$timer_delim_icon: var(--on_gr_bg_acc_text);
+$timer_delim_icon_inverse: var(--on_gr_primary_text);
+
+$timer_number_bg: none;
+$timer_number_bg_inverse: var(--on_gr_primary_bg);
+
+$timer_number_color: var(--on_gr_bg_acc_text);
+$timer_number_color_inverse: var(--on_gr_primary_text_dark);
+
+$timer_number_shd: inset 0 0 0 1px var(--on_gr_bg_border_4);
+$timer_number_shd_inverse: none;
+
+$timer_seconds_color: var(--gr_accent);
+$timer_seconds_color_inverse: var(--gr_accent);
+
+$timer_top_border: var(--on_gr_bg_border_4);
+$timer_top_border_inverse: var(--on_gr_primary_border_1);
+
+$timer_text_color: var(--on_gr_bg_acc_text);
+$timer_text_color_inverse: var(--on_gr_primary_text);
+$timer_desc_color: var(--on_gr_bg_sec_text);
+$timer_desc_color_inverse: var(--on_gr_primary_text_7);
+
+.invert_header_top .timer-block {
+	border-bottom: none;
+}
+
+.timer-block {
+	background: $timer_bg;
+	z-index: 15;
+	border-bottom: 1px solid $timer_top_border;
+	
+	&.timer_bottom {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1000;
+		border: none;
+	}
+	
+	&.timer_inverse {
+		background: $timer_bg_inverse;
+		border: none;
+		
+		.timer-block__btn a {
+			@extend .gr-btn-2-style;
+		}
+		
+		.timer-block__title {
+			color: $timer_text_color_inverse;
+		}
+		
+		.timer-block__desc {
+			color: $timer_desc_color_inverse;
+		}
+		
+		.timer-block__date .gr-timer-elem .gr-timer-number {
+			color: $timer_number_color_inverse;
+			background: $timer_number_bg_inverse;
+			box-shadow: $timer_number_shd_inverse;
+		}
+		
+		.timer-block__date .gr-timer-elem:last-child .gr-timer-number {
+			color: $timer_seconds_color_inverse;
+		}
+		
+		.timer-block__date .gr-timer-delim {
+			opacity: 0.5;
+		}
+		
+		.timer-block__date .gr-timer-delim svg {
+			fill: $timer_delim_icon_inverse;
+		}
+		
+		.timer-block__close {
+			svg {
+				fill: var(--on_gr_primary_icon);
+				
+				&:hover, &:active {
+					fill: var(--on_gr_primary_icon);
+				}
+			}
+		}
+	}
+	
+	&__inner {
+		position: relative;
+		min-height: $timer_min_height;
+		padding: 0 30px;
+		
+		@media all and (max-width: 1023px) {
+			min-height: 0;
+		}
+
+	    @media all and (max-width: 767px) {
+	        padding: 0 20px;
+	    }
+	}
+	
+	&__body {
+		margin: 0 auto;
+		max-width: $timer_max_width;
+		display: flex;
+		justify-content: center;
+		padding: 15px 0;
+		
+		@media all and (max-width: 1260px) {
+			max-width: 100%;
+			padding: 15px 40px 15px 0;		
+		}
+		
+		@media all and (max-width: 1023px) {
+			flex-direction: column;
+			padding: 15px 0;
+		}
+		
+		&.no_timer_block {
+			.timer-block__text {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	&__close {
+		position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @extend .gr-icon-btn-3;
+        @extend .gr-small-icon-btn-desktop;
+        @extend .gr-small-icon-btn-tablet;
+        @extend .gr-small-icon-btn-mobile;
+        
+        @media all and (max-width: 1260px) {
+			right: 12px;
+		}
+		
+		@media all and (max-width: 1023px) {
+			top: 15px;
+			margin-top: 0;
+			transform: none;
+		}
+		
+		@media all and (max-width: 767px) {
+			top: 0;
+			right: 0;
+			width: 46px;
+			height: 46px;
+		}
+
+        svg {
+            display: none;
+            width: 20px;
+            height: 20px;
+
+            @media all and (max-width: 767px) {
+                display: block;
+            }
+
+            &.gr_big_icon {
+                width: 30px;
+                height: 30px;
+                display: block;
+
+                @media all and (max-width: 767px) {
+                    display: none;
+                }
+            }
+
+            &.gr_small_icon {
+                display: none;
+            }
+        }
+	}
+	
+	&__left {
+		margin-right: 50px;
+		flex: 0 1 auto;
+		display: flex;
+		flex-direction: column;
+		
+		@media all and (max-width: 1260px) {
+			margin-right: 30px;
+		}
+		
+		@media all and (max-width: 1023px) {
+			margin: 0;
+			align-items: center;
+			
+			& + .timer-block__right {
+				margin-top: 10px;
+			}
+		}
+	}
+	
+	&__right {
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex: 0 1 auto;
+	    
+	    @media all and (max-width: 1023px) {
+	    	padding-right: 30px;
+	    }
+	    
+	    @media all and (max-width: 767px) {
+	    	flex-direction: column;
+	    	padding-right: 0;
+	    	text-align: center;
+	    }
+	}
+	
+	&__date {
+		margin: auto 0;
+		display: flex;
+		align-items: center;
+		
+		.gr-timer-elem {
+			
+			&:last-child {
+				.gr-timer-number {
+					color: $timer_seconds_color;
+				}
+			}
+			
+			.gr-timer-number {
+				display: block;
+				text-align: center;
+				font-size: 18px;
+				line-height: 50px;
+				width: 50px;
+				height: 50px;
+				color: $timer_number_color;
+				font-family: var(--font2);
+				font-weight: var(--font2_700);
+				background: $timer_number_bg;
+				border-radius: var(--gr_btn_radius);
+				box-shadow: $timer_number_shd;
+				
+				@media all and (max-width: 767px) {
+					width: 36px;
+					height: 36px;
+					line-height: 36px;
+					font-size: 16px;
+				}
+			}
+			
+			em {
+				display: none;
+			}
+		}
+		
+		.gr-timer-delim {
+			margin: 0 4px;
+			font-size: 0;
+			width: 2px;
+			height: 12px;
+			opacity: .2;
+			
+			svg {
+				width: 2px;
+				height: 12px;
+				fill: $timer_delim_icon;
+				
+				&.gr_small_icon {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	&__text {
+		margin-right: auto;
+		
+		@media all and (max-width: 767px) {
+			width: 100%;
+			margin-right: 0;
+		}
+		
+		& + .timer-block__btn {
+			margin-left: 50px;
+			
+			@media all and (max-width: 1260px) {
+				margin-left: 30px;
+			}
+			
+			@media all and (max-width: 767px) {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+	
+	&__title {
+		color: $timer_text_color;
+		font-size: 18px;
+		line-height: 1.1;
+		font-family: var(--font2);
+		font-weight: var(--font2_500);
+		
+		& + .timer-block__desc {
+			padding-top: 6px;
+		}
+	}
+	
+	&__desc {
+		color: $timer_desc_color;
+		font-size: 14px;
+		line-height: 1.2;
+	}
+	
+	&__btn {
+		margin-left: auto;
+		max-width: 200px;
+		
+		@media all and (max-width: 767px) {
+			max-width: 100%;
+			width: auto;
+		}
+
+		a {
+			min-width: 200px;
+			max-width: 200px;
+			
+			@extend .gr-btn-1;
+			@extend .gr-small-btn-mobile;
+
+			@media all and (max-width: 1023px) {
+				min-width: 160px;
+			}
+			
+			@media all and (max-width: 767px) {
+				max-width: 100%;
+				min-width: 0;
+			}
+		}
+	}
+}

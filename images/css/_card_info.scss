@@ -1,0 +1,131 @@
+.order-info-block {
+	margin: 20px 0 0;
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: var(--on_gr_bg_bg);
+	border-radius: var(--gr_inner_radius);
+
+	&__item {
+		margin: 2px 0;
+		
+		&-body {
+			position: relative;
+			z-index: 1;
+			display: inline-block;
+			vertical-align: top;
+			cursor: pointer;
+			padding: 7px 10px 8px;
+		
+			&:hover {
+				.order-info-block__title {
+					ins {
+						border-bottom-color: var(--on_gr_bg_acc_text_5);
+					}
+					
+					svg {
+						fill: var(--gr_accent);
+					}
+				}
+			}	
+		}
+	}
+	
+	&__title {
+		font-size: 14px;
+		line-height: 1.14;
+		@extend .gr-btn-icon-left;
+		
+		color: var(--on_gr_bg_acc_text);
+		font-family: var(--font1);
+		font-weight: var(--font1_400);
+		transition: $transition;
+		
+		ins {
+			transition: $transition;
+			border-bottom: 1px dashed var(--on_gr_bg_border_12);
+		}
+
+		svg {
+			transition: $transition;
+			fill: var(--on_gr_bg_icon);
+			
+			&.gr_small_icon {
+				display: block;
+			}
+		}
+	}
+	
+	&__popup {
+		position: absolute;
+		left: -10px;
+		bottom: 100%;
+		padding: 20px;
+		margin-bottom: 5px;
+		background: var(--gr_bg);
+		border-radius: var(--gr_inner_radius);
+		box-shadow: inset 0 0 0 1px var(--on_gr_bg_border_12);
+		display: none;
+		width: 320px;
+
+		@media all and (max-width: 1340px) {
+			width: 280px;
+		}
+		
+		&.right_popup {
+			right: -10px;
+    		left: auto;
+		}
+	}
+	
+	&__close {
+		position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        display: none;
+
+        @extend .gr-icon-btn-3;
+        @extend .gr-small-icon-btn-desktop;
+        @extend .gr-small-icon-btn-tablet;
+        @extend .gr-small-icon-btn-mobile;
+
+        svg {
+        	display: none;
+        	width: 20px;
+        	height: 20px;
+
+        	&.gr_small_icon {
+        		display: block;
+        	}
+        }
+	}
+	
+	&__subtitle {
+		font-size: 16px;
+		line-height: 1.1;
+		
+		color: var(--on_gr_bg_acc_text);
+		font-family: var(--font2);
+		font-weight: var(--font2_500);
+		
+		& + .order-info-block__desc {
+			padding-top: 10px;
+		}
+	}
+	
+	&__desc {
+		font-size: 14px;
+		line-height: 1.25;
+		
+		color: var(--on_gr_bg_sec_text);
+		font-family: var(--font1);
+		font-weight: var(--font1_400);
+	}
+}
+
+.mobile .order-info-block__close {
+	display: flex;
+}

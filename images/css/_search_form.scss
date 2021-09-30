@@ -1,0 +1,412 @@
+// Поиск
+//----------------------------------------------------------------------------//
+
+	// Размер допполей с цветом
+	$searchOptionsColorWidth: 					28px;
+	$searchOptionsColorHeight: 					28px;
+
+	// Радиус допполей с цветом
+	$searchOptionsColorRadius: 					var(--gr_small_radius);
+
+	// Отступы допполей с цветом
+	$searchOptionsColorMargin: 					0 9px 15px;
+
+	// Before
+		// Background допполей с цветом
+		$beforeSearchOptionsColorBg: 						none;
+		$beforeSearchOptionsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$beforeSearchOptionsColorShadow: 					inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$beforeSearchOptionsColorShadowSelected: 			inset 0 0 0 1px var(--on_gr_bg_border_4);
+
+		// Border допполей с цветом
+		$beforeSearchOptionsColorBorder: 					none;
+		$beforeSearchOptionsColorBorderSelected: 			none;
+
+	// After
+		// Background допполей с цветом
+		$afterSearchOptionsColorBg: 						none;
+		$afterSearchOptionsColorBgSelected:					none;
+
+		// Shadow допполей с цветом
+		$afterSearchOptionsColorShadow: 					none;
+		$afterSearchOptionsColorShadowSelected: 			inset 0 0 0 1px var(--gr_primary_6);
+
+		// Border допполей с цветом
+		$afterSearchOptionsColorBorder: 					none;
+		$afterSearchOptionsColorBorderSelected: 			none;
+
+// Бегунок
+//----------------------------------------------------------------------------//
+	// Отступ до инпутов
+	$searchRangeMarginTop: 					20px;
+
+	// Размер полосы
+	$searchRangeHeight: 					6px;
+
+	// Закругления полосы
+	$searchRangeRadius: 					3px;
+
+	// Верхняя полоса
+	$searchRangeTopBg: 						var(--gr_accent);
+	$searchRangeTopBorder: 					none;
+	$searchRangeTopShadow: 					none;
+
+	// Нижняя полоса
+	$searchRangeBottomBg: 					#fff;
+	$searchRangeBottomBorder: 				none;
+	$searchRangeBottomShadow: 				none;
+
+	// Размер кнопок
+	$searchRangeBtnWidth: 					30px;
+	$searchRangeBtnHeight: 					30px;
+
+	// Закругления кнопок
+	$searchRangeBtnRadius: 					50%;
+
+	// Background кнопок
+	$searchRangeBtnBg: 						var(--gr_accent); 
+	$searchRangeBtnBgHover: 				var(--gr_accent); 
+	$searchRangeBtnBgActive:				var(--gr_accent);
+
+	// Box-shadow кнопок
+	$searchRangeBtnShadow: 					none; 
+	$searchRangeBtnShadowHover: 			none; 
+	$searchRangeBtnShadowActive:			none;
+
+	// Border кнопок
+	$searchRangeBtnBorder: 					none; 
+	$searchRangeBtnBorderHover: 			none; 
+	$searchRangeBtnBorderActive:			none;
+//----------------------------------------------------------------------------//
+
+.search-form {
+
+	.empty-val {
+		opacity: .5;
+		pointer-events: none;
+	}
+	
+	#shop2-name, #shop2-text, #shop2-article {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	&__header {
+		@extend .remodal-block-title;
+	}
+
+	.search-rows {
+
+		&__row {
+			border-bottom: 1px solid var(--on_gr_bg_border_4);
+			
+			&.shop2-search-vendors, &.shop2-search-selects {
+				ul {
+					li {
+						&:nth-child(n+6) {
+							display: none;
+						}
+						
+						&.active {
+							display: block;
+						}
+					}
+				}
+			}
+
+			&.checkbox_row {
+				padding: 18px 0 21px;
+				
+				.type-checkbox {
+					margin-bottom: 0;
+				}
+			}
+
+			&.price_row {
+				.row-body {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.row-title {
+		position: relative;
+		cursor: pointer;
+		padding: 21px 45px 21px 0;
+		font-size: 15px;
+		line-height: 1.2;
+		color: var(--on_gr_bg_sec_text);
+		display: block;
+
+		&.active {
+			.row-title__icon {
+				.gr_filter_plus {
+					display: none;
+				}
+
+				.gr_filter_minus {
+					display: block;
+				}
+			}
+		}
+
+		>span {
+			
+		}
+
+		&__icon {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			@extend .gr-icon-btn-1;
+
+			&.row_title_icon {
+				width: 30px;
+				height: 30px;
+				min-height: 30px;
+			}
+
+			svg {
+				width: 20px;
+				height: 20px;
+				display: none;
+
+				&.gr_filter_plus {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.row-body {
+		display: none;
+		font-size: 0;
+		padding: 0 0 20px;
+	}
+	
+	.gr-filter-more {
+		margin: 20px 0 0;
+
+		&__btn {
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+		}
+
+		&__text {
+
+		}
+
+		&__amount {
+			margin-left: 5px;
+		}
+	}
+
+	.input-from, .input-to {
+		display: inline-block;
+		vertical-align: top;
+		width: calc(50% - 10px);
+
+		&__title {
+			
+		}
+	}
+
+	.input-from {
+		margin-right: 20px;
+	}
+
+	.search-rows__btn {
+		padding-top: 30px;
+
+		@media all and (max-width: 767px) {
+			padding-top: 22px;		
+		}
+
+		.search-btn {
+			@extend .gr-btn-1;
+
+			@media all and (max-width: 639px) {
+				width: 100%;
+			}
+		}
+	}
+
+	.shop-search-color-select {
+		margin-left: -9px;
+
+		.shop-search-colors {
+			font-size: 0;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+				position: relative;
+				cursor: pointer;
+				vertical-align: top;
+				display: inline-block;
+				width: $searchOptionsColorWidth;
+				height: $searchOptionsColorHeight;
+				margin: $searchOptionsColorMargin;
+				border-radius: $searchOptionsColorRadius;
+				
+				&.empty-val {
+				    opacity: 1;
+				    
+					&:after {
+						position: absolute;
+						content: '';
+						width: 1px;
+						top: -8px;
+						left: 50%;
+						right: auto;
+						bottom: -8px;
+						opacity: .4;
+						transform: rotate(45deg);
+						background: var(--gr_dark);
+					}
+					
+					.shop-search-color-icon {
+						opacity: .3;
+						
+						&:after {
+							display: none;
+						}
+					}
+				}
+
+				&.shop2-color-ext-selected .shop-search-color-icon {
+					&:after {
+						opacity: 1;
+						visibility: visible;
+						border: $afterSearchOptionsColorBorderSelected;
+						box-shadow: $afterSearchOptionsColorShadowSelected;
+						background: $afterSearchOptionsColorBgSelected;
+					}
+
+					&:before {
+						border: $beforeSearchOptionsColorBorderSelected;
+						box-shadow: $beforeSearchOptionsColorShadowSelected;
+						background: $beforeSearchOptionsColorBgSelected;
+					}
+				}
+
+				&.no_bg {
+					display: none;
+				}
+
+				.shop-search-color-icon {
+					position: relative;
+					width: $searchOptionsColorWidth;
+					height: $searchOptionsColorHeight;
+					border-radius: $searchOptionsColorRadius;
+					background-size: cover;
+					
+					&:before {
+						position: absolute;
+						content: '';
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						transition: $transition;
+						border-radius: $searchOptionsColorRadius;
+						border: $beforeSearchOptionsColorBorder;
+						box-shadow: $beforeSearchOptionsColorShadow;
+						background: $beforeSearchOptionsColorBg;
+					}
+	
+					&:after {
+						position: absolute;
+						content: '';
+						left: -7px;
+						right: -7px;
+						top: -7px;
+						bottom: -7px;
+						z-index: 1;
+						opacity: 0;
+						visibility: hidden;
+						border-radius: var(--gr_inner_radius);
+						transition: $transition;
+						border: $afterSearchOptionsColorBorder;
+						box-shadow: $afterSearchOptionsColorShadow;
+						background: $afterSearchOptionsColorBg;
+					}
+				}
+			}
+		}
+	}
+	
+
+	.ui-widget.ui-widget-content {
+		position: relative;
+		display: block;
+		border: none;
+		background: none;
+		box-shadow: none;
+		height: $searchRangeHeight;
+		border-radius: $searchRangeRadius;
+		margin-top: $searchRangeMarginTop;
+		margin-right: $searchRangeBtnWidth;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: -$searchRangeBtnWidth;
+			bottom: 0;
+			border: $searchRangeBottomBorder;
+			background: $searchRangeBottomBg;
+			box-shadow: $searchRangeBottomShadow;
+			border-radius: $searchRangeRadius;
+		}
+
+		.ui-slider-range.ui-widget-header2 {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			font-size: 0;
+			height: $searchRangeHeight;
+			border: $searchRangeTopBorder;
+			background: $searchRangeTopBg;
+			box-shadow: $searchRangeTopShadow;
+			border-radius: $searchRangeRadius;
+			margin: 0 0 0 $searchRangeBtnWidth / 2;
+		}
+
+		.ui-slider-handle {
+		    position: absolute;
+		    top: -($searchRangeBtnHeight - ($searchRangeBtnHeight / 2) - ($searchRangeHeight / 2));
+		    z-index: 2;
+		    margin: 0;
+		    width: $searchRangeBtnWidth;
+		    height: $searchRangeBtnHeight;
+		    border-radius: $searchRangeBtnRadius;
+		    cursor: pointer;
+		    outline: none;
+		    transition: background .2s, box-shadow .2s, border .2s;
+		    border: $searchRangeBtnBorder;
+		    background: $searchRangeBtnBg;
+		    box-shadow: $searchRangeBtnShadow;
+
+		    &:hover {
+				border: $searchRangeBtnBorderHover;
+			    background: $searchRangeBtnBgHover;
+			    box-shadow: $searchRangeBtnShadowHover;
+		    }
+
+		    &:active, &.ui-state-active {
+				border: $searchRangeBtnBorderActive;
+			    background: $searchRangeBtnBgActive;
+			    box-shadow: $searchRangeBtnShadowActive;
+		    }
+		}
+	}
+}

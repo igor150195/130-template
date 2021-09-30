@@ -1,0 +1,271 @@
+// Кол-во .product-amount
+//----------------------------------------------------------------------------//
+	// Amount min
+	$amountMin: 						var(--on_gr_bg_sec_text_6);
+
+	// Radius
+	$prodAmounRadius: 					0;
+
+	// Input color
+	$prodAmounInputColor: 				var(--on_gr_bg_acc_text_7);
+	$prodAmounInputColorHover:			var(--on_gr_bg_acc_text_7);
+	$prodAmounInputColorFocus:			var(--on_gr_bg_acc_text_7);
+	$prodAmounInputColorDis:			var(--on_gr_disable);
+	
+	// Input bg
+	$prodAmounInputBg:					none;
+	$prodAmounInputBgHover:				none;
+	$prodAmounInputBgFocus:				none;
+	$prodAmounInputBgDis:				none;
+	
+	// Input shadow
+	$prodAmounInputShadow:				none;
+	$prodAmounInputShadowHover:			none;
+	$prodAmounInputShadowFocus:			none;
+	$prodAmounInputShadowDis:			none;
+	
+	// Input border
+	$prodAmounInputBorder:				none;
+	$prodAmounInputBorderHover:			none;
+	$prodAmounInputBorderFocus:			none;
+	$prodAmounInputBorderDis:			none;
+	//---------------------------------------------------//
+
+
+
+	// .product-amount PLUS
+		$prodAmountPlusBg:					none;
+		$prodAmountPlusBgHover:				none;
+		$prodAmountPlusBgActive:			none;
+		$prodAmountPlusBgDis:				none;
+
+		$prodAmountPlusIcon:				var(--on_gr_bg_icon);
+		$prodAmountPlusIconHover:			var(--gr_accent);
+		$prodAmountPlusIconActive:			var(--gr_accent);
+		$prodAmountPlusIconDis:				var(--on_gr_disable);
+
+		$prodAmountPlusShadow:				none;
+		$prodAmountPlusShadowHover:			none;
+		$prodAmountPlusShadowActive:		none;
+		$prodAmountPlusShadowDis:			none;
+
+		$prodAmountPlusBorder:				none;
+		$prodAmountPlusBorderHover:			none;
+		$prodAmountPlusBorderActive:		none;
+		$prodAmountPlusBorderDis:			none;
+	//---------------------------------------------------//
+
+
+
+	// .product-amount MINUS
+		$prodAmountMinusBg:					none;
+		$prodAmountMinusBgHover:			none;
+		$prodAmountMinusBgActive:			none;
+		$prodAmountMinusBgDis:				none;
+
+		$prodAmountMinusIcon:				var(--on_gr_bg_icon);
+		$prodAmountMinusIconHover:			var(--gr_accent);
+		$prodAmountMinusIconActive:			var(--gr_accent);
+		$prodAmountMinusIconDis:			var(--on_gr_disable);
+
+		$prodAmountMinusShadow:				none;
+		$prodAmountMinusShadowHover:		none;
+		$prodAmountMinusShadowActive:		none;
+		$prodAmountMinusShadowDis:			none;
+
+		$prodAmountMinusBorder:				none;
+		$prodAmountMinusBorderHover:		none;
+		$prodAmountMinusBorderActive:		none;
+		$prodAmountMinusBorderDis:			none;
+//----------------------------------------------------------------------------//
+
+body .product-amount, body .cart-amount {
+	width: 110px;
+
+	.amount-title {
+		display: none;
+	}
+	
+	.amount-min {
+		color: $amountMin;
+	}
+
+	.shop2-product-amount {
+		margin: 0;
+		width: auto;
+		border-radius: var(--gr_form_radius);
+		background: var(--on_gr_bg_bg_8);
+		box-shadow: inset 0 0 0 1px var(--on_gr_bg_border_4);
+
+		&.gr_cart_amount {
+			width: 110px;
+		}
+
+		&.disabled {
+
+			button {
+				svg {
+					fill: $prodAmountPlusIconDis;
+				}
+				
+				&:disabled {
+					pointer-events: none;
+					background: $prodAmountMinusBgDis;
+					border: $prodAmountMinusBorderDis;
+					box-shadow: $prodAmountMinusShadowDis;
+				}
+
+				& + input + button {
+
+					&:disabled {
+						background: $prodAmountPlusBgDis;
+						border: $prodAmountPlusBorderDis;
+						box-shadow: $prodAmountPlusShadowDis;
+					}
+				}
+			}
+
+			input {
+				color: $prodAmounInputColorDis;
+				background: $prodAmounInputBgDis;
+				border: $prodAmounInputBorderDis;
+				box-shadow: $prodAmounInputShadowDis;
+				pointer-events: none;
+			}
+		}
+
+		button {
+			width: 32%;
+			height: 44px;
+			padding: 0;
+			font-size: 0;
+			outline: none;
+			align-items: center;
+			display: inline-flex;
+			justify-content: center;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			transition: $transition;
+			border-radius: $prodAmounRadius;
+
+			svg {
+				transition: $transition;
+				display: none;
+				
+				&.gr_small_icon {
+					display: block;
+				}
+			}
+
+			&:hover {
+				svg {
+					fill: var(--gr_primary);
+				}
+			}
+
+			&.amount-minus {
+				background: $prodAmountMinusBg;
+				border: $prodAmountMinusBorder;
+				box-shadow: $prodAmountMinusShadow;
+				
+				svg {
+					fill: $prodAmountMinusIcon;
+				}
+
+				&:disabled {
+					pointer-events: none;
+					background: $prodAmountMinusBgDis;
+					border: $prodAmountMinusBorderDis;
+					box-shadow: $prodAmountMinusShadowDis;
+
+					svg {
+						fill: $prodAmountMinusIconDis;
+					}
+				}
+
+				&:hover {
+					background: $prodAmountMinusBgHover;
+					border: $prodAmountMinusBorderHover;
+					box-shadow: $prodAmountMinusShadowHover;
+
+					svg {
+						fill: $prodAmountMinusIconHover;
+					}
+				}
+
+				&:active {
+					background: $prodAmountMinusBgActive;
+					border: $prodAmountMinusBorderHover;
+					box-shadow: $prodAmountMinusShadowHover;
+
+					svg {
+						fill: $prodAmountMinusIconActive;
+					}
+				}
+			}
+
+			&.amount-plus {
+				background: $prodAmountPlusBg;
+				border: $prodAmountPlusBorder;
+				box-shadow: $prodAmountPlusShadow;
+
+				svg {
+					fill: $prodAmountPlusIcon;
+				}
+
+				&:hover {
+					background: $prodAmountPlusBgHover;
+					border: $prodAmountPlusBorderHover;
+					box-shadow: $prodAmountPlusShadowHover;
+
+					svg {
+						fill: $prodAmountPlusIconHover;
+					}
+				}
+
+				&:active {
+					background: $prodAmountPlusBgActive;
+					border: $prodAmountPlusBorderActive;
+					box-shadow: $prodAmountPlusShadowActive;
+
+					svg {
+						fill: $prodAmountPlusIconActive;
+					}
+				}
+			}
+		}
+
+		input {
+			width: 36%;
+			height: 44px;
+			line-height: 44px;
+			font-size: 16px;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			outline: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			color: $prodAmounInputColor;
+			background: $prodAmounInputBg;
+			border: $prodAmounInputBorder;
+			transition: $transition;
+			box-shadow: $prodAmounInputShadow;
+			border-radius: $prodAmounRadius;
+
+			&:hover {
+				color: $prodAmounInputColorHover;
+				background: $prodAmounInputBgHover;
+				border: $prodAmounInputBorderHover;
+				box-shadow: $prodAmounInputShadowHover;
+			}
+
+			&:focus {
+				color: $prodAmounInputColorFocus;
+				background: $prodAmounInputBgFocus;
+				border: $prodAmounInputBorderFocus;
+				box-shadow: $prodAmounInputShadowFocus;
+			}
+		}
+	}
+}

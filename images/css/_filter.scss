@@ -1,0 +1,621 @@
+// Фильтр
+//----------------------------------------------------------------------------//
+	// .shop2-color-ext-list
+		// Размер допполей с цветом
+		$filterColorWidth: 						28px;
+		$filterColorHeight: 					28px;
+
+		// Радиус допполей с цветом
+		$filterColorRadius: 					var(--gr_small_radius);
+
+		// Отступы допполей с цветом
+		$filterColorMargin: 					0 9px 22px;
+		
+		// Before
+			// Background допполей с цветом
+			$filterBeforeBg: 						none;
+			$filterBeforeBgSelected:				none;
+
+			// Shadow допполей с цветом
+			$filterBeforeShadow: 					inset 0 0 0 1px var(--on_gr_bg_border_4);
+			$filterBeforeShadowSelected:			none;
+
+			// Border допполей с цветом
+			$filterBeforeBorder: 					none;
+			$filterBeforeBorderSelected:			none;
+
+		// After
+			// Background допполей с цветом
+			$filterAfterBg: 						none;
+			$filterAfterBgSelected:					none;
+
+			// Shadow допполей с цветом
+			$filterAfterShadow: 					none;
+			$filterAfterShadowSelected:				inset 0 0 0 1px var(--gr_primary_6);
+
+			// Border допполей с цветом
+			$filterAfterBorder: 					none;
+			$filterAfterBorderSelected:				none;
+	//---------------------------------------------------//
+
+
+
+	// .param-val
+
+		// Margin 
+		$paramValMargin: 						15px 0 0;
+		
+		// Шрифт
+		$checkParamFont: 						var(--font1_400) 16px/ 1.25 var(--font1);
+
+		// Размер
+		$checkParamWidth: 						28px;
+		$checkParamHeight: 						28px;
+
+		// Радиус
+		$checkParamRadius: 						var(--gr_checkbox_radius);
+
+		// Отступ от галочки до текста
+		$checkParamPadding: 					4px 0 4px 40px;
+
+		// Text color чекбоксов
+		$checkParamColor: 						var(--on_gr_bg_acc_text_7);
+		$checkParamColorHover: 					var(--on_gr_bg_acc_text);
+		$checkParamColorChecked: 				var(--on_gr_bg_acc_text);
+		$checkParamColorCheckedHover: 			var(--on_gr_bg_acc_text);
+
+		// Background
+		$checkParamBg: 							var(--on_gr_bg_bg_8);
+		$checkParamBgHover:						var(--gr_bg);
+		$checkParamBgChecked:					var(--gr_primary);
+		$checkParamBgCheckedHover:				var(--gr_primary);
+		
+		// Box-shadow чекбоксов
+		$checkParamShadow: 						0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$checkParamShadowHover: 				0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$checkParamShadowChecked: 				none;
+		$checkParamShadowCheckedHover: 			none;
+
+		// Border чекбоксов
+		$checkParamBorder: 						none;
+		$checkParamBorderHover: 				none;
+		$checkParamBorderChecked: 				none;
+		$checkParamBorderCheckedHover: 			none;
+	//---------------------------------------------------//
+
+
+
+	// .input_range_slider
+
+		// Отступ до инпутов
+		$filterRangeMarginTop: 					20px;
+
+		// Размер полосы
+		$filterRangeHeight: 					6px;
+
+		// Закругления полосы
+		$filterRangeRadius: 					3px;
+		
+		// Верхняя полоса
+		$filterRangeTopBg: 						var(--gr_accent);
+		$filterRangeTopBorder: 					none;
+		$filterRangeTopShadow: 					none;
+
+		// Нижняя полоса
+		$filterRangeBottomBg: 					#fff;
+		$filterRangeBottomBorder: 				none;
+		$filterRangeBottomShadow: 				none;
+
+		// Размер кнопок
+		$filterRangeBtnWidth: 					30px;
+		$filterRangeBtnHeight: 					30px;
+
+		// Закругления кнопок
+		$filterRangeBtnRadius: 					50%;
+
+		// Background кнопок
+		$filterRangeBtnBg: 						var(--gr_accent); 
+		$filterRangeBtnBgHover: 				var(--gr_accent); 
+		$filterRangeBtnBgActive:				var(--gr_accent);
+
+		// Box-shadow кнопок
+		$filterRangeBtnShadow: 					none; 
+		$filterRangeBtnShadowHover: 			none; 
+		$filterRangeBtnShadowActive:			none;
+
+		// Border кнопок
+		$filterRangeBtnBorder: 					none; 
+		$filterRangeBtnBorderHover: 			none; 
+		$filterRangeBtnBorderActive:			none;
+//----------------------------------------------------------------------------//
+
+
+.filter-block {
+	text-align: left;
+	color: var(--txt);
+
+	.empty-val {
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	&__inner {
+
+	}
+
+	.shop2-filter {
+		padding: 0;
+		margin: 0;
+		border: none;
+
+		&__header {
+			@extend .remodal-block-title;
+		}
+
+		&__item {
+			border-bottom: 1px solid var(--on_gr_bg_border_4);
+
+			&:first-child {
+				.shop2-filter__body {
+					display: block;
+				}
+			}
+		}
+
+		&__title {
+			position: relative;
+			cursor: pointer;
+			padding: 21px 45px 21px 0;
+			font-size: 15px;
+			line-height: 1.2;
+			font-family: var(--font2);
+    		font-weight: var(--font2_500);
+			color: var(--on_gr_bg_sec_text);
+
+			&.active {
+				.shop2-filter__title-icon {
+					.gr_filter_plus {
+						display: none;
+					}
+
+					.gr_filter_minus {
+						display: block;
+					}
+				}
+			}
+
+			>span {
+				display: block;
+			}
+			
+			ins {
+				display: none;
+			}
+
+			&-icon {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				@extend .gr-icon-btn-1;
+
+				&.filter_title_icon {
+					width: 30px;
+					height: 30px;
+					min-height: 30px;
+				}
+
+				svg {
+					width: 20px;
+					height: 20px;
+					display: none;
+
+					&.gr_filter_plus {
+						display: block;
+					}
+				}
+			}
+		}
+
+		&__body {
+			display: none;
+			font-size: 0;
+			padding: 0 0 20px;
+		}
+
+		&__params {
+			
+		}
+
+		&__checkbox {
+			margin: $paramValMargin;
+			display: flex;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:nth-child(n+6) {
+				display: none;
+			}
+
+			&.active {
+				display: flex;
+			}
+
+			.param-val {
+				position: relative;
+				margin: 0;
+				text-decoration: none;
+				color: $checkParamColor;
+				font: $checkParamFont;
+				padding: $checkParamPadding;
+				min-height: $checkParamHeight;
+				display: flex;
+				align-items: center;
+				
+				@media all and (max-width: 767px) {
+					padding-left: 38px;
+					min-height: 26px;
+				}
+
+				&:before {
+					position: absolute;
+					content: '';
+					top: 0;
+					left: 0;
+					width: $checkParamWidth;
+					height: $checkParamHeight;
+					border: $checkParamBorder;
+					background: $checkParamBg;
+					box-shadow: $checkParamShadow;
+					border-radius: $checkParamRadius;
+					transition: background-color .2s, box-shadow .2s;
+					
+					@media all and (max-width: 767px) {
+						width: 26px;
+						height: 26px;
+					}
+				}
+
+				&:hover {
+					color: $checkParamColorHover;
+					
+					&:before {
+						border: $checkParamBorderHover;
+						box-shadow: $checkParamShadowHover;
+						background: $checkParamBgHover;
+					}
+				}
+
+				&.active-val {
+					background: none;
+					font: $checkParamFont;
+					padding: $checkParamPadding;
+					color: $checkParamColorChecked;
+
+					&:before {
+						content: "\e901";
+						font-size: 10px;
+			    		font-family: 'icomoon';
+			    		text-align: center;
+						line-height: $checkParamHeight;
+			    		color: $checkIcon;
+
+						border: $checkParamBorderChecked;
+						box-shadow: $checkParamShadowChecked;
+						background: $checkParamBgChecked;
+					}
+
+					&:hover {
+						color: $checkParamColorCheckedHover;
+
+						&:before {
+							content: "\e901";
+							font-size: 10px;
+				    		font-family: 'icomoon';
+				    		text-align: center;
+							line-height: $checkParamHeight;
+				    		color: $checkIcon;
+
+							border: $checkParamBorderCheckedHover;
+							box-shadow: $checkParamShadowCheckedHover;
+							background: $checkParamBgCheckedHover;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.input-from, .input-to {
+		vertical-align: top;
+		display: inline-block;
+		width: calc(50% - 10px);
+
+		&__title {
+			font-size: 14px;
+			margin: 0 0 6px;
+			display: none;
+		}
+
+		input {
+			@include placeholder {
+				text-transform: capitalize;	
+			};
+		}
+	}
+
+	.input-from {
+		margin-right: 20px;
+	}
+
+	.shop2-color-ext-popup {
+		.gr-filter-more {
+			display: none;
+		}
+		
+		.shop2-color-ext-list {
+			margin-bottom: -17px;
+			margin-left: -9px;
+			padding: 0;
+			overflow: visible;
+
+			li {
+				float: none;
+				border: none;
+				background: none;
+				vertical-align: top;
+				display: inline-block;
+				width: $filterColorWidth;
+				height: $filterColorHeight;
+				margin: $filterColorMargin;
+
+				&.shop2-color-ext-selected {
+					outline: none;
+
+					.filter-color-add {
+						.filter-color-icon {
+							&:before {
+								border: $filterBeforeBorderSelected;
+								background: $filterBeforeBgSelected;
+								box-shadow: $filterBeforeShadowSelected;
+							}
+
+							&:after {
+								opacity: 1;
+								visibility: visible;
+								border: $filterAfterBorderSelected;
+								background: $filterAfterBgSelected;
+								box-shadow: $filterAfterShadowSelected;
+							}
+						}
+					}
+				}
+				
+				&.empty-val {
+					position: relative;
+					opacity: 1;
+					
+					&:after {
+						position: absolute;
+						content: '';
+						width: 1px;
+						top: -8px;
+						left: 50%;
+						right: auto;
+						bottom: -8px;
+						opacity: .4;
+						transform: rotate(45deg);
+						background: var(--gr_dark);
+					}
+					
+					.filter-color-add .filter-color-icon {
+						opacity: .3;
+						
+						&:before, &:after {
+							display: none;
+						}
+					}
+				}
+
+				.filter-color-add {
+					display: block !important;
+
+					.filter-color-icon {
+						position: relative;
+						vertical-align: top;
+						display: inline-block;
+						background-size: cover;
+						width: $filterColorWidth;
+						height: $filterColorHeight;
+						border-radius: $filterColorRadius;
+
+						&:before {
+							position: absolute;
+							content: '';
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+							z-index: 1;
+							border: $filterBeforeBorder;
+							background: $filterBeforeBg;
+							box-shadow: $filterBeforeShadow;
+							border-radius: $filterColorRadius;
+						}
+
+						&:after {
+							position: absolute;
+							content: '';
+							left: -7px;
+							right: -7px;
+							top: -7px;
+							bottom: -7px;
+							z-index: 1;
+							opacity: 0;
+							visibility: hidden;
+							border: $filterAfterBorder;
+							background: $filterAfterBg;
+							box-shadow: $filterAfterShadow;
+							border-radius: var(--gr_btn_radius);
+						}
+					}
+
+					.filter-color-subtitle {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.shop2-filter-result {
+		margin: 0 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&__title {
+
+		}
+
+		.result {
+			color: var(--gr_primary);
+			height: auto;
+			padding: 0;
+			margin: 0 0 0 10px;
+			background: none;
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	.shop2-filter-btns {
+		font-size: 0;
+		padding: 24px 0 0;
+
+		.shop2-filter-go {
+			width: 100%;
+			display: block;
+			margin: 0 0 20px;
+
+			@extend .gr-btn-1;
+
+			&.gr_filter_go {
+				@extend .gr-large-btn-desktop;
+				@extend .gr-large-btn-tablet;
+				@extend .gr-large-btn-mobile;
+			}
+
+			.result {
+				margin: 0;
+				padding: 0 0 0 5px;
+				height: auto;
+				font-size: inherit;
+				line-height: inherit;
+				color: inherit;
+				background: none;
+			}
+		}
+
+		.shop2-filter-reset {
+			width: 100%;
+			display: block;
+
+			@extend .gr-btn-3;
+
+			&.gr_filter_reset {
+				@extend .gr-large-btn-desktop;
+				@extend .gr-large-btn-tablet;
+				@extend .gr-large-btn-mobile;
+				@extend .gr-btn-icon-right;
+			}
+		}
+	}
+
+	.gr-filter-more {
+		margin: 15px 0 0;
+
+		&__btn {
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+		}
+
+		&__text {
+
+		}
+
+		&__amount {
+			margin-left: 5px;
+		}
+	}
+
+	.ui-widget.ui-widget-content {
+		position: relative;
+		display: block;
+		border: none;
+		background: none;
+		box-shadow: none;
+		height: $filterRangeHeight;
+		border-radius: $filterRangeRadius;
+		margin-top: $filterRangeMarginTop;
+		margin-right: $filterRangeBtnWidth;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: -$filterRangeBtnWidth;
+			bottom: 0;
+			border: $filterRangeBottomBorder;
+			background: $filterRangeBottomBg;
+			box-shadow: $filterRangeBottomShadow;
+			border-radius: $filterRangeRadius;
+		}
+
+		.ui-slider-range.ui-widget-header2 {
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			font-size: 0;
+			height: $filterRangeHeight;
+			border: $filterRangeTopBorder;
+			background: $filterRangeTopBg;
+			box-shadow: $filterRangeTopShadow;
+			border-radius: $filterRangeRadius;
+			margin: 0 0 0 $filterRangeBtnWidth / 2;
+		}
+
+		.ui-slider-handle {
+		    position: absolute;
+		    top: -($filterRangeBtnHeight - ($filterRangeBtnHeight / 2) - ($filterRangeHeight / 2));
+		    z-index: 2;
+		    margin: 0;
+		    width: $filterRangeBtnWidth;
+		    height: $filterRangeBtnHeight;
+		    border-radius: $filterRangeBtnRadius;
+		    cursor: pointer;
+		    outline: none;
+		    transition: background .2s, box-shadow .2s, border .2s;
+		    border: $filterRangeBtnBorder;
+		    background: $filterRangeBtnBg;
+		    box-shadow: $filterRangeBtnShadow;
+
+		    &:hover {
+				border: $filterRangeBtnBorderHover;
+			    background: $filterRangeBtnBgHover;
+			    box-shadow: $filterRangeBtnShadowHover;
+		    }
+
+		    &:active, &.ui-state-active {
+				border: $filterRangeBtnBorderActive;
+			    background: $filterRangeBtnBgActive;
+			    box-shadow: $filterRangeBtnShadowActive;
+		    }
+		}
+	}
+}

@@ -1,0 +1,308 @@
+// Допполя с цветом
+//----------------------------------------------------------------------------//
+	// Шрифт
+	$prodOptionsTitleFont: 				14px/ 1.1 var(--font1);
+	$prodOptionsBodyFont: 				14px/ 1.14 var(--font1);
+	//---------------------------------------------------//
+
+	// Цвет шрифта
+	$prodOptionsTitleColor: 			var(--on_gr_bg_sec_text_6);
+	$prodOptionsBodyColor: 				var(--on_gr_bg_sec_text);
+
+	// Размер допполей с цветом
+	$optionsColorWidth: 					28px;
+	$optionsColorHeight: 					28px;
+
+	// Радиус допполей с цветом
+	$optionsColorRadius: 					var(--gr_small_radius);
+
+	// Отступы допполей с цветом
+	$optionsColorMargin: 					5px 6px;
+	
+	// Before
+		// Background допполей с цветом
+		$beforeOptionsColorBg: 						none;
+		$beforeOptionsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$beforeOptionsColorShadow: 					inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$beforeOptionsColorShadowSelected: 			inset 0 0 0 1px var(--on_gr_bg_border_4);
+
+		// Border допполей с цветом
+		$beforeOptionsColorBorder: 					none;
+		$beforeOptionsColorBorderSelected: 			none;
+
+	// After
+		// Background допполей с цветом
+		$afterOptionsColorBg: 						none;
+		$afterOptionsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$afterOptionsColorShadow: 					none;
+		$afterOptionsColorShadowSelected: 			inset 0 0 0 1px var(--gr_primary_6);
+
+		// Border допполей с цветом
+		$afterOptionsColorBorder: 					none;
+		$afterOptionsColorBorderSelected: 			none;
+//----------------------------------------------------------------------------//
+
+
+.shop2-product-options {
+
+	.option-item {
+		margin: 0 0 12px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.option-title {
+		margin: 0 0 8px;
+		color: $prodOptionsTitleColor;
+		font: $prodOptionsTitleFont;
+		
+		@media all and (max-width: 767px) {
+			margin: 0 0 3px;
+		}
+	}
+
+	.option-body {
+		color: $prodOptionsBodyColor;
+		font: $prodOptionsBodyFont;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.file {
+			text-decoration: none;
+
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+			@extend .gr-btn-icon-right;
+
+			text-align: left;
+			justify-content: flex-start;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			span {
+				width: 100%;
+				padding-right: 30px;
+
+				svg {
+					right: -3px;
+					width: 20px;
+					height: 20px;
+					display: none;
+
+					&.gr_small_icon {
+						display: block;
+					}
+				}
+			}
+		}
+		
+		.gr-select-wrapper, .shop2-color-ext-select {
+			max-width: 300px;
+		}
+	}
+
+	.shop2-texture-pick {
+		overflow: visible;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 -10px -10px 0;
+
+		li {
+			position: relative;
+			cursor: pointer;
+			width: 76px;
+			height: 76px;
+			border: none;
+			float: none;
+			outline: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 10px 10px 0;
+			border-radius: var(--gr_wrap_radius);
+
+			&.active-texture {
+				&:before {
+					border-color: var(--gr_primary);
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 2;
+				pointer-events: none;
+				border-radius: var(--gr_wrap_radius);
+				border: 1px solid var(--on_gr_bg_border_4);
+			}
+
+			img {
+				height: 76px;
+				width: 76px;
+				object-fit: contain;
+				border-radius: var(--gr_wrap_radius);
+			}
+		}
+	}
+
+	.shop2-color-pick, .shop2-color-ext-list {
+		overflow: visible;
+		display: inline-block;
+		vertical-align: middle;
+
+		li {
+			position: relative;
+			cursor: pointer;
+			width: $optionsColorWidth !important;
+			height: $optionsColorHeight;
+			border: none;
+			float: none;
+			outline: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin: $optionsColorMargin;
+			border-radius: $optionsColorRadius;
+
+			&:first-child {
+				margin-left: 0 !important;
+
+				&.active-color, &.shop2-color-ext-selected, &.active-texture {
+					margin-left: 6px !important;
+				}
+			}
+
+			&.active-color,
+			&.active-texture,
+			&.shop2-color-ext-selected {
+				outline: none !important;
+
+				&:after {
+					opacity: 1;
+					visibility: visible;
+					border: $afterOptionsColorBorderSelected;
+					box-shadow: $afterOptionsColorShadowSelected;
+					background: $afterOptionsColorBgSelected;
+				}
+
+				&:before {
+					border: $beforeOptionsColorBorderSelected;
+					box-shadow: $beforeOptionsColorShadowSelected;
+					background: $beforeOptionsColorBgSelected;
+				}
+			}
+
+			&.shop2-color-ext-selected {
+				outline: none !important;
+
+				span {
+					display: none;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				transition: $transition;
+				border-radius: $optionsColorRadius;
+				border: $beforeOptionsColorBorder;
+				box-shadow: $beforeOptionsColorShadow;
+				background: $beforeOptionsColorBg;
+			}
+
+			&:after {
+				position: absolute;
+				content: '';
+				left: -7px;
+				right: -7px;
+				top: -7px;
+				bottom: -7px;
+				z-index: 1;
+				opacity: 0;
+				visibility: hidden;
+				border-radius: var(--gr_btn_radius);
+				transition: $transition;
+				border: $afterOptionsColorBorder;
+				box-shadow: $afterOptionsColorShadow;
+				background: $afterOptionsColorBg;
+			}
+
+			span, img {
+				width: $optionsColorWidth;
+				height: $optionsColorHeight;
+				border-radius: $optionsColorRadius;
+			}
+		}
+	}
+
+	.shop2-color-ext-multi {
+		overflow: visible;
+		outline: none;
+		border: none;
+		margin-left: -8px;
+
+		li {
+			position: relative;
+			height: $optionsColorHeight;
+			border: none;
+			float: none;
+			cursor: pointer;
+			border-radius: $optionsColorRadius;
+			vertical-align: top;
+			display: inline-block;
+			background-size: cover;
+			outline: none !important;
+			width: $optionsColorWidth !important;
+			margin: $optionsColorMargin !important;
+
+			&:first-child {
+				width: $optionsColorWidth !important;
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: $optionsColorRadius;
+				border: $beforeOptionsColorBorder;
+				box-shadow: $beforeOptionsColorShadow;
+				background: $beforeOptionsColorBg;
+			}
+
+			span {
+				display: none;
+			}
+
+			img {
+				width: $optionsColorWidth;
+				height: $optionsColorHeight;
+				border-radius: $optionsColorRadius;
+			}
+		}
+	}
+}

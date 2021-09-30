@@ -1,0 +1,360 @@
+// Параметры .shop2-product-params
+//----------------------------------------------------------------------------//
+	// Шрифт
+	$prodParamsTitleFont: 					14px/ 1.1 var(--font1);
+	$prodParamsBodyFont: 					14px/ 1.14 var(--font1);
+	//---------------------------------------------------//
+
+	// Цвет шрифта
+	$prodParamsTitleColor: 					var(--on_gr_bg_sec_text_6);
+	$prodParamsBodyColor: 					var(--on_gr_bg_sec_text);
+
+	// Размер допполей с цветом
+	$paramsColorWidth: 						28px;
+	$paramsColorHeight: 					28px;
+
+	// Радиус допполей с цветом
+	$paramsColorRadius: 					var(--gr_small_radius);
+
+	// Отступы допполей с цветом
+	$paramsColorMargin: 					5px 9px;
+
+	// Before
+		// Background допполей с цветом
+		$beforeParamsColorBg: 						none;
+		$beforeParamsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$beforeParamsColorShadow: 					inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$beforeParamsColorShadowSelected: 			inset 0 0 0 1px var(--on_gr_bg_border_4);
+
+		// Border допполей с цветом
+		$beforeParamsColorBorder: 					none;
+		$beforeParamsColorBorderSelected: 			none;
+
+	// After
+		// Background допполей с цветом
+		$afterParamsColorBg: 						none;
+		$afterParamsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$afterParamsColorShadow: 					none;
+		$afterParamsColorShadowSelected: 			inset 0 0 0 1px var(--gr_primary_6);
+
+		// Border допполей с цветом
+		$afterParamsColorBorder: 					none;
+		$afterParamsColorBorderSelected: 			none;
+//----------------------------------------------------------------------------//
+
+
+.shop2-product-params {
+
+	.param-item {
+		margin: 0 0 12px;
+
+		&.gr_color_option {
+
+			&:not([data-option-type="image2"]) {
+				.param-title {
+					margin-bottom: 12px;
+					
+					@media all and (max-width: 767px) {
+						margin-bottom: 6px;
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.param-title {
+		margin: 0 0 8px;
+		color: $prodParamsTitleColor;
+		font: $prodParamsTitleFont;
+		
+		@media all and (max-width: 767px) {
+			font-size: 13px;
+			margin-bottom: 3px;
+		}
+	}
+
+	.param-body {
+		color: $prodParamsBodyColor;
+		font: $prodParamsBodyFont;
+		
+		@media all and (max-width: 767px) {
+			font-size: 13px;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.file {
+			text-decoration: none;
+
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+			@extend .gr-btn-icon-right;
+
+			text-align: left;
+			justify-content: flex-start;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			span {
+				width: 100%;
+				padding-right: 30px;
+
+				svg {
+					right: -3px;
+					width: 20px;
+					height: 20px;
+					display: none;
+
+					&.gr_small_icon {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	.shop2-texture-pick {
+		overflow: visible;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 -10px -10px 0;
+
+		@media all and (max-width: 767px) {
+			margin: 0 -5px -5px 0;
+		}
+
+		li {
+			position: relative;
+			cursor: pointer;
+			width: 76px;
+			height: 76px;
+			border: none;
+			float: none;
+			outline: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 10px 10px 0;
+			border-radius: var(--gr_wrap_radius);
+
+			@media all and (max-width: 767px) {
+				width: 50px;
+				height: 50px;
+				margin: 0 5px 5px 0;
+			}
+
+			&.active-texture {
+				&:before {
+					border-color: var(--gr_primary);
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 2;
+				pointer-events: none;
+				border-radius: var(--gr_wrap_radius);
+				border: 1px solid var(--on_gr_bg_border_4);
+			}
+
+			img {
+				height: 76px;
+				width: 76px;
+				object-fit: contain;
+				border-radius: var(--gr_wrap_radius);
+
+				@media all and (max-width: 767px) {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+	}
+
+	.shop2-color-pick,
+	.shop2-color-ext-list {
+		overflow: visible;
+		display: inline-block;
+		vertical-align: middle;
+
+		li {
+			position: relative;
+			cursor: pointer;
+			width: $paramsColorWidth !important;
+			height: $paramsColorHeight;
+			border: none;
+			float: none;
+			outline: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin: $paramsColorMargin;
+			border-radius: $paramsColorRadius;
+
+			@media all and (max-width: 767px) {
+				width: 26px !important;
+				height: 26px;
+				margin: 5px 6px;
+			}
+
+			&:first-child {
+				margin-left: 0 !important;
+
+				&.active-color, &.shop2-color-ext-selected, &.active-texture {
+					margin-left: 7px !important;
+
+					@media all and (max-width: 767px) {
+						margin-left: 6px !important;
+					}
+				}
+			}
+
+			&.active-color,
+			&.active-texture,
+			&.shop2-color-ext-selected {
+				outline: none !important;
+
+				&:after {
+					opacity: 1;
+					visibility: visible;
+					border: $afterParamsColorBorderSelected;
+					box-shadow: $afterParamsColorShadowSelected;
+					background: $afterParamsColorBgSelected;
+				}
+
+				&:before {
+					border: $beforeParamsColorBorderSelected;
+					box-shadow: $beforeParamsColorShadowSelected;
+					background: $beforeParamsColorBgSelected;
+				}
+			}
+
+			&.shop2-color-ext-selected {
+				outline: none !important;
+
+				span {
+					display: none;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-radius: $paramsColorRadius;
+				transition: $transition;
+				border: $beforeParamsColorBorder;
+				box-shadow: $beforeParamsColorShadow;
+				background: $beforeParamsColorBg;
+			}
+
+			&:after {
+				position: absolute;
+				content: '';
+				left: -7px;
+				right: -7px;
+				top: -7px;
+				bottom: -7px;
+				z-index: 1;
+				opacity: 0;
+				visibility: hidden;
+				border-radius: var(--gr_btn_radius);
+				transition: $transition;
+				border: $afterParamsColorBorder;
+				box-shadow: $afterParamsColorShadow;
+				background: $afterParamsColorBg;
+
+				@media all and (max-width: 767px) {
+					left: -5px;
+					right: -5px;
+					top: -5px;
+					bottom: -5px;
+				}
+			}
+
+			span, img {
+				width: $paramsColorWidth;
+				height: $paramsColorHeight;
+				border-radius: $paramsColorRadius;
+
+				@media all and (max-width: 767px) {
+					width: 26px;
+					height: 26px;
+				}
+			}
+		}
+	}
+
+	.shop2-color-ext-multi {
+		overflow: visible;
+		outline: none;
+		border: none;
+
+		li {
+			position: relative;
+			height: $paramsColorHeight;
+			border: none;
+			float: none;
+			cursor: pointer;
+			border-radius: $paramsColorRadius;
+			vertical-align: top;
+			display: inline-block;
+			background-size: cover;
+			outline: none !important;
+			width: $paramsColorWidth !important;
+			margin: $paramsColorMargin !important;
+
+			&:first-child {
+				margin-left: 0 !important;
+				width: $paramsColorWidth !important;
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: $paramsColorRadius;
+				border: $beforeParamsColorBorder;
+				box-shadow: $beforeParamsColorShadow;
+				background: $beforeParamsColorBg;
+			}
+
+			span {
+				display: none;
+			}
+
+			img {
+				width: $paramsColorWidth;
+				height: $paramsColorHeight;
+				border-radius: $paramsColorRadius;
+			}
+		}
+	}
+}

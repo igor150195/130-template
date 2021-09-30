@@ -1,0 +1,1228 @@
+// Элементы формы
+//----------------------------------------------------------------------------//
+	// Border-radius полей формы
+	$formDefaultRadius:                 var(--gr_form_radius);             
+
+	// Field-title
+	$fieldTitleColor: 					var(--on_gr_bg_sec_text_7);
+	$fieldTitleFont: 					var(--font1_400) 15px/ 1.1 var(--font1);
+	$fieldTitlePadding: 				0 0 6px;
+
+	// Field-note
+	$fieldNoteColor: 					var(--on_gr_bg_sec_text_7);
+	$fieldNoteFont: 					var(--font1_400) 12px/ normal var(--font1);
+	$fieldNotePadding: 					6px 0 0 0;
+
+	// Error-message
+	$fieldErrorColor: 					var(--gr_error);
+	$fieldErrorFont: 					var(--font1_400) 12px/ normal var(--font1);
+	$fieldErrorPadding: 				0 0 6px;
+
+	// Tpl-anketa-success-note
+	$formSuccesColor: 					var(--on_gr_bg_acc_text);
+	$formSuccesFont: 					var(--font2_500) 20px/ normal var(--font2);
+
+	//---------------------------------------------------//
+
+
+	// Input
+
+		// Text color инпутов
+		$inputPlaceholder:                 	var(--on_gr_bg_acc_text_7);
+		$inputColorDefault:                 var(--on_gr_bg_acc_text);
+		$inputColorHover:                   var(--on_gr_bg_acc_text);
+		$inputColorFocus:                   var(--on_gr_bg_acc_text);
+		$inputColorError:                   var(--on_gr_bg_acc_text);
+
+		// Background инпутов
+		$inputBgDefault:                    var(--on_gr_bg_bg_8);
+		$inputBgHover:                      var(--gr_bg);
+		$inputBgFocus:                      var(--gr_bg);
+		$inputBgError:                      var(--gr_error_1);
+
+		// Box-shadow инпутов
+		$inputShadowDefault:                0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$inputShadowHover:                  0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$inputShadowFocus:                 	0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$inputShadowError:                 	0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--gr_error_15);
+
+		// Border инпутов
+		$inputBorderDefault:                none;
+		$inputBorderHover:                  none;
+		$inputBorderFocus:                  none;
+		$inputBorderError:                  none;
+	//---------------------------------------------------//
+
+
+	// Select
+
+		// Text color
+		$selectColorDefault:                var(--on_gr_bg_acc_text_7);
+		$selectColorHover:                  var(--on_gr_bg_acc_text_7);
+		$selectColorFocus:                  var(--on_gr_bg_acc_text_7);
+		$selectColorError:                  var(--on_gr_bg_acc_text_7);
+
+		// Box-shadow
+		$selectShadowDefault:               0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$selectShadowHover:                 0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$selectShadowFocus:                 0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$selectShadowError:                 0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--gr_error_15);
+
+		// Border
+		$selectBorderDefault:               none;
+		$selectBorderHover:                 none;
+		$selectBorderFocus:                 none;
+		$selectBorderError:                 none;
+
+		// Background
+		$selectBgDefault:                 	var(--on_gr_bg_bg_8);
+		$selectBgHover:                   	var(--gr_bg);
+		$selectBgFocus:                   	var(--gr_bg);
+		$selectBgError:                   	var(--gr_error_1);
+	//---------------------------------------------------//
+
+
+
+	// Checkbox
+		// Size
+		$checkSize: 						28px;
+		$checkSizeTablet: 					28px;
+		$checkSizeMobile: 					26px;
+
+		// Border-radius
+		$checkRadius: 						var(--gr_checkbox_radius);
+
+		// Верхний отступ для выравнивания галочки
+		$checkPaddingTop: 					5px;
+		$checkPaddingTopTablet: 			5px;
+		$checkPaddingTopMobile: 			4px;
+
+		// Отступ от галочки до текста
+		$checkMargin: 						12px;
+		$checkMarginTablet: 				12px;
+		$checkMarginMobile:					12px;
+
+		// Font
+		$checkFont: 						var(--font1_400) 16px/ 1.25 var(--font1);
+		$checkFontTablet: 					var(--font1_400) 16px/ 1.25 var(--font1);
+		$checkFontMobile: 					var(--font1_400) 16px/ 1.25 var(--font1);
+
+		// Text color
+		$checkColor: 						var(--on_gr_bg_acc_text_7);
+		$checkColorHover: 					var(--on_gr_bg_acc_text);
+		$checkColorChecked: 				var(--on_gr_bg_acc_text);
+		$checkColorCheckedHover: 			var(--on_gr_bg_acc_text);
+
+		// Icon
+		$checkIcon:							var(--on_gr_primary_icon);
+		
+		// Background
+		$checkBg: 							var(--on_gr_bg_bg_8);
+		$checkBgHover:						var(--gr_bg);
+		$checkBgChecked:					var(--gr_primary);
+		$checkBgCheckedHover:				var(--gr_primary);
+		
+		// Box-shadow
+		$checkShadow: 						0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$checkShadowHover: 					0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$checkShadowChecked: 				none;
+		$checkShadowCheckedHover: 			none;
+
+		// Border
+		$checkBorder: 						none;
+		$checkBorderHover: 					none;
+		$checkBorderChecked: 				none;
+		$checkBorderCheckedHover: 			none; 
+
+
+	// Radio
+		// Size
+		$radioSize: 						30px;
+		$radioSizeTablet:					30px;
+		$radioSizeMobile:					26px;
+
+		// Border-radius
+		$radioRadius: 						50%;
+
+		// Верхний отступ для выравнивания радиокнопки
+		$radioPaddingTop: 					6px;
+		$radioPaddingTopTablet: 			6px;
+		$radioPaddingTopMobile: 			4px;
+
+		// Отступ от галочки до текста
+		$radioMargin: 						12px;
+		$radioMarginTablet:					12px;
+		$radioMarginMobile:					12px;
+		
+		// Font
+		$radioFont: 						var(--font1_400) 16px/ 1.25 var(--font1);
+		$radioFontTablet:					var(--font1_400) 16px/ 1.25 var(--font1);
+		$radioFontMobile:					var(--font1_400) 16px/ 1.25 var(--font1);
+
+		// Text color
+		$radioColor: 						var(--on_gr_bg_acc_text_7);
+		$radioColorHover: 					var(--on_gr_bg_acc_text);
+		$radioColorChecked: 				var(--on_gr_bg_acc_text);
+		$radioColorCheckedHover: 			var(--on_gr_bg_acc_text);
+
+		// Background
+		$radioBg: 							var(--on_gr_bg_bg_8);
+		$radioBgHover:						var(--gr_bg);
+		$radioBgChecked:					var(--gr_bg);
+		$radioBgCheckedHover:				var(--gr_bg);
+		
+		// Box-shadow
+		$radioShadow: 						0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$radioShadowHover: 					0 0 0 1px rgba(0,0,0, .0), inset 0 0 0 2px var(--gr_primary);
+		$radioShadowChecked: 				inset 0 0 0 7px var(--gr_primary);
+		$radioShadowCheckedHover: 			inset 0 0 0 7px var(--gr_primary);
+
+		// Border
+		$radioBorder: 						none;
+		$radioBorderHover: 					none;
+		$radioBorderChecked: 				none;
+		$radioBorderCheckedHover: 			none;
+//----------------------------------------------------------------------------//
+
+
+/*----Inputs----*/
+	.gr-large-input-desktop {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 18px 20px;
+	}
+	.gr-large-input-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 16px 20px;
+		}
+	}
+	.gr-large-input-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 15px 20px;
+		}
+	}
+
+
+	.gr-medium-input-desktop {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 15px 20px;
+	}
+	.gr-medium-input-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 14px 20px;
+		}
+	}
+	.gr-medium-input-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 13px 20px;
+		}
+	}
+
+
+	.gr-small-input-desktop {
+		font-size: 14px;
+		line-height: 16px;
+		padding: 12px;
+	}
+	.gr-small-input-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 14px;
+			line-height: 16px;
+			padding: 12px;
+		}
+	}
+	.gr-small-input-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 14px;
+			line-height: 16px;
+			padding: 10px 12px;
+		}
+	}
+/*----Inputs----*/
+
+.gr-select-wrapper {
+	position: relative;
+	display: block;
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		z-index: 2;
+		font-size: 6px;
+		margin-top: -4px;
+		font-family: 'icomoon';
+		content: "\e900";
+		pointer-events: none;
+		color: var(--on_gr_bg_icon_4);
+	}
+}
+
+/*----Selects----*/
+	.gr-large-select-desktop {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 20px 50px 20px 20px;
+	}
+	.gr-large-select-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 18px 50px 18px 20px;
+		}
+	}
+	.gr-large-select-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 16px 50px 16px 20px;
+		}
+	}
+
+
+	.gr-medium-select-desktop {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 15px 50px 15px 20px;
+	}
+	.gr-medium-select-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 14px 50px 14px 20px;
+		}
+	}
+	.gr-medium-select-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 20px;
+			padding: 13px 50px 13px 20px;
+		}
+	}
+
+	.gr-small-select-desktop {
+		font-size: 14px;
+		line-height: 16px;
+		padding: 12px 40px 12px 12px;
+	}
+	.gr-small-select-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 14px;
+			line-height: 16px;
+			padding: 12px 40px 12px 12px;
+		}
+	}
+	.gr-small-select-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 14px;
+			line-height: 16px;
+			padding: 10px 40px 10px 12px;
+		}
+	}
+/*----Selects----*/
+
+
+.form-item .mg-styler-label--checkbox .required,
+.form-item .mg-styler-label--radio .required {
+	padding-bottom: 0;
+	display: inline;
+}
+
+
+body .mg-styler-label--checkbox {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: $checkPaddingTop;
+	color: $checkColor;
+	font: $checkFont;
+	padding-left: $checkSize + $checkMargin;
+
+	@media all and (max-width: 1260px) {
+		font: $checkFontTablet;
+		padding-top: $checkPaddingTopTablet;
+		padding-left: $checkSizeTablet + $checkMarginTablet;
+	}
+
+	@media all and (max-width: 767px) {
+		font: $checkFontMobile;
+		padding-top: $checkPaddingTopMobile;
+		padding-left: $checkSizeMobile + $checkMarginMobile;
+	}
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		margin-right: $checkMargin;
+		width: $checkSize;
+		height: $checkSize;
+		border: $checkBorder;
+		box-shadow: $checkShadow;
+		background: $checkBg;
+		border-radius: $checkRadius;
+		transition: background-color .2s, box-shadow .2s;
+
+		@media all and (max-width: 1260px) {
+			width: $checkSizeTablet;
+			height: $checkSizeTablet;
+			margin-right: $checkMarginTablet;
+		}
+
+		@media all and (max-width: 767px) {
+			width: $checkSizeMobile;
+			height: $checkSizeMobile;
+			margin-right: $checkMarginMobile;
+		}
+	}
+
+	&:hover {
+		color: $checkColorHover;
+
+		&:before {
+			border: $checkBorderHover;
+			box-shadow: $checkShadowHover;
+			background: $checkBgHover;
+		}	
+    }
+
+    &.checked {
+		color: $checkColorChecked;
+
+    	&:before {
+    		content: "\e901";
+			font-size: 10px;
+    		font-family: 'icomoon';
+    		text-align: center;
+			line-height: $checkSize;
+    		color: $checkIcon;
+
+    		border: $checkBorderChecked;
+			box-shadow: $checkShadowChecked;
+			background: $checkBgChecked;
+    	}
+
+		&:hover {
+			color: $checkColorCheckedHover;
+			
+			&:before {
+				content: "\e901";
+				font-size: 10px;
+	    		font-family: 'icomoon';
+	    		text-align: center;
+				line-height: $checkSize;
+	    		color: var(--on_gr_primary_icon);
+
+				border: $checkBorderCheckedHover;
+				box-shadow: $checkShadowCheckedHover;
+				background: $checkBgCheckedHover;
+			}
+		}
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+    	opacity: 0;
+        -webkit-appearance: none;
+    }
+}
+
+
+body .mg-styler-label--radio {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: $radioPaddingTop;
+	color: $radioColor;
+	font: $radioFont;
+	padding-left: $radioSize + $radioMargin;
+
+	@media all and (max-width: 1260px) {
+		padding-top: $radioPaddingTopTablet;
+		padding-left: $radioSizeTablet + $radioMarginTablet;
+	}
+
+	@media all and (max-width: 767px) {
+		padding-top: $radioPaddingTopMobile;
+		padding-left: $radioSizeMobile + $radioMarginMobile;
+	}
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		margin-right: $radioMargin;
+		width: $radioSize;
+		height: $radioSize;
+		border: $radioBorder;
+		box-shadow: $radioShadow;
+		background: $radioBg;
+		border-radius: $radioRadius;
+		transition: background-color .2s, box-shadow .2s;
+
+		@media all and (max-width: 1260px) {
+			width: $radioSizeTablet;
+			height: $radioSizeTablet;
+			margin-right: $radioMarginTablet;
+		}
+
+		@media all and (max-width: 767px) {
+			width: $radioSizeMobile;
+			height: $radioSizeMobile;
+			margin-right: $radioMarginMobile;
+		}
+	}
+
+	&:hover {
+		&:before {
+			border: $radioBorderHover;
+			box-shadow: $radioShadowHover;
+			background: $radioBgHover;
+		}	
+    }
+
+    &.checked {
+
+    	&:before {
+    		border: $radioBorderChecked;
+			box-shadow: $radioShadowChecked;
+			background: $radioBgChecked;
+    	}
+
+		&:hover {
+			&:before {
+				border: $radioBorderCheckedHover;
+				box-shadow: $radioShadowCheckedHover;
+				background: $radioBgCheckedHover;
+			}
+		}
+    }
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+    	opacity: 0;
+        -webkit-appearance: none;
+    }
+}
+
+
+.tpl-anketa-success-note {
+	text-align: center;
+	color: $formSuccesColor;
+	font: $formSuccesFont;
+}
+
+
+.tpl-field, .gr-field-style, .option-item:not(.deligate-option), .form-item {
+	.field-title, .tpl-title, & > label > span:not(.tpl-required), & > label > strong {
+		color: $fieldTitleColor;
+		font: $fieldTitleFont;
+		padding: $fieldTitlePadding;
+		margin: 0;
+		display: block;
+
+		.required {
+			padding-left: 2px;
+		}
+	}
+
+	.field-note {
+		color: $fieldNoteColor;
+		font: $fieldNoteFont;
+		padding: $fieldNotePadding;
+		display: block;
+	}
+
+	.error-message {
+		color: $fieldErrorColor;
+		font: $fieldErrorFont;
+		padding: $fieldErrorPadding;
+		display: block;
+	}
+
+	.field-required-mark {
+		color: var(--gr_error);
+		font-size: 0;
+		line-height: 1;
+
+		&:after {
+			font-size: 20px;
+			vertical-align: baseline;
+			content: '•';
+		}
+	}
+
+	&.field-error {
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		input[type="number"],
+		input[type="password"],
+		textarea,
+		select[multiple] {
+			color: $inputColorError;
+			background: $inputBgError;
+			border: $inputBorderError;
+			box-shadow: $inputShadowError;
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="password"] {
+		color: $inputColorDefault;
+		border: $inputBorderDefault;
+		background: $inputBgDefault;
+		box-shadow: $inputShadowDefault;
+		border-radius: $formDefaultRadius;
+
+		@extend .gr-medium-input-desktop;
+		@extend .gr-medium-input-tablet;
+		@extend .gr-medium-input-mobile;
+
+		width: 100%;
+		height: auto;
+
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		transition: $transition;
+
+		&:hover {
+			color: $inputColorHover;
+			border: $inputBorderHover;
+			background: $inputBgHover;
+			box-shadow: $inputShadowHover;
+
+			@include placeholder {
+				color: $inputPlaceholder;
+			};
+		}
+
+		&:focus {
+			color: $inputColorFocus;
+			border: $inputBorderFocus;
+			background: $inputBgFocus;
+			box-shadow: $inputShadowFocus;
+		}
+
+		@include placeholder {
+			color: $inputPlaceholder;
+			opacity: 1 !important;
+		};
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none; 
+			margin: 0; 
+		}
+	}
+
+	textarea {
+		color: $inputColorDefault;
+		border: $inputBorderDefault;
+		background: $inputBgDefault;
+		box-shadow: $inputShadowDefault;
+		border-radius: $formDefaultRadius;
+
+		@extend .gr-medium-input-desktop;
+		@extend .gr-medium-input-tablet;
+		@extend .gr-medium-input-mobile;
+
+		width: 100%;
+		min-width: 100%;
+		min-height: 100px;
+		height: auto;
+
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		transition: $transition;
+
+		&:hover {
+			color: $inputColorHover;
+			border: $inputBorderHover;
+			background: $inputBgHover;
+			box-shadow: $inputShadowHover;
+
+			@include placeholder {
+				color: $inputPlaceholder;
+			};
+		}
+
+		&:focus {
+			color: $inputColorFocus;
+			border: $inputBorderFocus;
+			background: $inputBgFocus;
+			box-shadow: $inputShadowFocus;
+		}
+
+		@include placeholder {
+			color: $inputPlaceholder;
+			opacity: 1 !important;	
+		};
+	}
+
+	select:not([multiple]) {
+		color: $selectColorDefault;
+		border: $selectBorderDefault;
+		background: $selectBgDefault;
+		box-shadow: $selectShadowDefault;
+		border-radius: $formDefaultRadius;
+
+		@extend .gr-medium-select-desktop;
+		@extend .gr-medium-select-tablet;
+		@extend .gr-medium-select-mobile;
+
+		width: 100%;
+		height: auto;
+
+		cursor: pointer;
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		transition: $transition;
+		position: relative;
+
+		&.field-select-error {
+			color: $selectColorError;
+			border: $selectBorderError;
+			background: $selectBgError;
+			box-shadow: $selectShadowError;
+		}
+
+		&::-ms-expand {
+		    display: none;
+		}
+
+		&:hover {
+			color: $selectColorHover;
+			border: $selectBorderHover;
+			background: $selectBgHover;
+			box-shadow: $selectShadowHover;
+		}
+
+		&:focus {
+			color: $selectColorFocus;
+			border: $selectBorderFocus;
+			background: $selectBgFocus;
+			box-shadow: $selectShadowFocus;
+		}
+	}
+
+	select[multiple] {
+		color: $inputColorDefault;
+		border: $inputBorderDefault;
+		background: $inputBgDefault;
+		box-shadow: $inputShadowDefault;
+		border-radius: $formDefaultRadius;
+
+		@extend .gr-medium-input-desktop;
+		@extend .gr-medium-input-tablet;
+		@extend .gr-medium-input-mobile;
+
+		width: 100%;
+		height: auto;
+
+		outline: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		transition: $transition;
+
+		&::-ms-expand {
+		    display: none;
+		}
+
+		&:hover {
+			color: $inputColorHover;
+			border: $inputBorderHover;
+			background: $inputBgHover;
+			box-shadow: $inputShadowHover;
+		}
+
+		&:focus {
+			color: $inputColorFocus;
+			border: $inputBorderFocus;
+			background: $inputBgFocus;
+			box-shadow: $inputShadowFocus;
+		}
+	}
+
+	&.type-hidden {
+		display: none;
+	}
+	
+	&.type-title {
+		h2 {
+			margin: 0;
+			font-size: 18px;
+		}
+	}
+
+	&.type-html {
+		font-size: 16px;
+	}
+
+	&.type-calendar_interval {
+		font-size: 0;
+
+		.calendar-label {
+			display: inline-block;
+			vertical-align: top;
+			width: calc(50% - 10px);
+
+			&.disabled {
+				opacity: .5;
+				pointer-events: none;
+			}
+
+			&:first-of-type {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&.type-upload .upload-button {
+		input {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 8px;
+		}
+
+		.upload-count {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	&.type-checkbox {
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+				font-size: 0;
+
+				& + li {
+					margin-top: 15px;
+				}
+
+				label {
+					cursor: pointer;
+					align-items: center;
+					display: inline-flex;
+
+					&:hover {
+						span {
+							color: $checkColorHover;
+							
+							&:before {
+								border: $checkBorderHover;
+								box-shadow: $checkShadowHover;
+								background: $checkBgHover;
+							}
+						}
+
+						input[type="checkbox"]:checked + span {
+							color: $checkColorCheckedHover;
+
+							&:before {
+								content: "\e901";
+								font-size: 10px;
+					    		font-family: 'icomoon';
+					    		text-align: center;
+								line-height: $checkSize;
+					    		color: $checkIcon;
+
+								border: $checkBorderCheckedHover;
+								box-shadow: $checkShadowCheckedHover;
+								background: $checkBgCheckedHover;
+							}
+						}
+					}
+				}
+
+				input[type="checkbox"] {
+					width: $checkSize;
+					height: $checkSize;
+					padding: 0;
+					opacity: 0;
+					margin-right: $checkMargin;
+					display: inline-block;
+					vertical-align: middle;
+					-webkit-appearance: none;
+
+					@media all and (max-width: 1260px) {
+						width: $checkSizeTablet;
+						height: $checkSizeTablet;
+						margin-right: $checkMarginTablet;
+					}
+
+					@media all and (max-width: 767px) {
+						width: $checkSizeMobile;
+						height: $checkSizeMobile;
+						margin-right: $checkMarginMobile;
+					}
+
+
+					&:checked + span {
+						color: $checkColorChecked;
+
+						&:before {
+							content: "\e901";
+							font-size: 10px;
+				    		font-family: 'icomoon';
+				    		text-align: center;
+							line-height: $checkSize;
+				    		color: $checkIcon;
+
+							border: $checkBorderChecked;
+							box-shadow: $checkShadowChecked;
+							background: $checkBgChecked;
+						}
+					}
+				}
+
+				span {
+					position: relative;
+					font: $checkFont;
+					color: $checkColor;
+				    min-height: $checkSize;
+					padding-top: $checkPaddingTop;
+					max-width: calc(100% - #{$checkSize} - #{$checkMargin});
+
+					@media all and (max-width: 1260px) {
+						min-height: $checkSizeTablet;
+						font: $checkFontTablet;
+						padding-top: $checkPaddingTopTablet;
+						max-width: calc(100% - #{$checkSizeTablet} - #{$checkMarginTablet});
+					}
+
+					@media all and (max-width: 767px) {
+						min-height: $checkSizeMobile;
+						font: $checkFontMobile;
+						padding-top: $checkPaddingTopMobile;
+						max-width: calc(100% - #{$checkSizeMobile} - #{$checkMarginMobile});
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						left: -($checkSize + $checkMargin);
+						width: $checkSize;
+						height: $checkSize;
+						content: '';
+						border: $checkBorder;
+						background: $checkBg;
+						box-shadow: $checkShadow;
+						border-radius: $checkRadius;
+						transition: background-color .2s, box-shadow .2s;
+
+						@media all and (max-width: 1260px) {
+							width: $checkSizeTablet;
+							height: $checkSizeTablet;
+							left: -($checkSizeTablet + $checkMarginTablet);
+						}
+
+						@media all and (max-width: 767px) {
+							width: $checkSizeMobile;
+							height: $checkSizeMobile;
+							left: -($checkSizeMobile + $checkMarginMobile);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.type-multi_checkbox {
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+				font-size: 0;
+
+				& + li {
+					margin-top: 15px;
+				}
+
+				label {
+					cursor: pointer;
+					align-items: center;
+					display: inline-flex;
+
+					&:hover {
+						span {
+							color: $checkColorHover;
+
+							&:before {
+								border: $checkBorderHover;
+								box-shadow: $checkShadowHover;
+								background: $checkBgHover;
+							}
+						}
+
+						input[type="checkbox"]:checked + span {
+							color: $checkColorCheckedHover;
+
+							&:before {
+								content: "\e901";
+								font-size: 10px;
+					    		font-family: 'icomoon';
+					    		text-align: center;
+								line-height: $checkSize;
+					    		color: $checkIcon;
+
+								border: $checkBorderCheckedHover;
+								box-shadow: $checkShadowCheckedHover;
+								background: $checkBgCheckedHover;
+							}
+						}
+					}
+				}
+
+				input[type="checkbox"] {
+					width: $checkSize;
+					height: $checkSize;
+					padding: 0;
+					opacity: 0;
+					margin-right: $checkMargin;
+					display: inline-block;
+					vertical-align: middle;
+					-webkit-appearance: none;
+
+					@media all and (max-width: 1260px) {
+						width: $checkSizeTablet;
+						height: $checkSizeTablet;
+						margin-right: $checkMarginTablet;
+					}
+
+					@media all and (max-width: 767px) {
+						width: $checkSizeMobile;
+						height: $checkSizeMobile;
+						margin-right: $checkMarginMobile;
+					}
+
+					&:checked + span {
+						color: $checkColorChecked;
+
+						&:before {
+							content: "\e901";
+							font-size: 10px;
+				    		font-family: 'icomoon';
+				    		text-align: center;
+							line-height: $checkSize;
+				    		color: $checkIcon;
+				    		
+							border: $checkBorderChecked;
+							box-shadow: $checkShadowChecked;
+							background: $checkBgChecked;
+						}
+					}
+				}
+
+				span {
+					position: relative;
+					font: $checkFont;
+					color: $checkColor;
+					padding-top: $checkPaddingTop;
+					min-height: $checkSize;
+					max-width: calc(100% - #{$checkSize} - #{$checkMargin});
+
+					@media all and (max-width: 1260px) {
+						min-height: $checkSizeTablet;
+						font: $checkFontTablet;
+						padding-top: $checkPaddingTopTablet;
+						max-width: calc(100% - #{$checkSizeTablet} - #{$checkMarginTablet});
+					}
+
+					@media all and (max-width: 767px) {
+						min-height: $checkSizeMobile;
+						font: $checkFontMobile;
+						padding-top: $checkPaddingTopMobile;
+						max-width: calc(100% - #{$checkSizeMobile} - #{$checkMarginMobile});
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						left: -($checkSize + $checkMargin);
+						width: $checkSize;
+						height: $checkSize;
+						content: '';
+						border: $checkBorder;
+						background: $checkBg;
+						box-shadow: $checkShadow;
+						border-radius: $checkRadius;
+						transition: background-color .2s, box-shadow .2s;
+
+						@media all and (max-width: 1260px) {
+							width: $checkSizeTablet;
+							height: $checkSizeTablet;
+							left: -($checkSizeTablet + $checkMarginTablet);
+						}
+
+						@media all and (max-width: 767px) {
+							width: $checkSizeMobile;
+							height: $checkSizeMobile;
+							left: -($checkSizeMobile + $checkMarginMobile);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.type-radio_group {
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+				font-size: 0;
+
+				& + li {
+					margin-top: 15px;
+				}
+
+				label {
+					cursor: pointer;
+					align-items: center;
+					display: inline-flex;
+
+					&:hover {
+						span {
+							color: $radioColorHover;
+
+							&:before {
+								border: $radioBorderHover;
+								box-shadow: $radioShadowHover;
+								background: $radioBgHover;
+							}
+						}
+
+						input[type="radio"]:checked + span {
+							color: $radioColorCheckedHover;
+
+							&:before {
+								border: $radioBorderCheckedHover;
+								box-shadow: $radioShadowCheckedHover;
+								background: $radioBgCheckedHover;
+							}
+						}
+					}
+				}
+
+				input[type="radio"] {
+					width: $radioSize;
+					height: $radioSize;
+					padding: 0;
+					opacity: 0;
+					margin-right: $radioMargin;
+					display: inline-block;
+					vertical-align: middle;
+					-webkit-appearance: none;
+
+					@media all and (max-width: 1260px) {
+						width: $radioSizeTablet;
+						height: $radioSizeTablet;
+						margin-right: $radioMarginTablet;
+					}
+
+					@media all and (max-width: 767px) {
+						width: $radioSizeMobile;
+						height: $radioSizeMobile;
+						margin-right: $radioMarginMobile;
+					}
+
+					&:checked + span {
+						color: $radioColorChecked;
+
+						&:before {
+							border: $radioBorderChecked;
+							box-shadow: $radioShadowChecked;
+							background: $radioBgChecked;
+						}
+					}
+				}
+
+				span {
+					position: relative;
+					font: $radioFont;
+					color: $radioColor;
+					padding-top: $radioPaddingTop;
+					max-width: calc(100% - #{$radioSize} - #{$radioMargin});
+					display: inline-block;
+					vertical-align: top;
+
+					@media all and (max-width: 1260px) {
+						padding-top: $radioPaddingTopTablet;
+						max-width: calc(100% - #{$radioSizeTablet} - #{$radioMarginTablet});
+					}
+
+					@media all and (max-width: 767px) {
+						padding-top: $radioPaddingTopMobile;
+						max-width: calc(100% - #{$radioSizeMobile} - #{$radioMarginMobile});
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						left: -($radioSize + $radioMargin);
+						width: $radioSize;
+						height: $radioSize;
+						content: '';
+						border: $radioBorder;
+						background: $radioBg;
+						box-shadow: $radioShadow;
+						border-radius: $radioRadius;
+						transition: background-color .2s, box-shadow .2s;
+
+						@media all and (max-width: 1260px) {
+							width: $radioSizeTablet;
+							height: $radioSizeTablet;
+							left: -($radioSizeTablet + $radioMarginTablet);
+						}
+
+						@media all and (max-width: 767px) {
+							width: $radioSizeMobile;
+							height: $radioSizeMobile;
+							left: -($radioSizeMobile + $radioMarginMobile);
+						}
+					}
+				}
+			}
+		}
+	}
+}

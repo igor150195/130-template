@@ -1,0 +1,357 @@
+/*Вместе дешевле*/
+#shop2-alert.promo-products-list {
+	background: var(--gr_bg);
+	padding: 46px 40px 50px; 
+	max-width: 920px;
+	min-width: 300px;
+	border-radius: var(--gr_wrap_radius);
+	
+	@media all and (max-width: 1023px) {
+		padding: 36px 30px 40px;
+	}
+	
+	@media all and (max-width: 767px) {
+		padding: 20px 16px 30px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	
+	.promo-desc {
+		font-size: 22px;
+		line-height: 1.2;
+		margin: 0 0 30px;
+		font-weight: 400;
+
+		@media all and (max-width: 767px) {
+			font-size: 18px;
+			margin: 0 0 15px;
+		}
+	}
+	
+	.product-list.list .product-item {
+		border-left: none;
+		border-right: none;
+		border-radius: 0;
+		margin-left: -40px;
+		margin-right: -40px;
+		padding-left: 40px;
+		padding-right: 40px;
+		margin-bottom: 0;;
+		
+		@media all and (max-width: 1023px) {
+			margin-left: -30px;
+			margin-right: -30px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		
+		@media all and (max-width: 767px) {
+			margin-left: -16px;
+			margin-right: -16px;
+			padding-left: 16px;
+			padding-right: 16px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid var(--on_gr_bg_border_08);
+		}
+		
+		&:first-child {
+			border-top: 1px solid var(--on_gr_bg_border_08);
+		}
+		
+		.quick-view-trigger, .product-additional__bottom {
+			display: none;
+		}
+	}
+	
+	.shop-pagelist {
+		margin-top: 30px;
+	}
+}
+
+.shop2-product-actions dl dt.promo-action {
+	vertical-align: top;
+	position: relative;
+	@extend .gr-btn-1;
+	@extend .gr-small-btn-desktop;
+	padding: 5px 10px;
+	font-size: 14px;
+	line-height: 1.2;
+	
+	@media all and (max-width: 767px) {
+		font-size: 13px;
+	}
+	
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		border-radius: var(--gr_btn_radius);
+		transition: $transition;
+		opacity: 0;
+		visibility: hidden;
+		background: var(--gr_btn_overlay_15);
+	}
+	
+	&:hover, &:active {
+		&:before {
+			z-index: 1;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.get-promo-link {
+		display: flex;
+		min-height: 20px;
+		align-items: center;
+	}
+	
+	.promo-action__name {
+		z-index: 2;
+	}
+	
+	.promo-action__text {
+		display: none;
+	}
+}
+
+.promo-header {
+	padding: 0 0 24px;
+	
+	@media all and (max-width: 767px) {
+    	padding: 0 0 20px;
+    }
+    
+	&__title {
+	    font-size: 26px;
+	    line-height: 1.1;
+	    font-family: var(--font2);
+	    font-weight: var(--font2_500);
+	    color: var(--on_gr_bg_acc_text);
+	    
+	    @media all and (max-width: 767px) {
+	    	font-size: 22px;
+	    }
+	}
+	
+	&__desc {
+		margin-top: 10px;
+		color: var(--on_gr_bg_sec_text_8);
+	    font-size: 16px;
+	    line-height: 1.4;
+	    
+	    @media all and (max-width: 767px) {
+	    	font-size: 15px;
+	    }
+	}
+	
+	&__note {
+		margin-top: 20px;
+		color: var(--on_gr_bg_acc_text);
+	    font-size: 18px;
+	    line-height: 1.4;
+	    font-family: var(--font2);
+		font-weight: var(--font2_500);
+		
+		@media all and (max-width: 767px) {
+	    	font-size: 16px;
+	    	margin-top: 15px;
+	    }
+	}
+}
+
+/*Вместе дешевле*/
+
+
+
+/*Бонусы*/
+.shop-coupon .coupon-btn, .cart-bonuses__right .bonus-apply {
+	@media all and (min-width: 1261px) {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+}
+
+.cart-page__right .shop2-info {
+	@media all and (max-width: 1023px) {
+		width: calc(50% - 10px);
+		order: 1;
+		margin-top: 0;
+	}
+	
+	@media all and (max-width: 767px) {
+		width: 100%;
+		order: -2;
+	}
+}
+
+.bonus-param {
+	padding-top: 2px;
+	font-size: 0;
+	margin-bottom: 10px;
+	
+	@media all and (max-width: 767px) {
+		margin-bottom: 6px;
+	}
+	
+	&__title {
+		position: relative;
+		font-size: 14px;
+		line-height: 1.14;
+		font-family: var(--font1);
+		color: var(--gr_error);
+		padding-left: 26px;
+		
+		i {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			font-size: 0;
+			margin-top: -10px;
+			
+			svg {
+				fill: var(--gr_error);
+				display: none;
+				
+				&.gr_small_icon {
+					display: block;
+				}
+			}
+		}
+	}	
+	
+	&__value {
+		padding-left: 3px;
+		font-size: 14px;
+		line-height: 1.14;
+		font-family: var(--font1);
+		font-weight: var(--font1_500);
+		color: var(--gr_error);
+	}
+}
+
+.cart-total__bonuses {
+	margin-top: 20px;
+	font-size: 0;
+	
+	strong {
+		position: relative;
+	    padding-left: 26px;
+	    font-size: 16px;
+		line-height: 1.1;
+		min-height: 20px;
+		font-family: var(--fon2);
+		font-weight: var(--font2_700);
+	    color: var(--on_gr_bg_acc_text);
+	    
+	    i {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 0;
+
+			svg {
+				fill: var(--on_gr_bg_icon);
+				display: none;
+				
+				&.gr_small_icon {
+					display: block;
+				}
+			}
+		}
+	}
+	
+	ins {
+		font-size: 16px;
+		line-height: 1.1;
+		padding-left: 5px;
+		color: var(--on_gr_bg_sec_text_6);
+	}
+}
+
+.cart-bonuses {
+	margin: 26px 0 0;
+	
+	& + .cart-total__btns {
+		padding-top: 24px;
+	}
+
+    &__title {
+
+		&.tpl-field.type-checkbox ul li span {
+			color: var(--on_gr_bg_acc_text);
+		}
+		
+		ul li {
+			display: inline-block;
+			vertical-align: top;
+		}
+    }
+    
+    &__container {
+    	padding: 16px 0 0;
+    	display: none;
+    	
+    	&.show_bonuses {
+    		display: block;
+    	}
+    }
+
+    &__header {
+		font-size: 16px;
+		line-height: 1.15;
+		color: var(--on_gr_bg_sec_text_6);
+		margin-bottom: 8px;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+    	margin-right: 10px;
+    	width: calc(100% - 140px - 10px);
+    	
+        .field-title {
+            display: none;
+        }
+        
+        #bonus-points {
+        	@extend .gr-small-input-mobile;	
+        	
+        	@media all and (max-width: 767px) {
+        		height: 42px;
+        	}
+        }
+    }
+
+    &__right {
+		width: 140px;
+		
+		.bonus-apply {
+			width: 100%;
+			@extend .gr-medium-btn-desktop;
+			@extend .gr-medium-btn-tablet;
+			@extend .gr-small-btn-mobile;
+			
+			@media all and (max-width: 767px) {
+				height: 42px;
+			}
+		}
+		
+		.bonus-delete {
+			display: none;
+		}
+    }
+}
+/*Бонусы*/

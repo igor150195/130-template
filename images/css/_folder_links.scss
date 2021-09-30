@@ -1,0 +1,122 @@
+.folders-submenu {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 40px 0 0;
+
+	@media all and (max-width: 1260px) {
+		padding: 30px 0 0;
+	}
+	
+	@media all and (max-width: 767px) {
+		padding: 20px 0 0;
+	}
+	
+	&.no_next_btn, &.no_prev_btn {
+		@media all and (max-width: 767px) {
+			justify-content: center;
+		}
+		
+		a {
+			@media all and (max-width: 767px) {
+				max-width: 100%;
+				margin: 0;
+			}
+		}
+	}
+
+	a {
+		max-width: calc(50% - 10px);
+		
+		@media all and (max-width: 767px) {
+			max-width: calc(50% - 4px);
+		}
+		
+		span svg {
+			@media all and (max-width: 767px) {
+				display: none;
+				width: 20px !important;
+				height: 20px !important;
+			}
+			
+			&.gr_small_icon {
+				@media all and (max-width: 767px) {
+					display: block;
+				}
+			}
+		}
+		
+		&.folders-submenu__prev {
+			margin-right: auto;
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+			@extend .gr-btn-icon-left;
+
+			@media all and (max-width: 767px) {
+				font-size: 13px;
+				line-height: 1.25;
+				padding: 10px 15px;
+				margin-right: 0;
+			}
+
+			span {
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				padding-left: 20px;
+					
+				@media all and (max-width: 767px) {
+					padding-left: 16px;
+				}
+
+				svg {
+					left: -10px;
+					
+					@media all and (max-width: 767px) {
+						left: -6px;
+					}
+				}
+			}
+		}
+
+		&.folders-submenu__next {
+			margin-left: auto;
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+			@extend .gr-btn-icon-right;
+
+			@media all and (max-width: 767px) {
+				font-size: 13px;
+				line-height: 1.25;
+				padding: 10px 15px;
+				margin-left: 0;
+			}
+
+			span {
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				padding-right: 20px;
+					
+				@media all and (max-width: 767px) {
+					padding-right: 16px;
+				}
+
+				svg {
+					right: -10px;
+					
+					@media all and (max-width: 767px) {
+						right: -6px;
+					}
+				}
+			}
+		}
+	}
+}

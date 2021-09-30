@@ -1,0 +1,100 @@
+// Флаги .product-flags
+//----------------------------------------------------------------------------//
+	$flagsFont: 						var(--font1_400) 14px/ 1.2 var(--font1);
+	$flagsColor: 						var(--gr_white);
+
+	$newFlagBg: 						var(--gr_success);
+	$newFlagColor: 						var(--on_gr_success);
+
+	$specialFlagBg: 					var(--gr_attention);
+	$specialFlagColor: 					var(--on_gr_attention);
+
+	$actionFlagColor: 					var(--on_gr_primary_text);
+	$actionFlagBg: 						var(--gr_primary);
+//----------------------------------------------------------------------------//
+
+
+
+body .product-flags {
+	font-size: 0;
+
+	&__left {
+		display: inline;
+	}
+
+	&__right {
+		display: inline;
+	}
+
+	&__item {
+		margin: 0 1px 1px 0;
+		color: $flagsColor;
+		font: $flagsFont;
+		vertical-align: top;
+		display: inline-block;
+		border-radius: var(--gr_small_radius);
+
+		&.spec_item {
+			span {
+				color: $specialFlagColor;
+				background: $specialFlagBg;
+			}
+		}
+
+		&.new_item {
+			span {
+				color: $newFlagColor;
+				background: $newFlagBg;
+			}
+		}
+		
+		&.action_item {
+			span {
+				color: $actionFlagColor;
+				background: $actionFlagBg;
+			}
+		}
+
+		span {
+			padding: 6px 12px 5px;
+			text-align: center;
+			vertical-align: top;
+			display: inline-block;
+			border-radius: var(--gr_small_radius);
+		}
+	}
+}
+
+.gr-amount-flag {
+	
+	span {
+		font-family: var(--font1);
+		font-weight: var(--font1_400);
+		vertical-align: top;
+		display: inline-block;
+		font-size: 13px;
+		line-height: 1.2;
+		padding: 5px 12px 4px;
+		color: var(--on_gr_success_4);
+		background: var(--gr_success_4);
+		border-radius: var(--gr_small_radius);
+	}
+	
+	&.has_amount {
+		
+	}
+	
+	&.pre_order {
+		span {
+			color: var(--on_gr_attention_4);
+			background: var(--gr_attention_4);
+		}
+	}
+	
+	&.no_amount {
+		span {
+			color: var(--on_gr_disable);
+			background: var(--gr_disable);
+		}
+	}
+}

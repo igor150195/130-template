@@ -1,0 +1,272 @@
+.main-blocks {
+	
+	&__inner {
+		
+	}
+	
+	&__item {
+		padding: 20px 0;
+		margin-bottom: 40px;
+		
+		@media all and (max-width: 1260px) {
+			padding: 10px 0;
+		}
+		
+		@media all and (max-width: 767px) {
+			padding: 0;
+			margin-bottom: 24px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	
+	.main-products {
+		position: relative;
+		background: url(/g/templates/shop2/2.130.2/130-8/images/gr_loader.svg) center no-repeat;
+		
+		&:before {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 100%;
+			width: 60px;
+			content: '';
+			
+			@media all and (max-width: 1260px) {
+				display: none;
+			}
+		}
+		
+		&:after {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 100%;
+			width: 60px;
+			content: '';
+			
+			@media all and (max-width: 1260px) {
+				display: none;
+			}
+		}
+		
+		&:hover {
+			.tns-controls button[data-controls="prev"],
+			.tns-controls button[data-controls="next"] {
+				transform: translate(0);
+				opacity: 1;
+			}
+		}
+		
+		&:not(.main_products_loaded) {
+			min-height: 600px;
+			
+			.tns-controls, .tns-nav {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		
+		&.main_products_loaded {
+			background: none;
+		}
+		
+		&__title {
+			color: var(--on_gr_bg_acc_text);
+			text-align: center;
+			font-size: 35px;
+			font-family: var(--font2);
+			font-weight: var(--font2_500);
+			line-height: 1.2;
+			padding: 0 0 40px;
+	
+			@media screen and (max-width: 1260px) {
+				font-size: 32px;
+				padding-bottom: 30px;
+			}
+	
+			@media screen and (max-width: 1023px) {
+				font-size: 28px;
+			}
+	
+			@media screen and (max-width: 767px) {
+				font-size: 24px;
+				line-height: 1;
+				padding: 0 0 20px;
+			}
+			
+			& + .main-products__before {
+				margin-top: -20px;
+				
+				@media all and (max-width: 1260px) {
+					margin-top: -10px;
+				}
+			}
+		}
+		
+		&__before {
+			font-size: 16px;
+			line-height: 1.6;
+			color: var(--on_gr_bg_sec_text);
+			padding-bottom: 30px;
+			
+			@media all and (max-width: 767px) {
+				padding-bottom: 20px;
+				font-size: 15px;
+			}
+			
+			p {
+				margin-top: 0;
+			}
+		}
+		
+		&__after {
+			font-size: 16px;
+			line-height: 1.6;
+			color: var(--on_gr_bg_sec_text);
+			padding-top: 30px;
+			
+			@media all and (max-width: 767px) {
+				padding-top: 20px;
+				font-size: 15px;
+			}
+			
+			p {
+				margin-top: 0;
+			}
+		}
+		
+		.product-list-titles {
+			display: none !important;
+		}
+		
+		.product-list.thumbs {
+			margin-top: 0;
+			
+			.gr-product-options {
+				display: none;
+			}
+		}
+		
+		.tns-ovh {
+			padding: 0 0 0 1px;
+			
+			@media all and (max-width: 767px) {
+				padding: 0 6px;
+				margin: 0 -6px;
+			}
+		}
+		
+		.tns-outer {
+			position: relative;
+		}
+		
+		.tns-controls {
+			position: absolute;
+			top: 50%;
+			left: -20px;
+			right: -20px;
+			z-index: 2;
+			margin-top: -20px;
+			pointer-events: none;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+	
+			button {
+				opacity: 0;
+				pointer-events: auto;
+	
+				@media all and (max-width: 1260px) {
+					pointer-events: auto;
+					opacity: 1;
+				}
+	
+				&[data-controls="prev"] {
+					transform: translateX(-50px);
+	
+					@media all and (max-width: 1420px) {
+						transform: translateX(-30px);
+					}
+	
+					@media all and (max-width: 1260px) {
+						transform: translate(0);
+					}
+				}
+	
+				&[data-controls="next"] {
+					transform: translateX(50px);
+	
+					@media all and (max-width: 1420px) {
+						transform: translateX(30px);
+					}
+	
+					@media all and (max-width: 1260px) {
+						transform: translate(0);
+					}
+				}
+			}
+			
+			svg {
+				display: none;
+	
+				&.gr_small_icon {
+					display: block;
+				}
+			}
+		}
+	}
+	
+	.main-text {
+		
+		&__title {
+			color: var(--on_gr_bg_acc_text);
+			text-align: center;
+			font-size: 35px;
+			font-family: var(--font2);
+			font-weight: var(--font2_500);
+			line-height: 1.2;
+			padding: 0 0 40px;
+	
+			@media screen and (max-width: 1260px) {
+				font-size: 32px;
+				padding-bottom: 30px;
+			}
+	
+			@media screen and (max-width: 1023px) {
+				font-size: 28px;
+			}
+	
+			@media screen and (max-width: 767px) {
+				font-size: 24px;
+				line-height: 1;
+				padding: 0 0 18px;
+			}
+		}
+		
+		&__body {
+			font-size: 16px;
+			line-height: 1.6;
+			color: var(--on_gr_bg_sec_text);
+			
+			@media all and (max-width: 767px) {
+				font-size: 15px;
+			}
+			
+			p {
+				margin-top: 0;
+			}
+		}
+	}
+
+
+	.tns-nav {
+		margin: 30px 0 0;
+
+		@media all and (max-width: 767px) {
+			margin: 20px 0 0;
+		}
+	}
+}

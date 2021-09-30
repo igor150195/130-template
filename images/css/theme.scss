@@ -1,0 +1,89 @@
+@charset "utf-8";
+// Plugins
+@import "css/_site_plugins.scss";
+
+@import "global:/s3/makeup/sass/defaults/classes.scss";
+@import "css/_site_functions.scss"; 
+@import "css/_site_mixins.scss";
+@import "global:/s3/makeup/sass/defaults/font-family.scss";
+
+// Main frame
+//----------------------------------------------------------------------------//
+	$siteWidth: 1300px;									/* Ширина */
+	$transition: all .18s linear;						/* Анимация */
+//----------------------------------------------------------------------------//
+
+
+// Table-style's
+//----------------------------------------------------------------------------//
+	$tableBorder: 1px solid var(--tableBorder);			/* Цвет границы */
+	$tableThBackground: var(--tableThBackground);		/* Фон заголовка */
+	$tableThColor: var(--tableThColor);					/* Цвет заголовка */
+	$tablePadding: .5em;					  			/* Отступы в ячейке */
+//----------------------------------------------------------------------------//
+
+@import "css/_site_defaults.scss"; /* Дефолтные стили для html документа */
+
+// Design
+@import "css/_site_buttons_styles.scss"; /* Стили кнопок */
+@import "css/_site_form_styles.scss"; /* Стили форм */
+
+// Shop
+@import "css/_product_settings.scss"; /* Стили товара */
+@import "css/_views.scss"; /* Вид отображения товаров */
+@import "css/_filter.scss"; /* Фильтр */
+@import "css/_sorting.scss"; /* Сортировка */
+@import "css/_pagelist.scss"; /* Пагинация */
+@import "css/_login_form.scss"; /* Авторизация */
+@import "css/_search_form.scss"; /* Поиск */
+@import "css/_shop_defaults.scss"; /* .shop2-panel, .shop2-warning, #shop2-alert */
+
+@import "css/_amount.scss"; /* Количество */
+@import "css/_params.scss"; /* Параметры в табах */
+@import "css/_options.scss"; /* Параметры */
+@import "css/_cart_params.scss"; /* Параметры в корзине */
+@import "css/_ratings.scss"; /* Рейтинг */
+@import "css/_gifts.scss"; /* Подарок и скидка */
+@import "css/_flags.scss"; /* Флаги */
+@import "css/_tooltips.scss"; /* Всплывающие подсказки */
+
+@import "css/_card_slider.scss"; /* Слайдер с картинками товара */
+@import "css/_collections.scss"; /* Коллекции */
+@import "css/_collections_2.scss"; /* Коллекции */
+@import "css/_collections_3.scss"; /* Коллекции */
+@import "css/_collections_4.scss"; /* Коллекции */
+@import "css/_collections_5.scss"; /* Коллекции */
+@import "css/_comments.scss"; /* Отзывы */
+@import "css/_tabs.scss"; /* Табы */
+@import "css/_delivery.scss"; /* Доставка */
+@import "css/_cart.scss"; /* Корзина */
+@import "css/_folder_links.scss"; /* Перелинковка категорий */
+@import "css/_thumbs_2.scss"; /* Витрина */
+@import "css/_thumbs_3.scss"; /* Витрина */
+@import "css/_thumbs_4.scss"; /* Витрина */
+@import "css/_thumbs_5.scss"; /* Витрина */
+@import "css/_simple.scss"; /* Простой */
+@import "css/_pricelist.scss"; /* Прайс */
+@import "css/_product.scss"; /* Карточка */
+@import "css/_card_blocks.scss"; /* Блоки карточки */
+@import "css/_main_blocks.scss"; /* Блоки на главной */
+@import "css/_vendors.scss"; /* Производители */
+@import "css/_compare.scss"; /* Стили сравнения */
+@import "css/_favorite.scss"; /* Избранное */
+// Shop
+
+
+// Site
+@import "css/_styles.scss";
+
+@import "css/_site_header.scss"; /* Шапка */
+@import "css/_site_inner_folders.scss"; /* Подкатегории */
+@import "css/_site_footer.scss"; /* Футер */
+
+@import "css/_site_cart_preview_popup.scss"; /* Всплывающая корзина */
+@import "css/_site_quick_view_popup.scss"; /* Быстрый просмотр товара */
+@import "css/_site_top_timer.scss"; /* Таймер в шапке */
+@import "css/_site_special_timer_popup.scss"; /* Форма «Специальное предложение» */
+@import "css/_site_smart_search.scss"; /* Умный поиск */
+@import "css/_site_recent_block.scss"; /* Недавно просмотренные товары */
+@import "css/_site_product_preview_popup.scss"; /* Диалог «Продолжить покупки» */

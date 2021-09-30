@@ -1,0 +1,1394 @@
+// Кнопки
+//----------------------------------------------------------------------------//
+
+	// Font-famly кнопок
+	$btnsFontFamily:              		var(--font1);     
+	//---------------------------------------------------//
+
+	// Кнопка 1
+	//---------------------------------------------------//
+		// Font weight 
+		$btn1Weight: 						var(--font1_700);
+
+		// Text color
+		$btn1ColorDefault:                  var(--gr_btn_1_text);             
+		$btn1ColorHover:                    var(--gr_btn_1_text_h);             
+		$btn1ColorActive:                   var(--gr_btn_1_text_a);
+
+		// Background 
+		$btn1BackgroundDefault:             var(--gr_primary);             
+		$btn1BackgroundHover:               var(--gr_primary);             
+		$btn1BackgroundActive:              var(--gr_primary);
+
+		// Box-shadow
+		$btn1ShadowDefault:                 none;             
+		$btn1ShadowHover:                   none;             
+		$btn1ShadowActive:                  none;
+
+		// Border 
+		$btn1BorderDefault:                 none;             
+		$btn1BorderHover:                   none;             
+		$btn1BorderActive:                  none;
+	//---------------------------------------------------//
+
+
+	// Кнопка 2
+	//---------------------------------------------------//
+		// Font weight
+		$btn2Weight: 						var(--font1_700);
+
+		// Text color
+		$btn2ColorDefault:                  var(--gr_btn_2_text);             
+		$btn2ColorHover:                    var(--gr_btn_2_text_h);             
+		$btn2ColorActive:                   var(--gr_btn_2_text_a);
+
+		// Background 
+		$btn2BackgroundDefault:             var(--gr_accent);             
+		$btn2BackgroundHover:               var(--gr_accent);             
+		$btn2BackgroundActive:              var(--gr_accent);
+
+		// Box-shadow
+		$btn2ShadowDefault:                 none;             
+		$btn2ShadowHover:                   none;             
+		$btn2ShadowActive:                  none;
+
+		// Border 
+		$btn2BorderDefault:                 none;             
+		$btn2BorderHover:                   none;             
+		$btn2BorderActive:                  none;
+	//---------------------------------------------------//
+
+
+	// Кнопка 3
+	//---------------------------------------------------//
+		// Font weight
+		$btn3Weight: 						var(--font1_700);
+
+		// Text color
+		$btn3ColorDefault:                  var(--gr_btn_3_text);             
+		$btn3ColorHover:                    var(--gr_btn_3_text_h);             
+		$btn3ColorActive:                   var(--gr_btn_3_text_a);
+
+		// Background 
+		$btn3BackgroundDefault:             none;             
+		$btn3BackgroundHover:               var(--gr_primary_1);             
+		$btn3BackgroundActive:              var(--gr_primary_2);
+
+		// Box-shadow
+		$btn3ShadowDefault:                 inset 0 0 0 1px var(--gr_primary_4);             
+		$btn3ShadowHover:                   inset 0 0 0 1px var(--gr_primary_4);             
+		$btn3ShadowActive:                  inset 0 0 0 1px var(--gr_primary_4);
+
+		// Border 
+		$btn3BorderDefault:                 none;             
+		$btn3BorderHover:                   none;             
+		$btn3BorderActive:                  none;
+	//---------------------------------------------------//
+
+	// Кнопка c иконкой 1
+	//---------------------------------------------------//
+		// Background 
+		$icon1BackgroundDefault:             var(--gr_icon_btn_1_bg);             
+		$icon1BackgroundHover:               var(--gr_icon_btn_1_bg_h);             
+		$icon1BackgroundActive:              var(--gr_icon_btn_1_bg_a);
+
+		// Box-shadow
+		$icon1ShadowDefault:                 0 0 0 1px var(--gr_icon_btn_1_border);             
+		$icon1ShadowHover:                   0 0 0 1px var(--gr_icon_btn_1_border_h);             
+		$icon1ShadowActive:                  0 0 0 1px var(--gr_icon_btn_1_border_a);
+
+		// Border 
+		$icon1BorderDefault:                 none;             
+		$icon1BorderHover:                   none;             
+		$icon1BorderActive:                  none;
+	//---------------------------------------------------//
+
+	// Кнопка c иконкой 2
+	//---------------------------------------------------//
+		// Background 
+		$icon2BackgroundDefault:             var(--gr_icon_btn_2_bg);             
+		$icon2BackgroundHover:               var(--gr_icon_btn_2_bg_h);             
+		$icon2BackgroundActive:              var(--gr_icon_btn_2_bg_a);
+
+		// Box-shadow
+		$icon2ShadowDefault:                 none;             
+		$icon2ShadowHover:                   none;             
+		$icon2ShadowActive:                  none;
+
+		// Border 
+		$icon2BorderDefault:                 none;             
+		$icon2BorderHover:                   none;             
+		$icon2BorderActive:                  none;
+	//---------------------------------------------------//
+
+	// Кнопка c иконкой 3
+	//---------------------------------------------------//
+		// Background 
+		$icon3BackgroundDefault:             var(--gr_icon_btn_3_bg);             
+		$icon3BackgroundHover:               var(--gr_icon_btn_3_bg_h);             
+		$icon3BackgroundActive:              var(--gr_icon_btn_3_bg_a);
+
+		// Box-shadow
+		$icon3ShadowDefault:                 none;             
+		$icon3ShadowHover:                   none;             
+		$icon3ShadowActive:                  none;
+
+		// Border 
+		$icon3BorderDefault:                 none;             
+		$icon3BorderHover:                   none;             
+		$icon3BorderActive:                  none;
+	//---------------------------------------------------//
+
+
+	// Кнопка купить
+	//---------------------------------------------------//
+		// Font 
+		$buyFontFamily:              		var(--font1); 
+		$buyWeight: 						var(--font1_700);
+
+
+		// Text color
+		$buyColorDefault:                  var(--gr_btn_2_text);             
+		$buyColorHover:                    var(--gr_btn_2_text_h);             
+		$buyColorActive:                   var(--gr_btn_2_text_a);
+
+		// Background 
+		$buyBackgroundDefault:             var(--gr_accent);             
+		$buyBackgroundHover:               var(--gr_accent);             
+		$buyBackgroundActive:              var(--gr_accent);
+
+		// Box-shadow
+		$buyShadowDefault:                 none;             
+		$buyShadowHover:                   none;             
+		$buyShadowActive:                  none;
+
+		// Border 
+		$buyBorderDefault:                 none;             
+		$buyBorderHover:                   none;             
+		$buyBorderActive:                  none;
+	//---------------------------------------------------//
+//----------------------------------------------------------------------------//
+
+
+.gr-btn-style {
+	position: relative;
+	z-index: 1;
+
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	
+	height: auto;
+	min-height: auto;
+
+	padding: 0;
+	
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-clip: border-box;
+	transition: $transition;
+	border-radius: var(--gr_btn_radius);
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		border-radius: var(--gr_btn_radius);
+		transition: $transition;
+		opacity: 0;
+		visibility: hidden;
+		background: var(--gr_btn_overlay_15);
+	}
+	
+	&:hover {
+		&:before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&:active {
+		&:before {
+			background: var(--gr_btn_overlay_a_05);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&:active {
+		transition: all .05s linear;
+
+		&:before {
+			transition: all .05s linear;
+		}
+	}
+}
+
+/*----Text buttons----*/
+	.gr-large-btn-desktop {
+		font-size: 16px;
+		line-height: 1.125;
+		padding: 19px 30px;
+	}
+	.gr-large-btn-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 16px;
+			line-height: 1.125;
+			padding: 19px 30px;
+		}
+	}
+	.gr-large-btn-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 1.125;
+			padding: 16px 24px;
+		}
+	}
+
+
+	.gr-medium-btn-desktop {
+		font-size: 16px;
+		line-height: 1.125;
+		padding: 15px 30px;
+	}
+	.gr-medium-btn-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 16px;
+			line-height: 1.125;
+			padding: 15px 30px;
+		}
+	}
+	.gr-medium-btn-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 16px;
+			line-height: 1.125;
+			padding: 12px 20px;
+		}
+	}
+
+
+	.gr-small-btn-desktop {
+		font-size: 15px;
+		line-height: 1.2;
+		padding: 11px 20px;
+	}
+	.gr-small-btn-tablet {
+		@media all and (max-width: 1260px) {
+			font-size: 15px;
+			line-height: 1.2;
+			padding: 11px 20px;
+		}
+	}
+	.gr-small-btn-mobile {
+		@media all and (max-width: 767px) {
+			font-size: 14px;
+			line-height: 1.2;	
+			padding: 11px 16px;
+		}
+	}
+/*----Text buttons----*/
+
+/*----Icon buttons----*/
+	.gr-large-icon-btn-desktop {
+		width: 60px;
+		height: 60px;
+		min-height: 60px;
+	}
+	.gr-large-icon-btn-tablet {
+		@media all and (max-width: 1260px) {
+			width: 56px;
+			height: 56px;
+			min-height: 56px;
+		}
+	}
+	.gr-large-icon-btn-mobile {
+		@media all and (max-width: 767px) {
+			width: 52px;
+			height: 52px;
+			min-height: 52px;
+		}
+	}
+
+
+	.gr-medium-icon-btn-desktop {
+		width: 50px;
+		height: 50px;
+		min-height: 50px;
+	}
+	.gr-medium-icon-btn-tablet {
+		@media all and (max-width: 1260px) {
+			width: 48px;
+			height: 48px;
+			min-height: 48px;
+		}
+	}
+	.gr-medium-icon-btn-mobile {
+		@media all and (max-width: 767px) {
+			width: 46px;
+			height: 46px;
+			min-height: 46px;
+		}
+	}
+
+
+	.gr-small-icon-btn-desktop {
+		width: 40px;
+		height: 40px;
+		min-height: 40px;
+	}
+	.gr-small-icon-btn-tablet {
+		@media all and (max-width: 1260px) {
+			width: 36px;
+			height: 36px;
+			min-height: 36px;
+		}
+	}
+	.gr-small-icon-btn-mobile {
+		@media all and (max-width: 767px) {
+			width: 30px;
+			height: 30px;
+			min-height: 30px;
+		}
+	}
+/*----Icon buttons----*/
+
+.gr-btn-icon-left {
+	span {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+		padding-left: 40px;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			transform: translateY(-50%) rotate(0.001deg);
+			transition: $transition;
+		}
+	}
+}
+
+.gr-btn-icon-left-2 {
+	span {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+		padding-left: 36px;
+
+		i {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			transform: translateY(-50%) rotate(0.001deg);
+			transition: $transition;
+		}
+	}
+}
+
+.gr-btn-icon-right {
+	span {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+		padding-right: 40px;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			transform: translateY(-50%) rotate(0.001deg);
+			transition: $transition;
+		}
+	}
+}
+
+.gr-btn-icon-right-2 {
+	span {
+		position: relative;
+		vertical-align: top;
+		display: inline-block;
+		padding-right: 36px;
+
+		i {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			transform: translateY(-50%) rotate(0.001deg);
+			transition: $transition;
+		}
+	}
+}
+
+.gr-btn-1,
+.gr-btn-2,
+.gr-btn-3,
+.gr-btn-4,
+.gr-icon-btn-1,
+.gr-icon-btn-2,
+.gr-icon-btn-3,
+.shop-product-btn,
+button.shop2-btn,
+input[type="button"].shop2-btn,
+input[type="submit"].shop2-btn,
+a.shop2-btn,
+.shop2-btn,
+.tpl-button,
+a.tpl-button,
+.tpl-field button,
+.tpl-field input[type="button"],
+.tpl-field input[type="file"],
+.tpl-field input[type="submit"],
+.gr-field-style button,
+.gr-field-style input[type="button"],
+.gr-field-style input[type="file"],
+.gr-field-style input[type="submit"],
+.tns-controls button,
+.tns-nav button {
+	@extend .gr-btn-style;
+}
+
+
+
+.shop-product-btn {
+	font-weight: $buyWeight;
+	font-family: $buyFontFamily;
+
+	@extend .gr-medium-btn-desktop;
+	@extend .gr-medium-btn-tablet;
+	@extend .gr-medium-btn-mobile;
+
+	color: $buyColorDefault;
+	border: $buyBorderDefault;
+	background: $buyBackgroundDefault;
+	box-shadow: $buyShadowDefault;
+
+	&.type-3 {
+		@extend .gr-large-btn-desktop;
+	}
+	&.type-2 {
+		@extend .gr-medium-btn-desktop;
+	}
+	&.type-1 {
+		@extend .gr-small-btn-desktop;
+	}
+
+	&:hover {
+		color: $buyColorHover;
+		border: $buyBorderHover;
+		box-shadow: $buyShadowHover;
+		background: $buyBackgroundHover;
+	}
+
+	&:active {
+		color: $buyColorActive;
+		border: $buyBorderActive;
+		box-shadow: $buyShadowActive;
+		background: $buyBackgroundActive;
+	}
+
+	span {
+		position: relative;
+		padding-right: 30px;
+
+		svg {
+			position: absolute;
+			content: '';
+			right: 0;
+			top: 50%;
+			width: 30px;
+			height: 30px;
+			transform: translateY(-50%);
+			transition: $transition;
+		}
+	}
+
+	&.type-1, &.type-2 {
+		
+	}
+
+	&.type-3 {
+		
+	}
+
+	&.buy {
+		span {
+			svg {
+				right: -5px;
+				fill: var(--gr_btn_2_icon);
+			}
+		}
+
+		&:hover {
+			span {
+				svg {
+					fill: var(--gr_btn_2_icon_h);
+				}
+			}
+		}
+
+		&:active {
+			span {
+				svg {
+					fill: var(--gr_btn_2_icon_a);
+				}
+			}
+		}
+	}
+
+	&.onrequest {
+		span {
+			svg {
+				right: -5px;
+				fill: var(--gr_btn_2_icon);
+			}
+		}
+
+		&:hover {
+			span {
+				svg {
+					fill: var(--gr_btn_2_icon_h);
+				}
+			}
+		}
+
+		&:active {
+			span {
+				svg {
+					fill: var(--gr_btn_2_icon_a);
+				}
+			}
+		}
+	}
+
+	&.notavailable {
+		color: var(--on_gr_disable);
+		border: none;
+		box-shadow: none;
+		background: var(--gr_disable);
+		pointer-events: none;
+
+		span {
+			svg {
+				right: -5px;
+				fill: var(--on_gr_disable);
+			}
+		}
+	}
+}
+
+
+body .product-compare {
+	position: relative;
+	padding: 0;
+	border: none;
+	font-size: 14px;
+	line-height: 1;
+
+	&.product-compare-added {
+		font-size: 0;
+
+		.gr-compare-checkbox {
+			position: relative;
+			height: 30px;
+			width: 30px;
+			margin-right: 2px;
+			display: inline-block;
+			vertical-align: middle;
+
+			input {
+				position: absolute;
+				width: 0;
+				height: 0;
+				padding: 0;
+				overflow: hidden;
+				visibility: hidden;
+				padding: 0;
+				border: none;
+				background: none;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+			}
+			
+			.gr-svg-icon {
+				position: absolute;
+				top: 50%;
+				left: -3px;
+				font-size: 0;
+				margin-top: -15px;
+				fill: var(--on_gr_bg_icon);
+				cursor: pointer;
+			}
+		}
+
+		.link-reset {
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: -3px;
+			padding-bottom: 2px;
+			text-decoration: none;
+			color: var(--on_gr_bg_acc_text);
+			transition: $transition;
+			border-bottom: 1px solid var(--on_gr_bg_acc_text_4);
+			font: var(--font1_400) 14px/ 1.14 var(--font1);
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
+
+			span {
+				font-weight: var(--font1_500);
+			}
+		}
+	}
+
+	.gr-compare-plus {
+		position: relative;
+		cursor: pointer;
+		min-height: 30px;
+		padding: 0 0 0 32px;
+		align-items: center;
+		display: inline-flex;
+		color: var(--on_gr_bg_acc_text_7);
+		font: var(--font1_400) 14px/ 1.14 var(--font1);
+
+		&:hover {
+			.gr-svg-icon {
+				opacity: 1;
+			}
+		}
+		
+		.gr-svg-icon {
+			position: absolute;
+			top: 50%;
+			left: -3px;
+			font-size: 0;
+			margin-top: -15px;
+			opacity: .3;
+			transition: $transition;;
+			fill: var(--on_gr_bg_icon);
+			cursor: pointer;
+		}
+
+		input {
+			position: absolute;
+			width: 0;
+			height: 0;
+			padding: 0;
+			overflow: hidden;
+			visibility: hidden;
+			padding: 0;
+			border: none;
+			background: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+		}
+	}
+}
+
+.gr-btn-1 {
+	font-weight: $btn1Weight;
+	font-family: $btnsFontFamily;
+
+	@extend .gr-medium-btn-desktop;
+
+	color: $btn1ColorDefault;
+	border: $btn1BorderDefault;
+	background: $btn1BackgroundDefault;
+	box-shadow: $btn1ShadowDefault;
+
+	svg {
+		fill: $btn1ColorDefault;
+	}
+
+	&:hover {
+		color: $btn1ColorHover;
+		border: $btn1BorderHover;
+		box-shadow: $btn1ShadowHover;
+		background: $btn1BackgroundHover;
+
+		svg {
+			fill: $btn1ColorHover;
+		}
+	}
+
+	&:active {
+		color: $btn1ColorActive;
+		border: $btn1BorderActive;
+		box-shadow: $btn1ShadowActive;
+		background: $btn1BackgroundActive;
+
+		svg {
+			fill: $btn1ColorActive;
+		}
+	}
+}
+
+.gr-btn-1-style {
+	color: $btn1ColorDefault;
+	border: $btn1BorderDefault;
+	background: $btn1BackgroundDefault;
+	box-shadow: $btn1ShadowDefault;
+
+	svg {
+		fill: $btn1ColorDefault;
+	}
+
+	&:hover {
+		color: $btn1ColorHover;
+		border: $btn1BorderHover;
+		box-shadow: $btn1ShadowHover;
+		background: $btn1BackgroundHover;
+
+		svg {
+			fill: $btn1ColorHover;
+		}
+	}
+
+	&:active {
+		color: $btn1ColorActive;
+		border: $btn1BorderActive;
+		box-shadow: $btn1ShadowActive;
+		background: $btn1BackgroundActive;
+
+		svg {
+			fill: $btn1ColorActive;
+		}
+	}
+}
+
+
+.gr-btn-2 {
+	font-weight: $btn2Weight;
+	font-family: $btnsFontFamily;
+
+	@extend .gr-medium-btn-desktop;
+
+	color: $btn2ColorDefault;
+	border: $btn2BorderDefault;
+	background: $btn2BackgroundDefault;
+	box-shadow: $btn2ShadowDefault;
+
+	svg {
+		fill: $btn2ColorDefault;
+	}
+
+	&:hover {
+		color: $btn2ColorHover;
+		border: $btn2BorderHover;
+		box-shadow: $btn2ShadowHover;
+		background: $btn2BackgroundHover;
+
+		svg {
+			fill: $btn2ColorHover;
+		}
+	}
+
+	&:active {
+		color: $btn2ColorActive;
+		border: $btn2BorderActive;
+		box-shadow: $btn2ShadowActive;
+		background: $btn2BackgroundActive;
+
+		svg {
+			fill: $btn2ColorActive;
+		}
+	}
+}
+
+.gr-btn-2-style {
+	color: $btn2ColorDefault;
+	border: $btn2BorderDefault;
+	background: $btn2BackgroundDefault;
+	box-shadow: $btn2ShadowDefault;
+
+	svg {
+		fill: $btn2ColorDefault;
+	}
+
+	&:hover {
+		color: $btn2ColorHover;
+		border: $btn2BorderHover;
+		box-shadow: $btn2ShadowHover;
+		background: $btn2BackgroundHover;
+
+		svg {
+			fill: $btn2ColorHover;
+		}
+	}
+
+	&:active {
+		color: $btn2ColorActive;
+		border: $btn2BorderActive;
+		box-shadow: $btn2ShadowActive;
+		background: $btn2BackgroundActive;
+
+		svg {
+			fill: $btn2ColorActive;
+		}
+	}
+}
+
+
+.gr-btn-3 {
+	font-weight: $btn3Weight;
+	font-family: $btnsFontFamily;
+
+	@extend .gr-medium-btn-desktop;
+
+	color: $btn3ColorDefault;
+	border: $btn3BorderDefault;
+	background: $btn3BackgroundDefault;
+	box-shadow: $btn3ShadowDefault;
+
+	svg {
+		fill: $btn3ColorDefault;
+	}
+
+	&:hover {
+		color: $btn3ColorHover;
+		border: $btn3BorderHover;
+		box-shadow: $btn3ShadowHover;
+		background: $btn3BackgroundHover;
+		
+		&:before {
+			display: none;
+		}
+
+		svg {
+			fill: $btn3ColorHover;
+		}
+	}
+
+	&:active {
+		color: $btn3ColorActive;
+		border: $btn3BorderActive;
+		box-shadow: $btn3ShadowActive;
+		background: $btn3BackgroundActive;
+
+		&:before {
+			display: none;
+		}
+
+		svg {
+			fill: $btn3ColorActive;
+		}
+	}
+}
+
+.gr-btn-3-style {
+	color: $btn3ColorDefault;
+	border: $btn3BorderDefault;
+	background: $btn3BackgroundDefault;
+	box-shadow: $btn3ShadowDefault;
+
+	svg {
+		fill: $btn3ColorDefault;
+	}
+
+	&:hover {
+		color: $btn3ColorHover;
+		border: $btn3BorderHover;
+		box-shadow: $btn3ShadowHover;
+		background: $btn3BackgroundHover;
+
+		svg {
+			fill: $btn3ColorHover;
+		}
+	}
+
+	&:active {
+		color: $btn3ColorActive;
+		border: $btn3BorderActive;
+		box-shadow: $btn3ShadowActive;
+		background: $btn3BackgroundActive;
+
+		&:before {
+			display: none;
+		}
+
+		svg {
+			fill: $btn3ColorActive;
+		}
+	}
+}
+
+
+.gr-icon-btn-1 {
+	@extend .gr-medium-icon-btn-desktop;
+	@extend .gr-medium-icon-btn-tablet;
+	@extend .gr-medium-icon-btn-mobile;
+
+	border-radius: var(--gr_icon_btn_radius);
+	
+	font-size: 0;
+
+	padding: 0;
+	opacity: 1;
+	visibility: visible;
+	transition: $transition;
+	border: $icon1BorderDefault;
+	background: $icon1BackgroundDefault;
+	box-shadow: $icon1ShadowDefault;
+
+	&:before {
+		border-radius: var(--gr_icon_btn_radius);
+		display: none;
+	}
+
+	&:hover {
+		border: $icon1BorderHover;
+		box-shadow: $icon1ShadowHover;
+		background: $icon1BackgroundHover;
+
+		svg {
+			fill: var(--gr_icon_btn_1_icon_h);
+		}
+	}
+
+	&:active {
+		border: $icon1BorderActive;
+		box-shadow: $icon1ShadowActive;
+		background: $icon1BackgroundActive;
+
+		svg {
+			fill: var(--gr_icon_btn_1_icon_a);
+		}
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+		fill: var(--gr_icon_btn_1_icon);
+		transition: $transition;
+	}
+}
+
+.gr-icon-btn-1-style {
+	border-radius: var(--gr_icon_btn_radius);
+	transition: $transition;
+	border: $icon1BorderDefault;
+	background: $icon1BackgroundDefault;
+	box-shadow: $icon1ShadowDefault;
+
+	&:before {
+		border-radius: var(--gr_icon_btn_radius);
+		display: none;
+	}
+
+	&:hover {
+		border: $icon1BorderHover;
+		box-shadow: $icon1ShadowHover;
+		background: $icon1BackgroundHover;
+
+		svg {
+			fill: var(--gr_icon_btn_1_icon_h);
+		}
+	}
+
+	&:active {
+		border: $icon1BorderActive;
+		box-shadow: $icon1ShadowActive;
+		background: $icon1BackgroundActive;
+
+		svg {
+			fill: var(--gr_icon_btn_1_icon_a);
+		}
+	}
+
+	svg {
+		fill: var(--gr_icon_btn_1_icon);
+		transition: $transition;
+	}
+}
+
+.gr-icon-btn-2 {
+	@extend .gr-medium-icon-btn-desktop;
+	@extend .gr-medium-icon-btn-tablet;
+	@extend .gr-medium-icon-btn-mobile;
+
+	border-radius: var(--gr_icon_btn_radius);
+	
+	font-size: 0;
+
+	padding: 0;
+	opacity: 1;
+	visibility: visible;
+	transition: $transition;
+	border: $icon2BorderDefault;
+	background: $icon2BackgroundDefault;
+	box-shadow: $icon2ShadowDefault;
+
+	&:before {
+		border-radius: var(--gr_icon_btn_radius);
+		display: none;
+	}
+
+	&:hover {
+		border: $icon2BorderHover;
+		box-shadow: $icon2ShadowHover;
+		background: $icon2BackgroundHover;
+
+		svg {
+			fill: var(--gr_icon_btn_2_icon_h);
+		}
+	}
+
+	&:active {
+		border: $icon2BorderActive;
+		box-shadow: $icon2ShadowActive;
+		background: $icon2BackgroundActive;
+
+		svg {
+			fill: var(--gr_icon_btn_2_icon_a);
+		}
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+		fill: var(--gr_icon_btn_2_icon);
+		transition: $transition;
+	}
+}
+
+.gr-icon-btn-2-style {
+	border-radius: var(--gr_icon_btn_radius);
+	transition: $transition;
+	border: $icon2BorderDefault;
+	background: $icon2BackgroundDefault;
+	box-shadow: $icon2ShadowDefault;
+
+	&:before {
+		border-radius: var(--gr_icon_btn_radius);
+		display: none;
+	}
+
+	&:hover {
+		border: $icon2BorderHover;
+		box-shadow: $icon2ShadowHover;
+		background: $icon2BackgroundHover;
+
+		svg {
+			fill: var(--gr_icon_btn_2_icon_h);
+		}
+	}
+
+	&:active {
+		border: $icon2BorderActive;
+		box-shadow: $icon2ShadowActive;
+		background: $icon2BackgroundActive;
+
+		svg {
+			fill: var(--gr_icon_btn_2_icon_a);
+		}
+	}
+
+	svg {
+		fill: var(--gr_icon_btn_2_icon);
+		transition: $transition;
+	}
+}
+
+
+.gr-icon-btn-3 {
+	@extend .gr-medium-icon-btn-desktop;
+	@extend .gr-medium-icon-btn-tablet;
+	@extend .gr-medium-icon-btn-mobile;
+
+	border-radius: var(--gr_icon_btn_radius);
+	
+	font-size: 0;
+
+	padding: 0;
+	opacity: 1;
+	visibility: visible;
+	transition: $transition;
+	border: $icon3BorderDefault;
+	background: $icon3BackgroundDefault;
+	box-shadow: $icon3ShadowDefault;
+
+	&:before {
+		border-radius: var(--gr_icon_btn_radius);
+		display: none;
+	}
+
+	&:hover {
+		border: $icon3BorderHover;
+		box-shadow: $icon3ShadowHover;
+		background: $icon3BackgroundHover;
+
+		svg {
+			fill: var(--gr_icon_btn_3_icon_h);
+		}
+	}
+
+	&:active {
+		border: $icon3BorderActive;
+		box-shadow: $icon3ShadowActive;
+		background: $icon3BackgroundActive;
+
+		svg {
+			fill: var(--gr_icon_btn_3_icon_a);
+		}
+	}
+
+	svg {
+		width: 30px;
+		height: 30px;
+		fill: var(--gr_icon_btn_3_icon);
+		transition: $transition;
+	}
+}
+
+.gr-icon-btn-3-style {
+	border-radius: var(--gr_icon_btn_radius);
+	transition: $transition;
+	border: $icon3BorderDefault;
+	background: $icon3BackgroundDefault;
+	box-shadow: $icon3ShadowDefault;
+
+	&:before {
+		border-radius: var(--gr_icon_btn_radius);
+		display: none;
+	}
+
+	&:hover {
+		border: $icon3BorderHover;
+		box-shadow: $icon3ShadowHover;
+		background: $icon3BackgroundHover;
+
+		svg {
+			fill: var(--gr_icon_btn_3_icon_h);
+		}
+	}
+
+	&:active {
+		border: $icon3BorderActive;
+		box-shadow: $icon3ShadowActive;
+		background: $icon3BackgroundActive;
+
+		svg {
+			fill: var(--gr_icon_btn_3_icon_a);
+		}
+	}
+
+	svg {
+		fill: var(--gr_icon_btn_3_icon);
+		transition: $transition;
+	}
+}
+
+
+.tns-controls {
+	outline: none;
+
+	button {
+		@extend .gr-icon-btn-1-style;
+		@extend .gr-small-icon-btn-desktop;
+	}
+}
+
+.tns-nav {
+	margin: 20px 0 0;
+	outline: none;
+	font-size: 0;
+	text-align: center;
+
+	button {
+		margin: 0 5px;
+		min-height: 8px;
+		height: 8px;
+		width: 8px;
+		border-radius: var(--gr_icon_btn_radius);
+		
+		font-size: 0;
+
+		padding: 0;
+		opacity: 1;
+		visibility: visible;
+
+		border: none;
+		background: var(--on_gr_bg_icon_2);
+		box-shadow: none;
+
+		@media all and (max-width: 767px) {
+			margin: 0 3px;
+			min-height: 5px;
+			height: 5px;
+			width: 5px;
+		}
+
+		&.tns-nav-active {
+			background: var(--gr_accent);
+
+			&:hover,
+			&:active {
+				background: var(--gr_accent);
+			}
+		}
+
+		&:hover {
+			border: none;
+			box-shadow: none;
+			background: var(--gr_accent);
+		}
+
+		&:active {
+			border: none;
+			box-shadow: none;
+			background: var(--gr_accent);
+		}
+	}
+}
+
+// Кнопки магазина
+//----------------------------------------------------------------------------//
+
+.gr-field-style input[type="button"],
+.tpl-field input[type="button"] {
+	@extend .gr-btn-3;
+}
+
+button.shop2-btn,
+input[type="button"].shop2-btn,
+input[type="submit"].shop2-btn,
+a.shop2-btn,
+.shop2-btn,
+.tpl-button,
+a.tpl-button,
+.tpl-field button,
+.tpl-field input[type="file"],
+.tpl-field input[type="submit"],
+.gr-field-style button,
+.gr-field-style input[type="file"],
+.gr-field-style input[type="submit"] {
+	font-weight: $btn1Weight;
+	font-family: $btnsFontFamily;
+
+	@extend .gr-medium-btn-desktop;
+
+	color: $btn1ColorDefault;
+	border: $btn1BorderDefault;
+	background: $btn1BackgroundDefault;
+	box-shadow: $btn1ShadowDefault;
+
+	&:hover {
+		color: $btn1ColorHover;
+		border: $btn1BorderHover;
+		box-shadow: $btn1ShadowHover;
+		background: $btn1BackgroundHover;
+	}
+
+	&:active {
+		color: $btn1ColorActive;
+		border: $btn1BorderActive;
+		box-shadow: $btn1ShadowActive;
+		background: $btn1BackgroundActive;
+	}
+
+	&.notavailable {
+		color: var(--on_gr_disable);
+		border: none;
+		box-shadow: none;
+		background: var(--gr_disable);
+		pointer-events: none;
+	}
+
+	&.disabled {
+		color: var(--on_gr_disable);
+		border: none;
+		box-shadow: none;
+		background: var(--gr_disable);
+		pointer-events: none;
+	}
+}
+
+
+.shop2-btn {
+	&.shop2-btn-back {
+		@extend .gr-btn-3;
+		@extend .gr-small-btn-desktop;
+		@extend .gr-btn-icon-left;
+
+		span {
+			padding-left: 20px;
+
+			svg {
+				left: -11px;
+			}
+		}
+	}
+}
+
+.gr-more-btn-style {
+	cursor: pointer;
+	color: var(--on_gr_bg_acc_text);
+	font-family: var(--font2);
+	font-weight: var(--font2_500);
+	font-size: 15px;
+	line-height: 1.1;
+	transition: $transition;
+	@extend .gr-btn-icon-right-2;
+
+	text-align: left;
+	display: inline-flex;
+	justify-content: flex-start;
+
+	&:hover {
+		ins {
+			border-bottom: 1px dashed var(--on_gr_bg_acc_text);
+		}
+	}
+
+	&.active {
+		span i {
+			transform: translateY(-50%) rotate(-180deg);
+		}
+	}
+
+	ins {
+		transition: $transition;
+		border-bottom: 1px dashed var(--on_gr_bg_border_4);
+	}
+
+	span {
+		padding-right: 42px;
+
+		i {
+			width: 30px;
+			height: 28px;
+			display: inline-flex;
+			border-radius: var(--gr_small_radius);
+			box-shadow: inset 0 0 0 1px var(--on_gr_bg_border_4);
+
+			svg {
+				margin: auto;
+			}
+		}
+
+		svg {
+			width: 20px;
+			height: 20px;
+			fill: var(--on_gr_bg_icon);
+		}
+	}	
+}

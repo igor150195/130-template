@@ -1,0 +1,351 @@
+// Параметры .cart-params
+//----------------------------------------------------------------------------//
+	// Шрифт
+	$cartParamsTitleFont: 					14px/ 1.1 var(--font1);
+	$cartParamsBodyFont: 					14px/ 1.14 var(--font1);
+	//---------------------------------------------------//
+
+	// Цвет шрифта
+	$cartParamsTitleColor: 					var(--on_gr_bg_sec_text_6);
+	$cartParamsBodyColor: 					var(--on_gr_bg_sec_text);
+	
+	// Размер допполей с цветом
+	$cartParamsColorWidth: 						28px;
+	$cartParamsColorHeight: 					28px;
+
+	// Радиус допполей с цветом
+	$cartParamsColorRadius: 					var(--gr_small_radius);
+
+	// Отступы допполей с цветом
+	$cartParamsColorMargin: 					0 9px 5px;
+
+	// Before
+		// Background допполей с цветом
+		$beforeCartParamsColorBg: 						none;
+		$beforeCartParamsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$beforeCartParamsColorShadow: 					inset 0 0 0 1px var(--on_gr_bg_border_4);
+		$beforeCartParamsColorShadowSelected: 			inset 0 0 0 1px var(--on_gr_bg_border_4);
+
+		// Border допполей с цветом
+		$beforeCartParamsColorBorder: 					none;
+		$beforeCartParamsColorBorderSelected: 			none;
+
+	// After
+		// Background допполей с цветом
+		$afterCartParamsColorBg: 						none;
+		$afterCartParamsColorBgSelected:				none;
+
+		// Shadow допполей с цветом
+		$afterCartParamsColorShadow: 					none;
+		$afterCartParamsColorShadowSelected: 			inset 0 0 0 1px var(--gr_primary_6);
+
+		// Border допполей с цветом
+		$afterCartParamsColorBorder: 					none;
+		$afterCartParamsColorBorderSelected: 			none;
+//---------------------------------------------------//
+
+
+
+.cart-params {
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		>li {
+			margin: 0 0 10px;
+
+			&.gr_type_color, &.gr_type_color_ref {
+				.cart-params__title {
+					margin-bottom: 12px;
+					
+					@media all and (max-width: 767px) {
+						margin-bottom: 6px;
+					}
+				}
+			}
+
+			&.gr_vendor_name {
+				a {
+					color: var(--on_gr_bg_link);
+					text-decoration: none;
+					transition: $transition;
+					border-bottom: 1px solid transparent;
+
+					&:hover {
+						text-decoration: none;
+						border-bottom-color: var(--on_gr_bg_link_5);
+					}
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__title {
+		margin: 0 0 5px;
+		color: $cartParamsTitleColor;
+		font: $cartParamsTitleFont;
+		
+		@media all and (max-width: 767px) {
+			margin: 0 0 2px;
+		}
+	}
+
+	&__value {
+		color: $cartParamsBodyColor;
+		font: $cartParamsBodyFont;
+		
+		.gr-select-wrapper, .shop2-color-ext-select {
+			max-width: 300px;
+		}
+
+		&.gr_cart_param_img {
+			a {
+				line-height: 1;
+				position: relative;
+				font-size: 0;
+				vertical-align: top;
+				display: inline-block;
+				text-decoration: none;
+
+				&:before {
+					position: absolute;
+					content: '';
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 2;
+					pointer-events: none;
+					border-radius: var(--gr_wrap_radius);
+					border: 1px solid var(--gr_primary);
+				}
+			}
+			
+			img {
+				height: 76px;
+				width: 76px;
+				object-fit: contain;
+				border-radius: var(--gr_wrap_radius);
+
+				@media all and (max-width: 767px) {
+					width: 50px;
+					height: 50px;
+				}
+			}
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.file {
+			text-decoration: none;
+
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+			@extend .gr-btn-icon-right;
+
+			text-align: left;
+			justify-content: flex-start;
+
+			&:hover {
+				text-decoration: none;
+			}
+
+			span {
+				width: 100%;
+				padding-right: 30px;
+
+				svg {
+					right: -3px;
+					width: 20px;
+					height: 20px;
+					display: none;
+
+					&.gr_small_icon {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	.shop2-color-pick,
+	.shop2-color-ext-list {
+		overflow: visible;
+		display: inline-block;
+		vertical-align: middle;
+
+		li {
+			position: relative;
+			cursor: pointer;
+			width: $cartParamsColorWidth !important;
+			height: $cartParamsColorHeight;
+			border: none;
+			float: none;
+			outline: none !important;
+			display: inline-block;
+			vertical-align: top;
+			margin: $cartParamsColorMargin;
+			border-radius: $cartParamsColorRadius;
+
+			@media all and (max-width: 767px) {
+				width: 26px !important;
+				height: 26px;
+				margin: 5px 6px;
+			}
+
+			&:first-child {
+				margin-left: 0 !important;
+
+				&.active-color, &.shop2-color-ext-selected, &.active-texture {
+					margin-left: 7px !important;
+
+					@media all and (max-width: 767px) {
+						margin-left: 6px !important;
+					}
+				}
+			}
+
+			&.active-color,
+			&.active-texture,
+			&.shop2-color-ext-selected {
+				outline: none !important;
+
+				&:after {
+					opacity: 1;
+					visibility: visible;
+					border: $afterCartParamsColorBorderSelected;
+					box-shadow: $afterCartParamsColorShadowSelected;
+					background: $afterCartParamsColorBgSelected;
+				}
+
+				&:before {
+					border: $beforeCartParamsColorBorderSelected;
+					box-shadow: $beforeCartParamsColorShadowSelected;
+					background: $beforeCartParamsColorBgSelected;
+				}
+			}
+
+			&.shop2-color-ext-selected {
+				outline: none !important;
+
+				span {
+					display: none;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-radius: $cartParamsColorRadius;
+				transition: $transition;
+				border: $beforeCartParamsColorBorder;
+				box-shadow: $beforeCartParamsColorShadow;
+				background: $beforeCartParamsColorBg;
+			}
+
+			&:after {
+				position: absolute;
+				content: '';
+				left: -7px;
+				right: -7px;
+				top: -7px;
+				bottom: -7px;
+				z-index: 1;
+				opacity: 0;
+				visibility: hidden;
+				border-radius: var(--gr_btn_radius);
+				transition: $transition;
+				border: $afterCartParamsColorBorder;
+				box-shadow: $afterCartParamsColorShadow;
+				background: $afterCartParamsColorBg;
+
+				@media all and (max-width: 767px) {
+					left: -5px;
+					right: -5px;
+					top: -5px;
+					bottom: -5px;
+				}
+			}
+
+			span, img {
+				width: $cartParamsColorWidth;
+				height: $cartParamsColorHeight;
+				border-radius: $cartParamsColorRadius;
+
+				@media all and (max-width: 767px) {
+					width: 26px;
+					height: 26px;
+				}
+			}
+		}
+	}
+
+	.shop2-color-ext-multi {
+		overflow: visible;
+		outline: none;
+		border: none;
+
+		li {
+			position: relative;
+			height: $cartParamsColorHeight;
+			border: none;
+			float: none;
+			cursor: pointer;
+			border-radius: $cartParamsColorRadius;
+			vertical-align: top;
+			display: inline-block;
+			background-size: cover;
+			outline: none !important;
+			width: $cartParamsColorWidth !important;
+			margin: $cartParamsColorMargin !important;
+
+			&:first-child {
+				margin-left: 0 !important;
+				width: $cartParamsColorWidth !important;
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				border-radius: $cartParamsColorRadius;
+				border: $beforeCartParamsColorBorder;
+				box-shadow: $beforeCartParamsColorShadow;
+				background: $beforeCartParamsColorBg;
+			}
+
+			span {
+				display: none;
+			}
+
+			img {
+				width: $cartParamsColorWidth;
+				height: $cartParamsColorHeight;
+				border-radius: $cartParamsColorRadius;
+			}
+		}
+	}
+}

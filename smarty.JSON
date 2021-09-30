@@ -1,0 +1,602 @@
+{
+    "counters" : {
+        "body" : "<img src=\"files/counters.png\">"
+    },
+    "product_flag" : {
+        "0": {
+            "name":"Новинки"
+        },
+        "1": {
+            "name":"Спецпредложения"
+        },
+        "2": {
+            "name":"Тестовый флаг"
+        }
+    },
+
+    "tags_full": {
+        "0": {
+            "tag":"Тег номер 1"
+        },
+        "1": {
+            "tag":"Тег номер 2"
+        },
+        "2": {
+            "tag":"Тег номер 3"
+        },
+        "3": {
+            "tag":"Тег номер 4"
+        },
+        "4": {
+            "tag":"Тег номер 5"
+        }
+    },
+    "shop2": {
+        "my": {
+            "gr_orders_shop2_btn": true,
+            "show_product_unit": false,
+            "gr_promo_actions": true,
+            "gr_show_price_in_pricelist": true,
+            "gr_selected_theme": 1,
+            "gr_schema_org": true,
+            "gr_thumbs_height": "600",
+            "gr_thumbs_width": "600",
+            "gr_info_form": true,
+            "gr_cart_question": true,
+            "gr_compare_icons": true,
+            "gr_favorite": true,
+            "gr_collections_lazy": true,
+            "gr_main_blocks_lazy": true,
+            "gr_product_share_lazy": true,
+            "gr_main_blocks_ajax": false,
+            "gr_popup_compare": true,
+            "gr_responsive_tabs_2": true,
+            "gr_select_wrapper":true,
+            "new_alias":"Новинка",
+            "special_alias":"Акция",
+            "buy_alias": "В корзину",
+            "buy_mod": true,
+            "buy_kind": true,
+            "on_shop2_btn": true,
+            "show_sections": true,
+            "lazy_load_subpages": true,
+            "gr_amount_flag": true,
+            "gr_collections_one_click": true,
+            "gr_collections_columns_class": true,
+            "gr_collections_params": false,
+            "gr_collections_compare": true,
+            "gr_collections_amount": true,
+            "gr_collections_vendor": true,
+            "gr_product_list_titles": true,
+            "gr_product_list_title": true,
+            "gr_product_list_price": true,
+            "gr_product_list_amount": true,
+            "gr_images_size": true,
+            "gr_images_view": true,
+            "gr_images_lazy_load": true,
+            "gr_sliders_autoplay": true,
+            "gr_one_click_btn": "Купить в 1 клик",
+            "gr_amount_min_top": true,
+            "gr_options_more_btn": "Параметры",
+            "gr_product_print": true,
+            "gr_product_options_more_btn": "Все параметры",
+            "gr_product_nav_prev": "Предыдущий",
+            "gr_product_nav_next": "Следующий",
+            "gr_product_quick_view": true,
+            "gr_product_columns_class": true,
+            "gr_product_item_wrap": true,
+            "gr_product_list_main": true,
+            "gr_thumbs_vendor": true,
+            "gr_thumbs_one_click": true,
+            "gr_cart_info_in_total": true,
+            "gr_cart_preview_icons": true,
+            "gr_cart_titles": true,
+            "gr_cart_show_discount_sum": true,
+            "gr_cart_show_discounts_applied": true,
+            "gr_cart_auth_remodal": true,
+            "gr_cart_coupon_remodal": false,
+            "gr_cart_coupon_placeholder": "Промокод",
+            "gr_coupon_popup_btn": "Применить купон",
+            "gr_cart_options_more_btn": "Параметры",
+            "gr_cart_registration_title": "Купить без регистрации",
+            "gr_filter_remodal_btn": "Фильтр",
+            "gr_filter_max_count": 5,
+            "gr_filter_remodal": true,
+            "gr_filter_unwrap_sorting": false,
+            "gr_filter_go_result": true,
+            "gr_filter_color_btn": true,
+            "gr_filter_placeholders": true,
+            "gr_filter_range_slider": false,
+            "gr_login_form_placeholder": true,
+            "gr_search_placeholder": "Найти товар",
+            "gr_search_form_title": "Подбор по параметрам",
+            "gr_search_form_range_slider": false,
+            "gr_sorting_title":"Сортировать",
+            "gr_sorting_default": "По умолчанию",
+            "gr_sorting_item_default": "По умолчанию",
+            "gr_sorting_by_price_desc":"Цена - убывание",
+            "gr_sorting_by_price_asc":"Цена - возрастание",
+            "gr_sorting_by_name_desc":"Название - Я-А",
+            "gr_sorting_by_name_asc":"Название - А-Я"
+        },
+        "thumb_width": 450,
+        "thumb_height": 450,
+        "next_prev_link": true,
+        "currency_shortname": "р.",
+        "json": {
+            "compare": true,
+            "favorite_products": 1
+        },
+        "favorite_count": 1,
+        "products": {
+            "329393421": {
+                "is_favorite": true
+            }
+        }
+    },
+    "product": {
+        "is_favorite": true,
+        "meta": {
+            "gr_samovyvoz_besplatno":"Перед приездом забронируйте товар в магазине.",
+            "gr_besplatnaa_dostavka":"Бесплатно - при заказе от 3500 руб. Скидка на доставку- 500 руб., при заказе от 5000 руб."
+        }
+    },
+    "meta": {
+        "gr_samovyvoz_besplatno":{
+            "name":"Самовывоз бесплатно"
+        },
+        "gr_besplatnaa_dostavka":{
+            "name":"Бесплатная доставка"
+        }
+    },
+    "compare": {
+        "405841621": {
+            "product_id":"329393421",
+            "kind_id" : "405841621"
+        }
+    },
+    "currency": {
+        "currency_shortname": "р."
+    },
+    "card_blocks": {
+        "0":{
+            "json_id":"387105451",
+            "meta_id":"83749251",
+            "ver_id":"2816468",
+            "title":"",
+            "json":"{&quot;title&quot;:&quot;&quot;,&quot;hide_block&quot;:false,&quot;type&quot;:&quot;1&quot;}",
+            "modified":"2021-06-23 10:55:44",
+            "created":"2021-06-23 10:55:44",
+            "type_group_id":"83749251",
+            "hide_block":false,
+            "type":"1",
+            "blocks":{
+               "0":{
+                  "title":"Нам доверяют",
+                  "text":"С нами работают известные мировые производители",
+                  "image":{
+                     "image_id":"2085620651",
+                     "filename":"card_icon_1.svg",
+                     "ver_id":2816468,
+                     "svg_body":"&lt;svg class=&quot;card_icon_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;64&quot; height=&quot;64&quot; viewBox=&quot;0 0 64 64&quot;&gt;&lt;title&gt;check&lt;/title&gt;&lt;circle cx=&quot;22&quot; cy=&quot;28&quot; r=&quot;1&quot;/&gt;&lt;path d=&quot;M48 26a.997.997 0 0 0-1 .999V47H17V17h28a1 1 0 0 0 0-2H15v34h34V26.999A.997.997 0 0 0 48 26z&quot;/&gt;&lt;path d=&quot;M53.042 15.293a.999.999 0 0 0-1.416.002L31.072 35.85l-5.363-5.362a1 1 0 1 0-1.414 1.414l6.068 6.067a.996.996 0 0 0 .709.295 1.008 1.008 0 0 0 .707-.293L53.04 16.71a1.006 1.006 0 0 0 .002-1.416z&quot;/&gt;&lt;/svg&gt;",
+                     "image_width":"0",
+                     "image_height":"0",
+                     "ext":"svg"
+                  }
+               },
+               "1":{
+                  "title":"Обновление каталога",
+                  "text":"Каталог товаров регулярно расширяется и пополняется",
+                  "image":{
+                     "image_id":"2085620851",
+                     "filename":"card_icon_2.svg",
+                     "ver_id":2816468,
+                     "svg_body":"&lt;svg class=&quot;card_icon_2&quot; width=&quot;50&quot; height=&quot;50&quot; viewBox=&quot;0 0 50 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M10 5C10 4.44772 10.4477 4 11 4H17H22H28C28.5523 4 29 4.44772 29 5V20H31H36H42C42.5523 20 43 20.4477 43 21V37H45C45.5523 37 46 37.4477 46 38V41V43V45V46H44V45V43H43H42V41H43H44V39H6V45V46H4V45V38C4 37.4477 4.44772 37 5 37H24V22H20V24C20 24.5523 19.5523 25 19 25H14C13.4477 25 13 24.5523 13 24V22H9V33.5V34.5H7V33.5V21C7 20.4477 7.44772 20 8 20H14H19H25H27V6H23V8C23 8.55229 22.5523 9 22 9H17C16.4477 9 16 8.55229 16 8V6H12V17V18H10V17V5ZM15 22H18V23H15V22ZM26 22V37H41V22H37V24C37 24.5523 36.5523 25 36 25H31C30.4477 25 30 24.5523 30 24V22H29H27H26ZM18 6V7H21V6H18ZM32 22H35V23H32V22ZM8.87097 43H10V45V46H12V45V43H21V45V46H23V45V42C23 41.4477 22.5523 41 22 41H11.8065H11H10.8065H8.87097H7.87097V43H8.87097ZM27 43H25.6451H24.6451V41H25.6451H27.5806H28H28.5806H39C39.5523 41 40 41.4477 40 42V45V46H38V45V43H29V45V46H27V45V43ZM35 32H34V34H35H37.5H38.5V32H37.5H35ZM20 16H21H23.5H24.5V18H23.5H21H20V16ZM18 32H17V34H18H20.5H21.5V32H20.5H18Z&quot;/&gt;&lt;/svg&gt;",
+                     "image_width":"0",
+                     "image_height":"0",
+                     "ext":"svg"
+                  }
+               },
+               "2":{
+                  "title":"Гарантия возврата",
+                  "text":"Не понравился товар? Мы вернем деньги",
+                  "image":{
+                     "image_id":"2085620251",
+                     "filename":"card_icon_3.svg",
+                     "ver_id":2816468,
+                     "svg_body":"&lt;svg class=&quot;card_icon_3&quot; width=&quot;50&quot; height=&quot;50&quot; viewBox=&quot;0 0 50 50&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M21.7973 4.00026H28.2028C28.2179 3.99991 28.233 3.99992 28.248 4.00026H37.0161C37.2842 4.00026 37.541 4.10787 37.729 4.29896L45.1287 11.8208C45.6682 12.3436 46 13.0781 46 13.9105V43.09C46 44.7371 44.7012 46.0003 43.0645 46.0003H6.93548C5.29883 46.0003 4 44.7371 4 43.09V13.9105C4 13.1289 4.29252 12.4337 4.77484 11.9189L11.7641 4.32314C11.9535 4.11735 12.2204 4.00026 12.5 4.00026H21.7521C21.7671 3.99992 21.7822 3.99991 21.7973 4.00026ZM27.5654 6.00026H22.4347L20.3007 11.0003H29.6993L27.5654 6.00026ZM31.8739 11.0003L29.7399 6.00026H36.5971L41.5159 11.0003H31.8739ZM30 13.0003H20V16.3127L21.7094 15.7934C21.8988 15.7359 22.1012 15.7359 22.2906 15.7934L25 16.6164L27.7093 15.7934C27.8988 15.7359 28.1012 15.7359 28.2906 15.7934L30 16.3127V13.0003ZM18 13.0003V17.6615C18 17.9783 18.15 18.2763 18.4045 18.4649C18.6589 18.6535 18.9876 18.7104 19.2906 18.6184L22 17.7954L24.7094 18.6184C24.8989 18.6759 25.1012 18.6759 25.2907 18.6184L28 17.7954L30.7094 18.6184C31.0124 18.7104 31.3411 18.6535 31.5955 18.4649C31.85 18.2763 32 17.9783 32 17.6615V13.0003H43.0645C43.3328 13.0003 43.5598 13.0914 43.7229 13.2437L43.7731 13.2947C43.9176 13.4546 44 13.6689 44 13.9105V43.09C44 43.6079 43.6214 44.0003 43.0645 44.0003H6.93548C6.37859 44.0003 6 43.6079 6 43.09V13.9105C6 13.3926 6.37859 13.0003 6.93548 13.0003H18ZM18.1261 11.0003L20.2602 6.00026H12.9388L8.338 11.0003H18.1261ZM20.8198 24.2206C21.2354 23.857 21.2775 23.2252 20.9138 22.8096C20.5501 22.3939 19.9184 22.3518 19.5028 22.7155L14.3415 27.2316C14.1244 27.4215 14 27.6958 14 27.9842C14 28.2726 14.1244 28.5469 14.3415 28.7368L19.5028 33.2529C19.9184 33.6166 20.5501 33.5745 20.9138 33.1588C21.2775 32.7432 21.2354 32.1114 20.8198 31.7477L17.6798 29.0003H29.8886C32.0016 29.0003 33.6613 30.6472 33.6613 32.5003C33.6613 34.3534 32.0016 36.0003 29.8886 36.0003C29.3363 36.0003 28.8886 36.448 28.8886 37.0003C28.8886 37.5526 29.3363 38.0003 29.8886 38.0003C32.9937 38.0003 35.6613 35.5672 35.6613 32.5003C35.6613 29.4334 32.9937 27.0003 29.8886 27.0003H17.643L20.8198 24.2206Z&quot;/&gt;&lt;/svg&gt;",
+                     "image_width":"0",
+                     "image_height":"0",
+                     "ext":"svg"
+                  }
+               },
+               "3":{
+                  "title":"Быстрая доставка",
+                  "text":"Быстрая доставка по всей территории России",
+                  "image":{
+                     "image_id":"2085620451",
+                     "filename":"card_icon_4.svg",
+                     "ver_id":2816468,
+                     "svg_body":"&lt;svg class=&quot;card_icon_4&quot; width=&quot;42&quot; height=&quot;41&quot; viewBox=&quot;0 0 42 41&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;M8 24C8 24.5523 8.44772 25 9 25C9.55229 25 10 24.5523 10 24H8ZM36 20.8919C36 21.4442 36.4477 21.8919 37 21.8919C37.5523 21.8919 38 21.4442 38 20.8919H36ZM18 5H17C17 5.55228 17.4477 6 18 6V5ZM28 5V6C28.5523 6 29 5.55228 29 5H28ZM29 17C28.4477 17 28 17.4477 28 18C28 18.5523 28.4477 19 29 19V17ZM33 19C33.5523 19 34 18.5523 34 18C34 17.4477 33.5523 17 33 17V19ZM36.6428 21.3953L37.1349 22.2659C37.1408 22.2626 37.1466 22.2592 37.1524 22.2558L36.6428 21.3953ZM39.5758 26.5969L39.0662 25.7365C39.0545 25.7434 39.043 25.7505 39.0316 25.7579L39.5758 26.5969ZM27.4413 34.4668L27.9403 35.3334C27.9556 35.3246 27.9706 35.3154 27.9854 35.3058L27.4413 34.4668ZM13.3099 35.4801L13.8571 36.317C13.8643 36.3124 13.8714 36.3076 13.8784 36.3028L13.3099 35.4801ZM12.3975 22.608L12.9346 23.4515C12.9452 23.4447 12.9556 23.4378 12.966 23.4307L12.3975 22.608ZM4.23529 26L5.07673 25.4596C4.78623 25.0073 4.19009 24.8656 3.72709 25.1388L4.23529 26ZM12 38.0909L12.5082 38.9521C12.7423 38.814 12.91 38.5866 12.9729 38.3222C13.0357 38.0578 12.9883 37.7792 12.8414 37.5505L12 38.0909ZM10 24V2.24324H8V24H10ZM10 2.24324C10 2.15499 10.0941 2 10.3023 2V0C9.07802 0 8 0.96393 8 2.24324H10ZM10.3023 2H35.6977V0H10.3023V2ZM35.6977 2C35.9059 2 36 2.15499 36 2.24324H38C38 0.963929 36.922 0 35.6977 0V2ZM36 2.24324V20.8919H38V2.24324H36ZM17 1V5H19V1H17ZM18 6H28V4H18V6ZM29 5V1H27V5H29ZM29 19H33V17H29V19ZM27.9334 27.4674L37.1349 22.2659L36.1507 20.5248L26.9492 25.7264L27.9334 27.4674ZM37.1524 22.2558C38.0428 21.7284 39.2373 22.042 39.7428 22.959L41.4943 21.9934C40.4356 20.0732 37.9803 19.441 36.1333 20.5349L37.1524 22.2558ZM39.7428 22.959C40.2838 23.9402 39.9356 25.2215 39.0662 25.7365L40.0853 27.4573C41.9533 26.351 42.5175 23.8493 41.4943 21.9934L39.7428 22.959ZM39.0316 25.7579L26.8972 33.6278L27.9854 35.3058L40.1199 27.4359L39.0316 25.7579ZM26.9423 33.6002C26.7905 33.6876 26.4963 33.7885 26.1006 33.8649C25.7215 33.9382 25.3318 33.9734 25.0416 33.9734V35.9734C25.4683 35.9734 25.9852 35.9242 26.48 35.8286C26.9584 35.7362 27.5055 35.5837 27.9403 35.3334L26.9423 33.6002ZM25.0416 33.9734H15.4608V35.9734H25.0416V33.9734ZM15.4608 33.9734C14.7067 33.9734 13.5931 34.0688 12.7414 34.6574L13.8784 36.3028C14.1998 36.0807 14.781 35.9734 15.4608 35.9734V33.9734ZM12.7626 34.6431L11.2028 35.663L12.2972 37.337L13.8571 36.317L12.7626 34.6431ZM17.5464 28.8804H25.0416V26.8804H17.5464V28.8804ZM25.0416 28.8804C27.2567 28.8804 28.9745 27.0476 28.9745 24.8405H26.9745C26.9745 26.0111 26.0852 26.8804 25.0416 26.8804V28.8804ZM28.9745 24.8405C28.9745 22.5443 27.1665 21 25.0416 21V23C26.1754 23 26.9745 23.7591 26.9745 24.8405H28.9745ZM25.0416 21H14.4179V23H25.0416V21ZM14.4179 21C13.5185 21 12.5989 21.2533 11.829 21.7853L12.966 23.4307C13.3693 23.152 13.8835 23 14.4179 23V21ZM11.8604 21.7645L4.96289 26.1565L6.03711 27.8435L12.9346 23.4515L11.8604 21.7645ZM1.5082 28.7703L4.7435 26.8612L3.72709 25.1388L0.491799 27.0479L1.5082 28.7703ZM3.39386 26.5404L11.1586 38.6313L12.8414 37.5505L5.07673 25.4596L3.39386 26.5404ZM11.4918 37.2297L8.2565 39.1388L9.27291 40.8612L12.5082 38.9521L11.4918 37.2297Z&quot;/&gt;&lt;/svg&gt;",
+                     "image_width":"0",
+                     "image_height":"0",
+                     "ext":"svg"
+                  }
+               }
+            },
+            "parent":"0;"
+         },
+         "1":{
+            "json_id":"387105651",
+            "meta_id":"83749451",
+            "ver_id":"2816468",
+            "title":"Как заказать",
+            "json":"{&quot;title&quot;:&quot;Как заказать&quot;,&quot;hide_block&quot;:false,&quot;type&quot;:&quot;2&quot;}",
+            "modified":"2021-06-23 10:56:27",
+            "created":"2021-06-23 10:56:27",
+            "type_group_id":"83749451",
+            "hide_block":false,
+            "type":"2",
+            "blocks":{
+               "0":{
+                  "title":"Оставьте заявку",
+                  "text":"Заполните заявку на сайте или позвоните нам"
+               },
+               "1":{
+                  "title":"Мы перезваниваем",
+                  "text":"Перезваниваем вам и обговариваем детали заказа"
+               },
+               "2":{
+                  "title":"Доставляем товар",
+                  "text":"Осуществляем доставку по указанному вами адресу"
+               },
+               "3":{
+                  "title":"Производите оплату",
+                  "text":"Вы производите оплату любым удобным способом"
+               }
+            },
+            "parent":"0;"
+         },
+         "2":{
+            "json_id":"387105851",
+            "meta_id":"83749651",
+            "ver_id":"2816468",
+            "title":"Доставка заказов",
+            "json":"{&quot;title&quot;:&quot;Доставка заказов&quot;,&quot;hide_block&quot;:false,&quot;type&quot;:&quot;3&quot;}",
+            "modified":"2021-06-23 10:56:57",
+            "created":"2021-06-23 10:56:57",
+            "type_group_id":"83749651",
+            "hide_block":false,
+            "type":"3",
+            "blocks":{
+               "0":{
+                  "title":"Курьерская доставка",
+                  "text":"Курьерская доставка работает с 9.00 до 19.00. Когда товар поступит на склад, курьерская служба свяжется для уточнения деталей. Специалист предложит выбрать удобное время доставки и уточнит адрес. Осмотрите упаковку на целостность и соответствие указанной комплектации.",
+                  "image":{
+                     "image_id":"2085637451",
+                     "filename":"delivery_1.png",
+                     "ver_id":2816468,
+                     "image_width":"220",
+                     "image_height":"221",
+                     "ext":"png"
+                  }
+               },
+               "1":{
+                  "title":"Почтовая доставка",
+                  "text":"Почтовая доставка через почту России. Когда заказ придет в отделение, на ваш адрес придет извещение о посылке. Перед оплатой вы можете оценить состояние коробки: вес, целостность. Вскрывать коробку самостоятельно вы можете только после оплаты заказа. Один заказ может содержать не больше 10 позиций и его стоимость не должна превышать 100 000 р.",
+                  "image":{
+                     "image_id":"2085637651",
+                     "filename":"delivery_2.png",
+                     "ver_id":2816468,
+                     "image_width":"220",
+                     "image_height":"221",
+                     "ext":"png"
+                  }
+               }
+            },
+            "parent":"0;"
+         }
+    },
+    "copyright" : "<span style=\"font-size:10px;\" class=\"copyright\"><span class=\"copyright\"><a href=\"http://megagroup.ru/\" target=\"_blank\" rel=\"nofollow\"><img src=\"http://cp1.megagroup.ru/g/mlogo/25x25/grey/dark.png\" alt=\"разработка сайта - Мегагрупп.ру\" style=\"vertical-align: middle;\"></a><a href=\"http://megagroup.ru/compani\" title=\"разработка сайта - Мегагрупп.ру\" target=\"_blank\" rel=\"nofollow\">разработка сайта - Мегагрупп.ру</a></span></span>",
+
+    "one_click_form":{
+        "my_form": {
+            "type": "anketa",
+            "posted":false,
+            "name": "Пример формы в блоке",
+            "submit_name":"Отправить",
+            "success_note":"Премного вами благодарен! Вельми понеже! Паки-паки... Иже херувимы!!!",
+            "dictionaries":{
+                "0":{
+                    "type_code":"HIDDEN",
+                    "name":"",
+                    "value":"",
+                    "size":"30",
+                    "maxlength":"100",
+                    "alias":"link",
+                    "dictionary_position":"0",
+                    "required":0,
+                    "error":0,
+                    "note":""
+                },
+                "1":{
+                    "type_code":"DIV",
+                    "name":"Поле - заголовок",
+                    "alias":"",
+                    "dictionary_position":"1",
+                    "required":0,
+                    "note":""
+                },
+                "2":{
+                    "type_code":"HTML_BLOCK",
+                    "name":"TEST",
+                    "alias":"html",
+                    "dictionary_position":"2",
+                    "required":1,
+                    "html":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae voluptas assumenda quis placeat doloremque corrupti nesciunt fuga laboriosam nobis, perspiciatis officia fugiat nihil, dolorum quas eligendi odit deleniti, nostrum aliquid aliquam nulla aut temporibus. Cum!",
+                    "note":""
+                },
+                "3":{
+                    "type_code":"TEXT",
+                    "name":"some text field",
+                    "value":"",
+                    "size":"30",
+                    "maxlength":"100",
+                    "alias":"text",
+                    "dictionary_position":"3",
+                    "required":1,
+                    "error":0,
+                    "note":"It's just a small note for text field"
+                },
+                "4":{
+                    "type_code":"EMAIL",
+                    "name":"email",
+                    "value":"",
+                    "size":"30",
+                    "maxlength":"100",
+                    "alias":"",
+                    "dictionary_position":"4",
+                    "required":1,
+                    "error":"Ошибка",
+                    "note":"Текст"
+                },
+                "5":{
+                    "type_code":"PHONE",
+                    "name":"phone",
+                    "value":"",
+                    "size":"30",
+                    "maxlength":"100",
+                    "alias":"",
+                    "dictionary_position":"5",
+                    "required":1,
+                    "error":0,
+                    "note":""
+                },
+                "6":{
+                    "type_code":"TEXTAREA",
+                    "name":"TEXTAREA",
+                    "cols":"30",
+                    "rows":"5",
+                    "alias":"",
+                    "value":"",
+                    "dictionary_position":"6",
+                    "required":0,
+                    "error":0,
+                    "note":""
+                },
+                "7":{
+                    "type_code":"SELECT",
+                    "name":"SELECT",
+                    "size":"1",
+                    "alias":"",
+                    "dictionary_position":"7",
+                    "required":0,
+                    "error":"Ошибка",
+                    "note":"",
+                    "options":{
+                        "0":{
+                            "name":"First line",
+                            "selected":1
+                        },
+                        "1":{
+                            "name":"Second line",
+                            "selected":0
+                        },
+                        "2":{
+                            "name":"Third line",
+                            "selected":0
+                        },
+                        "3":{
+                            "name":"Fourth line",
+                            "selected":0
+                        },
+                        "4":{
+                            "name":"Fifth line",
+                            "selected":0
+                        }
+                    }
+                },
+                "8":{
+                    "type_code":"MULTI_SELECT",
+                    "name":"MULTI_SELECT",
+                    "size":"5",
+                    "alias":"",
+                    "dictionary_position":"8",
+                    "required":0,
+                    "error":0,
+                    "note":"",
+                    "options":{
+                        "0":{
+                            "name":"First line",
+                            "selected":0
+                        },
+                        "1":{
+                            "name":"Second line",
+                            "selected":0
+                        },
+                        "2":{
+                            "name":"Third line",
+                            "selected":0
+                        },
+                        "3":{
+                            "name":"Fourth line",
+                            "selected":1
+                        },
+                        "4":{
+                            "name":"Fifth line",
+                            "selected":0
+                        }
+                    }
+                },
+                "9":{
+                    "type_code":"CHECKBOX",
+                    "name":"CHECKBOX",
+                    "alias":"",
+                    "value":"CHECKBOX",
+                    "dictionary_position":"9",
+                    "required":0,
+                    "error":0,
+                    "note":""
+                },
+                "10":{
+                    "type_code":"MULTI_CHECKBOX",
+                    "name":"MULTI_CHECKBOX",
+                    "alias":"",
+                    "dictionary_position":"10",
+                    "required":0,
+                    "error":0,
+                    "note":"",
+                    "options":{
+                        "0":{
+                            "name":"First line",
+                            "selected":1
+                        },
+                        "1":{
+                            "name":"Second line",
+                            "selected":1
+                        },
+                        "2":{
+                            "name":"Third line",
+                            "selected":0
+                        },
+                        "3":{
+                            "name":"Fourth line",
+                            "selected":1
+                        },
+                        "4":{
+                            "name":"Fifth line",
+                            "selected":0
+                        }
+                    }
+
+                },
+                "11":{
+                    "type_code":"RADIO_GROUP",
+                    "name":"RADIO_GROUP",
+                    "alias":"",
+                    "dictionary_position":"11",
+                    "required":0,
+                    "error":0,
+                    "note":"",
+                    "options":{
+                        "0":{
+                            "name":"First line",
+                            "selected":0
+                        },
+                        "1":{
+                            "name":"Second line",
+                            "selected":0
+                        },
+                        "2":{
+                            "name":"Third line",
+                            "selected":0
+                        },
+                        "3":{
+                            "name":"Fourth line",
+                            "selected":1
+                        },
+                        "4":{
+                            "name":"Fifth line",
+                            "selected":0
+                        }
+                    }
+                },
+                "12":{
+                    "type_code":"CALENDAR",
+                    "name":"CALENDAR",
+                    "alias":"",
+                    "value":"",
+                    "dictionary_position":"12",
+                    "required":0,
+                    "error":0,
+                    "note":""
+                },
+                "13":{
+                    "type_code":"CALENDAR_INTERVAL",
+                    "name":"CALENDAR_INTERVAL",
+                    "alias":"",
+                    "value":"",
+                    "dictionary_position":"13",
+                    "required":0,
+                    "error":0,
+                    "note":""
+                },
+                "15":{
+                    "type_code":"UPLOAD",
+                    "name":"UPLOAD",
+                    "uploaded":{},
+                    "count":"2",
+                    "buttontitle":"Загрузить",
+                    "alias":"",
+                    "value":"",
+                    "dictionary_id":"15",
+                    "dictionary_position":"15",
+                    "required":0,
+                    "error":0,
+                    "note":""
+                }
+            }
+        }    
+    },
+    "color_option":"#000000",
+    "site": {
+        "additional_work": {
+            "pagelist_lazy_load": true
+        },
+        "custom_settings":{
+            "enable_custom_settings": true
+        }
+    },
+    "one_click_form2":{
+        "my_form": {
+            "type": "anketa",
+            "posted":false,
+            "name": "Хотите получать актуальные предложения?",
+            "submit_name":"Отправить",
+            "success_note":"Премного вами благодарен! Вельми понеже! Паки-паки... Иже херувимы!!!",
+            "dictionaries":{
+                "0":{
+                    "type_code":"CHECKBOX",
+                    "name":"Я согласен на обработку моих персональных данных",
+                    "alias":"",
+                    "value":"",
+                    "dictionary_position":"0",
+                    "required":1,
+                    "error":0,
+                    "note":""
+                },
+                "1":{
+                    "type_code":"TEXT",
+                    "name":"E-mail",
+                    "value":"",
+                    "size":"30",
+                    "maxlength":"100",
+                    "alias":"text",
+                    "dictionary_position":"1",
+                    "required":0,
+                    "error":0
+                }
+            }
+        }    
+    }
+}

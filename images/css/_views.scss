@@ -1,0 +1,79 @@
+// Переключение видов
+
+.shop-view {
+	position: relative;
+
+	.shop-view__btn {
+		display: none;
+	}
+
+	.shop-view__body {
+		overflow: hidden;
+		transition: all .3s;
+		display: flex;
+		transform: translate(12px);
+		width: 154px;
+
+		@media all and (max-width: 639px) {
+			margin: 0;
+			width: 30px;
+			transform: translate(7px);
+		}
+	}
+
+	.shop-view__item {
+		position: relative;
+		min-width: 30px;
+		width: 30px;
+		height: 30px;
+		margin: 0 11px;
+		align-items: center;
+		display: inline-flex;
+		justify-content: center;
+		text-decoration: none;
+		transition: $transition;
+
+		@media all and (max-width: 639px) {
+			margin: 0;
+		}
+
+		svg {
+			width: 30px;
+			height: 30px;
+			transition: $transition;
+			fill: var(--on_gr_bg_icon_4);
+
+			@media all and (max-width: 639px) {
+				display: none;
+				fill: var(--on_gr_bg_icon);
+			}
+
+			&.gr_small_icon {
+				width: 20px;
+				height: 20px;
+
+				@media all and (max-width: 639px) {
+					display: block;
+				}
+			}
+		}
+
+		&:hover, &.active-view, &.active-view:hover {
+			svg {
+				fill: var(--on_gr_bg_icon);
+			}
+		}
+
+		&.active-view {
+			@media all and (max-width: 639px) {
+				display: none;
+			}
+		}
+
+		&:nth-child(3) {
+			@media all and (max-width: 639px) {
+				display: none;
+			}
+		}
+	}
+}

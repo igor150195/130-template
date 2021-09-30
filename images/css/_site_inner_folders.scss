@@ -1,0 +1,60 @@
+.inner-folders {
+	padding: 0 0 40px;
+
+	@media all and (max-width: 1023px) {
+		padding: 0 0 30px;
+	}
+
+	@media all and (max-width: 767px) {
+		padding: 0 0 20px;
+		margin: 0 -16px;
+	}
+
+	@media all and (max-width: 639px) {
+		margin: 0 -16px;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 0 -10px;
+
+		@media all and (max-width: 767px) {
+			flex-wrap: nowrap;
+			white-space: nowrap;
+			overflow: auto;
+			overflow-y: hidden;
+		}
+	}
+
+	li {
+		margin: 0 10px 10px 0;
+
+		&:first-child {
+			@media all and (max-width: 767px) {
+				padding-left: 20px;
+			}
+
+			@media all and (max-width: 639px) {
+				padding-left: 16px;
+			}
+		}
+
+		&:last-child {
+			@media all and (max-width: 767px) {
+				padding-right: 20px;
+			}
+
+			@media all and (max-width: 639px) {
+				padding-right: 16px;
+			}
+		}
+
+		a {
+			@extend .gr-btn-3;
+			@extend .gr-small-btn-desktop;
+			@extend .gr-small-btn-tablet;
+			@extend .gr-small-btn-mobile;
+		}
+	}
+}
