@@ -2703,7 +2703,7 @@ shop2.queue.bonus = function () {
 
 					if ($image.parents('form').length) {
 						var paddingTop = $image.offset().top - $image.parents('form').offset().top;
-			        	var imgHeight = $image.outerHeight() + paddingTop + (paddingTop / 2);
+			        	var imgHeight = ($image.outerHeight() + paddingTop) - ($image.outerHeight() / 2);
 					} else {
 			        	var imgHeight = $image.outerHeight() / 2;
 					};
@@ -2726,7 +2726,7 @@ shop2.queue.bonus = function () {
 
 			                if ($image.parents('form').length) {
 								var paddingTop = $image.offset().top - $image.parents('form').offset().top;
-								var imgHeight = $image.outerHeight() + paddingTop + (paddingTop / 2);
+								var imgHeight = ($image.outerHeight() + paddingTop) - ($image.outerHeight() / 2);
 							} else {
 								var imgHeight = $image.outerHeight() / 2;
 							};
