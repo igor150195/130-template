@@ -102,3 +102,11 @@ $product_old_price_f_w: var(--font2_500);
 	}
 }
 /*-----Кнопка "параметры"-----*/
+
+.gr-product-name,
+.kind-name,
+.gr-recent-name,
+.cart-product-name,
+.card-product-preview__name {
+	word-break: break-word;
+}
