@@ -57,7 +57,7 @@
                     <div class="shop2-filter__title active">
                         <span>
                             Цена<ins>:</ins> р.
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -82,7 +82,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Int<ins>:</ins> mm
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -98,7 +98,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Float<ins>:</ins> cm
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -114,7 +114,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Checkbox<ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -132,7 +132,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Select<ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -154,7 +154,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Multiselect<ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -176,7 +176,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Справочник цветов <ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -215,7 +215,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Новинки<ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -237,7 +237,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Спецпредложения<ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
@@ -259,7 +259,7 @@
                     <div class="shop2-filter__title">
                         <span>
                             Тестовый флаг<ins>:</ins>
-                            <span class="shop2-filter__title-icon">
+                            <span class="shop2-filter__title-icon filter_title_icon">
                                 <svg class="gr-svg-icon gr_filter_plus">
                                     <use xlink:href="#icon_shop_filter_plus"></use>
                                 </svg>
