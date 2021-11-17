@@ -1948,9 +1948,9 @@ shop2.queue.bonus = function () {
 			if ($('table').length) {
 				$('table').wrap('<div class="table-wrapper"></div>');
 			};
-			if (shop2.facets.enabled && $('.shop2-filter').length) {
-				shop2.filter.count();
-			};
+			// if (shop2.facets.enabled && $('.shop2-filter').length) {
+			// 	shop2.filter.count();
+			// };
 			
 			$('body').removeClass('gr_hide_onload');
 
