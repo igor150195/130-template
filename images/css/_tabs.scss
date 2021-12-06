@@ -283,6 +283,11 @@
 								background: $product_bg;
 								border-radius: $product_radius;
 								box-shadow: inset 0 0 0 1px $product_b;
+
+								@media all and (max-width: 767px) {
+									padding: 0;
+									box-shadow: none;
+								}
 							}
 	
 							.kind-item__top {
