@@ -421,6 +421,7 @@ a.shop2-compare-delete {
 		strong {
 			font-size: 15px;
 			line-height: 1.3;
+			font-weight: $product_cur_price_f_w;
 
 			@media all and (max-width: 767px) {
 				font-size: 14px;
@@ -431,6 +432,7 @@ a.shop2-compare-delete {
 	strong {
 		font-size: 20px;
 		line-height: 1;
+		font-weight: $product_cur_price_f_w;
 
 		@media all and (max-width: 767px) {
 			font-size: 18px;

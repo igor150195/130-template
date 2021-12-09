@@ -660,6 +660,7 @@
 					strong {
 						font-size: 18px;
 						line-height: 1.2;
+						font-weight: $product_cur_price_f_w;
 
 						@media all and (max-width: 767px) {
 							font-size: 15px;
@@ -671,6 +672,7 @@
 				strong {
 					font-size: 22px;
 					line-height: 1;
+					font-weight: $product_cur_price_f_w;
 
 					@media all and (max-width: 767px) {
 						font-size: 18px;
