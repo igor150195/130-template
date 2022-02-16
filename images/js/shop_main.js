@@ -1,6 +1,35 @@
 shop2.facets.search.wrapper = "";
 shop2.options.msgTime = 2000;
 
+shop2.search.getParams = function (folder_id, func) {
+	var gr_filter_max_count = shop2.my.gr_filter_max_count;
+    var url;
+
+    shop2.trigger("beforeGetFolderCustomFields");
+    
+    if (folder_id > 0) {
+        url =
+            "/my/s3/api/shop2/?cmd=getFolderCustomFields" +
+            "&hash=" +
+            shop2.apiHash.getFolderCustomFields +
+            "&ver_id=" +
+            shop2.verId +
+            "&folder_id=" +
+            folder_id +
+            "&" +
+            decodeURIComponent(document.location.search).replace(/[^&]*=(&|$)/g,"");
+   
+        if (gr_filter_max_count) {
+        	url = url + `gr_filter_max_count=${gr_filter_max_count}&`;
+        };
+
+        $.getJSON(url, function (d, status) {
+            shop2.fire("afterGetFolderCustomFields", func, d, status);
+            shop2.trigger("afterGetFolderCustomFields", d, status);
+        });
+    };
+};
+
 shop2.queue.product = function () {
 
     shop2.product._reload = function (node) {
@@ -302,27 +331,7 @@ shop2.queue.lazyLoad = function() {
                 	$('.product-list').append(productsHtml);
                 	$('.product-list').after($lazyLoad);
                 	
-                	$('.product-list .gr_images_lazy_load').each(function(){
-				   		$(this).attr('src', $(this).attr('data-src'));
-					});
-					
-					$('.quick-view-trigger').elemToolTip({
-				    	text: 'Быстрый просмотр',
-				    	margin: 12
-				    });
-
-					//$('.product-list.thumbs .product-item__bottom-left').matchHeight('remove');
-            		$('.product-list.thumbs .product-item__bottom-right').matchHeight('remove');
-					$('.product-list.thumbs .product-price').matchHeight('remove');
-            		//$('.product-list.thumbs .product-item__bottom').matchHeight('remove');
-
-            		$('.product-list.thumbs .product-item__bottom-right').matchHeight();
-					$('.product-list.thumbs .product-price').matchHeight();
-					//$('.product-list.thumbs .product-item__bottom-left').matchHeight();
-            		//$('.product-list.thumbs .product-item__bottom').matchHeight();
-                	
-                	shop2_gr.methods.viewLots();
-                	shop2_gr.methods.amountInit();
+                	shop2.trigger('afterProductsLazyLoaded');
 				    
 				    pagelist = $('.shop-pagelist');
 				    
@@ -698,6 +707,30 @@ shop2.queue.bonus = function () {
 				    });
 				});
 			});
+			
+			shop2.on('afterProductsLazyLoaded', function(){
+				$('.product-list .gr_images_lazy_load').each(function(){
+			   		$(this).attr('src', $(this).attr('data-src'));
+				});
+				
+				$('.quick-view-trigger').elemToolTip({
+			    	text: 'Быстрый просмотр',
+			    	margin: 12
+			    });
+
+				//$('.product-list.thumbs .product-item__bottom-left').matchHeight('remove');
+        		$('.product-list.thumbs .product-item__bottom-right').matchHeight('remove');
+				$('.product-list.thumbs .product-price').matchHeight('remove');
+        		//$('.product-list.thumbs .product-item__bottom').matchHeight('remove');
+
+        		$('.product-list.thumbs .product-item__bottom-right').matchHeight();
+				$('.product-list.thumbs .product-price').matchHeight();
+				//$('.product-list.thumbs .product-item__bottom-left').matchHeight();
+        		//$('.product-list.thumbs .product-item__bottom').matchHeight();
+            	
+            	shop2_gr.methods.viewLots();
+            	shop2_gr.methods.amountInit();
+			});
 
 		}, /*Обновление скриптов при аякс-запросах*/
 		
@@ -773,12 +806,14 @@ shop2.queue.bonus = function () {
 					$input.val(value);
 				}
 				
-				var url = '/my/s3/api/shop2/?cmd=getSearchMatches&hash=' +
-			        shop2.apiHash.getSearchMatches +
-			        '&ver_id=' + shop2.verId + '&',
-			    	fullUrl = url + $(shop2.facets.search.wrapper).serialize();
-			
-				shop2.facets.getDataSearch(fullUrl);
+				if (shop2.facets.enabled) {
+					var url = '/my/s3/api/shop2/?cmd=getSearchMatches&hash=' +
+				        shop2.apiHash.getSearchMatches +
+				        '&ver_id=' + shop2.verId + '&',
+				    	fullUrl = url + $(shop2.facets.search.wrapper).serialize();
+				
+					shop2.facets.getDataSearch(fullUrl);
+				};
 			});
 		}, /*Допполе "Цвет" в фасетном поиске*/
 
@@ -842,6 +877,14 @@ shop2.queue.bonus = function () {
 			    };
 			});
 
+			/*$(document).on('click', '.sorting-button', function(){
+				$('.sorting-block').addClass('active');
+			});
+
+			$(document).on('click', '.sorting-block__title', function(){
+				$('.sorting-block').removeClass('active');
+			});*/
+
 			$('.sorting-block__body').on('click', function(){
 				$(this).next().stop().slideToggle(250);
 				$(this).parent().toggleClass('active');
@@ -859,14 +902,17 @@ shop2.queue.bonus = function () {
 			});
 			
 			function searchMoreFields() {
+	            var hideText         = $('html').attr('lang') == 'ru' ? 'Свернуть' : 'Hide';
+				var currentText  	 = $('html').attr('lang') == 'ru' ? shop2.my.gr_filter_select_btn || 'Показать ещё' : shop2.my.gr_filter_select_btn || 'Show more';
+				
 				$('.search-rows__row').each(function() {
 		            var $this            = $(this);
 		            var $btn             = $this.find('.gr-filter-more__btn');
-		            var hideText         = $('html').attr('lang') == 'ru' ? 'Свернуть' : 'Hide';
+		            
+		            $btn.find('.gr-filter-more__text').text(currentText);
 	
 					$btn.off('click').on('click', function(){
 			            var $hiddenCkeckbox  = $this.find('ul li:hidden');
-						var currentText  = $btn.data('text');
 	
 			            $hiddenCkeckbox.addClass('hidden_item');
 	
@@ -890,12 +936,14 @@ shop2.queue.bonus = function () {
 			shop2.on('afterGetFolderCustomFields', function(){
 				searchMoreFields();
 				
-				var url = '/my/s3/api/shop2/?cmd=getSearchMatches&hash=' +
-			        shop2.apiHash.getSearchMatches +
-			        '&ver_id=' + shop2.verId + '&',
-			    	fullUrl = url + $(shop2.facets.search.wrapper).serialize();
-			
-				shop2.facets.getDataSearch(fullUrl);
+				if (shop2.facets.enabled) {
+					var url = '/my/s3/api/shop2/?cmd=getSearchMatches&hash=' +
+				        shop2.apiHash.getSearchMatches +
+				        '&ver_id=' + shop2.verId + '&',
+				    	fullUrl = url + $(shop2.facets.search.wrapper).serialize();
+				
+					shop2.facets.getDataSearch(fullUrl);
+				};
 			});
 
 		}, /*Поиск*/
