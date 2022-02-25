@@ -1,6 +1,33 @@
 shop2.facets.search.wrapper = "";
 shop2.options.msgTime = 2000;
 
+(function(){
+	if (!!document.querySelector('#product-tabs')) {
+		let gr_active_tab = localStorage.getItem('gr_tab_href');
+					
+		if (gr_active_tab!=null) {
+			let desktopFirst = document.querySelectorAll('.shop-product-data__nav li')[0];
+			let mobileFirst = document.querySelectorAll('.r-tabs-accordion-title')[0];
+			let firstTab = document.querySelectorAll('.shop-product-data__desc .desc-area')[0];
+			
+			if (!!desktopFirst && !!mobileFirst) {
+				desktopFirst.classList.remove('r-tabs-state-active');
+				mobileFirst.classList.remove('r-tabs-state-active');
+			};
+			if (!!firstTab) {
+				firstTab.style.display = 'none';
+			};
+			
+			document.querySelectorAll(gr_active_tab)[0].style.display = 'block';
+			
+			let gr_active_tabs = document.querySelectorAll('[href="'+gr_active_tab+'"]');
+			for (i = 0; i < gr_active_tabs.length; i++) {
+				gr_active_tabs[i].parentNode.classList.add('r-tabs-state-active');
+			};
+		};
+	};
+})();
+
 shop2.search.getParams = function (folder_id, func) {
 	var gr_filter_max_count = shop2.my.gr_filter_max_count;
     var url;
@@ -1383,6 +1410,8 @@ shop2.queue.bonus = function () {
 					e.preventDefault();
 					let href = $(this).find('a').attr('href');
 					let $descArea = $(href);
+					
+					localStorage.setItem('gr_tab_href', href);
 				
 					if ($descArea.is(':hidden')) {
 						$('.shop-product-data__nav li, .r-tabs-accordion-title').removeClass('r-tabs-state-active');
