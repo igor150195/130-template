@@ -820,7 +820,7 @@ shop2.queue.bonus = function () {
 			});
 		}, /*Чекбоксы*/
 
-		colorSelect: function() {
+		facetSelect: function() {
 			$(document).on('click', '.shop-search-color-select li', function(){
 				var $input = $(this).find('input');
 				var value = $(this).data('value');
@@ -842,7 +842,18 @@ shop2.queue.bonus = function () {
 					shop2.facets.getDataSearch(fullUrl);
 				};
 			});
-		}, /*Допполе "Цвет" в фасетном поиске*/
+			
+			$(document).on('click', '.type-checkbox [data-name]', function(){
+                	if (shop2.facets.enabled) {
+	                    var url = '/my/s3/api/shop2/?cmd=getSearchMatches&hash=' +
+	                        shop2.apiHash.getSearchMatches +
+	                        '&ver_id=' + shop2.verId + '&',
+	                        fullUrl = url + $(shop2.facets.search.wrapper).serialize();
+	                	
+	                    shop2.facets.getDataSearch(fullUrl);
+                    };
+                });
+		}, /*Допполя в фасетном поиске*/
 
 		headerBlock: function() {
 			
