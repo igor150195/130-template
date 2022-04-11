@@ -1,6 +1,163 @@
 shop2.facets.search.wrapper = "";
 shop2.options.msgTime = 2000;
 
+shop2.queue.kindAvailable = function(){
+    var sentAjax_preorder = function(data, callback){
+        $.ajax({
+            url: '/my/s3/xapi/public/?method=shop2/addKindEmailNotification',
+            method: 'post',
+            xhrFields: {
+                withCredentials: true
+            },
+            data: data,
+            success: function(result) {
+                callback(result);
+            }
+        });
+    };
+    
+    var object_preorder = {};
+    $(document).on('click', '.preorder-btn-js', function(e) {
+        e.preventDefault();
+        object_preorder.data = {};
+        
+        object_preorder.jQbtn = $(this);
+        object_preorder.data.kind_id = object_preorder.jQbtn.data('product-kind_id');
+        object_preorder.data.email = object_preorder.jQbtn.data('user-email') || 0;
+        
+        if( object_preorder.data.email ){
+            var temp_email = `
+            <div class="preorder-field preorder-email tpl-field type-email field-required">
+                <span class="preorder-email_text">
+                    ${shop2.my.preorder_email_text||'Данный email указан при регистрации.'}
+                </span>
+                <div class="preorder-email-input">
+                    <div class="preorder-field-title field-title">E-mail: <span class="field-required-mark">*</span></div>
+                    <div class="preorder-field-value">
+                        <input type="text" name="email" required value="${object_preorder.data.email}">
+                    </div>
+                </div>
+            </div>
+            `;
+
+        }else {
+            var temp_email = `
+            <div class="preorder-field preorder-email tpl-field type-email field-required">
+                <div class="preorder-email-input">
+                    <div class="preorder-field-title field-title">E-mail: <span class="field-required-mark">*</span></div>
+                    <div class="preorder-field-value">
+                        <input type="text" name="email" required value="">
+                    </div>
+                </div>
+            </div>
+            `;
+        }
+        
+        let temp_html = `
+                    <div class="preorder-form-wrap preorder-block">
+                        <form class="preorder_body" action="/my/s3/xapi/public/?method=shop2/addKindEmailNotification" method="get">
+                            <div class="preorder-title tpl-anketa__title">
+                                ${shop2.my.preorder_form_title||'Узнать о поступлении'}
+                            </div>
+                            <div class="preorder_text preorder-field type-html tpl-field type-html">
+                                ${shop2.my.preorder_form_text||'Оставьте почту и мы напишем вам, когда товар появится в наличии.'}
+                            </div>
+                            ${temp_email}
+                            <input type="hidden" name="kind_id" value="${object_preorder.data.kind_id}">
+                            
+                            <div class="preorder-field tpl-field tpl-field-button">
+                                <button type="submit" class="tpl-form-button">${shop2.my.preorder_form_submitt||'Отправить'}</button>
+                            </div>
+                            
+                        </form>
+                        <div class="block-recaptcha"></div>
+                    </div>
+                        `;
+                        
+        let this_remodal = $('.remodal[data-remodal-id="buy-one-click"]');
+        
+        this_remodal.find('.preorder-form-wrap').add( this_remodal.find('.tpl-anketa') ).remove();
+        
+        this_remodal.append(temp_html);
+        
+        this_remodal.remodal().open();
+		
+		this_remodal.on('closed.preorder', function(e){
+			
+			this_remodal.find('.preorder-form-wrap').remove();
+			this_remodal.off('closed.preorder');
+		});
+    });
+    
+    $(document).on('submit', '.block-recaptcha form', function(e) {
+        e.preventDefault();
+        
+        var serializeArray = $(this).serializeArray();
+        
+        for(let i = 0; i < serializeArray.length; i++){
+            if( serializeArray[i]['name'] == '_sitekey' ){ object_preorder.data['_sitekey'] = serializeArray[i]['value'];}
+            if( serializeArray[i]['name'] == 'g-recaptcha-response' ){ object_preorder.data['g-recaptcha-response'] = serializeArray[i]['value'];}
+        };
+
+        sentAjax_preorder( object_preorder.data, (data)=>{
+        	
+            object_preorder.jQbtn.addClass('disabled').get(0).setAttribute('disabled', 'disabled');
+
+            $('.preorder-form-wrap').html(`
+				<div class="preorder_success tpl-anketa__right tpl-anketa__posted">
+					<div class="tpl-anketa-success-note">${shop2.my.preorder_form_success||'Спасибо!'}</div>
+				</div>
+            `);
+            
+            if( object_preorder.jQbtn.closest('form').length ){
+            	let $favorite_btn = object_preorder.jQbtn.closest('form').find('.gr-favorite-btn');
+            	
+            	if( $favorite_btn.length && !$favorite_btn.is(":hidden") ){
+            		$favorite_btn.trigger('click');
+            	};
+            };
+        });
+        
+    });
+    
+    shop2.on('afterFavoriteAddItem', function(){
+		if ($('.preorder-form-wrap').length) {
+			$('#shop2-msg').hide();
+		};
+	});
+    
+    $(document).on('submit', '.preorder_body', function(e) {
+        e.preventDefault();
+        var $form = $(this);
+        
+        object_preorder.data.email = this.email.value;
+        const _regexEmeil = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+        
+        let valid = _regexEmeil.test(object_preorder.data.email);
+        
+        if (valid){
+            $.get( '/my/s3/xapi/public/?method=shop2/addKindEmailNotification', function( data ) {
+            	console.log(object_preorder);
+
+                const _regexBody = new RegExp(/<body[^>]*>(.*?)<\/body>/ig);
+                
+                let body = data.result.html.match( _regexBody );
+                
+                $form.parent('.preorder-block').find('.block-recaptcha').html( body );
+              });
+        }else {
+            
+            if( !$form.find('.preorder-email').hasClass('field-error') )
+                $form
+                    .find('.preorder-email')
+                    .addClass('field-error')
+                    .find('.preorder-email-input .preorder-field-value')
+                    .before(`<div class="error-message">Неверный формат адреса электронной почты</div>`);
+        }
+
+    });
+};
+
 (function(){
 	if (!!document.querySelector('#product-tabs')) {
 		let gr_active_tab = localStorage.getItem('gr_tab_href');
@@ -1469,7 +1626,7 @@ shop2.queue.bonus = function () {
 
 		buyOneClick: function() {
 
-			$(document).on('click', '.buy-one-click', function(e) {
+			$(document).on('click', '.buy-one-click:not(.preorder-btn-js)', function(e) {
 				var productName = $(this).data('product-name');
 				var productLink = $(this).data('product-link');
 				var $this = $(this);
