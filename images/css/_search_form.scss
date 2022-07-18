@@ -83,7 +83,7 @@
 
 .search-form {
 
-	.empty-val {
+	.empty-val:not(.shop2-input-not-range) {
 		opacity: .5;
 		pointer-events: none;
 	}

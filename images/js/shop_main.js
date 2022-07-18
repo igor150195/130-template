@@ -1,4 +1,3 @@
-shop2.facets.search.wrapper = "";
 shop2.options.msgTime = 2000;
 
 shop2.queue.kindAvailable = function(){
