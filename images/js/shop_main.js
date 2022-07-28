@@ -786,6 +786,7 @@ shop2.queue.bonus = function () {
         $check.prop('checked', !$check.prop('checked'));
         
 		$('.cart-bonuses__container').toggleClass('show_bonuses');
+		$('.accrual_or_using_js').toggle();
 		
 		if (!$check.prop('checked') && $('.cart-total__item.bonus_item').length) {
 			shop2.cart.removeBonusPoint();
