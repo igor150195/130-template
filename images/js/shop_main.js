@@ -1626,7 +1626,7 @@ shop2.queue.bonus = function () {
 
 		buyOneClick: function() {
 
-			$(document).on('click', '.buy-one-click:not(.preorder-btn-js)', function(e) {
+			$(document).on('click', '.buy-one-click:not(.preorder-btn-js):not(.buy-one-click-js)', function(e) {
 				var productName = $(this).data('product-name');
 				var productLink = $(this).data('product-link');
 				var $this = $(this);
