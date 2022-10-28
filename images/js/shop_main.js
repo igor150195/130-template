@@ -1762,9 +1762,12 @@ shop2.queue.bonus = function () {
 			                if (typeof callback === 'function') {
 			                	setTimeout(function(){
 			                		callback();
-                                  	shop2.queue.edost2();
 			                	}, 100);
 			                }
+
+							setTimeout(function(){
+								shop2.queue.edost2();
+							}, 100);
 			            }
 			        });
 			    };
