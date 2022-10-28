@@ -1984,7 +1984,9 @@ shop2.queue.bonus = function () {
 				                },
 				                success: function (d, status) {
 				                    sessionStorage.setItem('cart-reload', 1);
-				                    getCart();
+				                    getCart(function(){
+				                    	shop2.queue.edost2();
+				                    });
 				                    setTimeout(function(){
 				                    	$('.gr-cart-total-amount').text($('#shop2-cart').data('cart-amount') || '0');
 				                    }, 1100);
