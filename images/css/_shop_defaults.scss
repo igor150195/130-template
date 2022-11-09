@@ -657,3 +657,11 @@ fieldset.shop2-order-data legend {
         margin: 0 5px 10px;
     }
 }
+
+#shop2-tooltip.shop2-color-ext-tooltip {
+	&.shop2_multi_tooltip {
+		@media all and (max-width: 767px) {
+			max-width: 280px;
+		}
+	}
+}
