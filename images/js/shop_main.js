@@ -939,7 +939,7 @@ shop2.queue.bonus = function () {
 		checkboxes: function() {
 			$('#orderForm input[name="personal_data"]').parents('label').next('a').appendTo($('#orderForm input[name="personal_data"]').parents('label'));
 			
-			$('.shop2-order-form input[type="checkbox"], .shop2-order-form input[type="radio"], .comments-block .tpl-field.checkbox input, .tpl-field-reg input, .gr-authorization-checkbox, .shop2-order-options.shop2-payment-options .payment_methods-column input[type="radio"], #orderForm input[name="personal_data"]').mgStyler();
+			$('.shop2-order-form input[type="checkbox"]:not(.gr-fixed-checkbox), .shop2-order-form input[type="radio"], .comments-block .tpl-field.checkbox input, .tpl-field-reg input, .gr-authorization-checkbox, .shop2-order-options.shop2-payment-options .payment_methods-column input[type="radio"], #orderForm input[name="personal_data"]').mgStyler();
 			
 			$('#orderForm .mg-styler-label--checkbox a').on('click', function(e){
 				var $label = $(this).parent();
@@ -1769,7 +1769,7 @@ shop2.queue.bonus = function () {
 								shop2.queue.edost2();
 								shop2.queue.bonus();
 								
-								$('.shop2-order-form input[type="checkbox"], .shop2-order-form input[type="radio"], .tpl-field-reg input, .gr-authorization-checkbox, .shop2-order-options.shop2-payment-options .payment_methods-column input[type="radio"], #orderForm input[name="personal_data"]').mgStyler();
+								$('.shop2-order-form input[type="checkbox"]:not(.gr-fixed-checkbox), .shop2-order-form input[type="radio"], .tpl-field-reg input, .gr-authorization-checkbox, .shop2-order-options.shop2-payment-options .payment_methods-column input[type="radio"], #orderForm input[name="personal_data"]').mgStyler();
 							}, 100);
 			            }
 			        });
