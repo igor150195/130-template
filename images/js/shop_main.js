@@ -749,7 +749,7 @@ shop2.queue.bonus = function () {
 		document.location.reload();
 	});
 
-	$('.bonus-apply').on('click', function (e) {
+	$(document).on('click', '.bonus-apply', function (e) {
 		var bonus = $('#bonus-points'),
 			points = Number(bonus.val()),
 			bonus_user = Number($('.bonus-amount').data('bonus-amount'));
@@ -777,11 +777,11 @@ shop2.queue.bonus = function () {
 		};
 	});
 
-	$('.bonus-delete').on('click', function (e) {
+	$(document).on('click','.bonus-delete', function (e) {
 		shop2.cart.removeBonusPoint();
 	});
 	
-	$('.cart-bonuses__title label').on('click', function(e){
+	$(document).on('click', '.cart-bonuses__title label', function(e){
 		e.preventDefault();
         var $check = $(':checkbox', this);
         $check.prop('checked', !$check.prop('checked'));
