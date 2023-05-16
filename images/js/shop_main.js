@@ -1868,46 +1868,7 @@ shop2.queue.bonus = function () {
 					});	
 					/*Код из shop2.queue.cart*/
 					
-					/*Код из shop2.queue.delivery*/
-					$('#shop2-order-delivery').find('.delivery-items').each(function() {
-					    var $this = $(this);
-					    if ($.trim($this.text()) == "") {
-					        $this.parents('.shop2-delivery--item__tab:first').addClass('disabled');
-					    }
-					});
-					$('#shop2-ems-calc, #shop2-edost-calc').on('click', function(e) {
-					    var $this = $(this);
-					    var attach_id = $this.data('attach-id');
-					    var to = $('select[name=' + attach_id + '\\[to\\]]');
-					    var zip = $('input[name=' + attach_id + '\\[zip\\]]');
-					    var order_value = $('input[name=' + attach_id + '\\[order_value\\]]');
-					
-					    if (to.length == 0) {
-					        to = $('#shop2-edost2-to');
-					    }
-					
-					    e.preventDefault();
-					
-					    to = to.get(0) ? to.val() : '';
-					    zip = zip.get(0) ? zip.val() : '';
-					    order_value = order_value.prop("checked") ? 'on' : '';
-					
-					    shop2.delivery.calc(attach_id, 'to=' + to + '&zip=' + zip + '&order_value=' + order_value, function(d) {
-					        if (!d.data && d.errstr) {
-					            shop2.alert(d.errstr);
-					            $('#delivery-' + attach_id + '-cost').html(0);
-					        } else {
-					            $('#delivery-' + attach_id + '-cost').html(d.data.cost);
-					
-					            if (d.data.html) {
-					                $('#delivery-' + attach_id + '-html').html(d.data.html);
-					                shop2.queue.edost();
-					            }
-					        }
-					    });
-					
-					});
-					/*Код из shop2.queue.delivery*/
+					shop2.queue.delivery();
 			    };
 			
 			    function initCart($div) {
