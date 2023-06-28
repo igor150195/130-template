@@ -2395,7 +2395,7 @@ shop2.queue.bonus = function () {
 		}, /*Перекраска цвета текста кастомных флагов*/
 		
 		mainBlocks: function(lazyElem) {
-			if (!$('.main-products').length) {
+			if ($('.main-products').length) {
 				$('.product-list').removeClass('simple').removeClass('list').addClass('thumbs');
 				
 				var slider = lazyElem.querySelector('.main_blocks_list');
