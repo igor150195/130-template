@@ -233,6 +233,11 @@ shop2.queue.product = function () {
         window.gr_reloaded_product_node = $node.parents('.shop2-product-item');
         window.gr_reloaded_product_index = $node.parents('.shop2-product-item').index();
         
+        if ($('.product-item-wrap').length) {
+        	window.gr_reloaded_product_index = $node.parents('.product-item-wrap').index();
+        	window.gr_reloaded_wrap_index = $node.parents('.main-products').index();
+        }
+        
         if (kinds && $.type(paramName) !== 'undefined' && $.type(paramValue) !== 'undefined' && form) {
             meta = $form.find('input[name=meta]').val();
             product_id = $form.find('input[name=product_id]').val();
@@ -878,8 +883,12 @@ shop2.queue.bonus = function () {
 					};
 				    
 				    $('#shop2-tooltip').hide();
-
-					$('.shop2-product-item').eq(gr_reloaded_product_index).addClass('active');
+					
+					if ($('.product-item-wrap').length) {
+						$('.main-products').eq(gr_reloaded_wrap_index).find('.product-item-wrap').eq(gr_reloaded_product_index).find('.shop2-product-item').addClass('active');	
+					} else {
+						$('.shop2-product-item').eq(gr_reloaded_product_index).addClass('active');	
+					}
 
 				    setTimeout(function () {
 				    	var hideText = $('html').attr('lang') == 'ru' ? 'Свернуть' : 'Hide';
@@ -2386,7 +2395,7 @@ shop2.queue.bonus = function () {
 		}, /*Перекраска цвета текста кастомных флагов*/
 		
 		mainBlocks: function(lazyElem) {
-			if ($('.main-products').length) {
+			if (!$('.main-products').length) {
 				$('.product-list').removeClass('simple').removeClass('list').addClass('thumbs');
 				
 				var slider = lazyElem.querySelector('.main_blocks_list');
