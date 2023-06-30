@@ -2202,7 +2202,7 @@ shop2.queue.bonus = function () {
 
 		    // Клик по документу
 			$(document).on('click', function(e){
-				if (!$(e.target).closest('.price-old.question, .shop2-cart-total .question').length) {
+				if (!$(e.target).closest('.price-old.question, .cart-total .question').length) {
 			    	$('.shop2-product-discount-desc').hide();
 			    };
 			    
