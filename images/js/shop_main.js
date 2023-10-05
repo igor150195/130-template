@@ -786,7 +786,7 @@ shop2.queue.bonus = function () {
 		shop2.cart.removeBonusPoint();
 	});
 	
-	$(document).on('click', '.cart-bonuses__title label', function(e){
+	$(document).off('click.bonusLabel').on('click.bonusLabel', '.cart-bonuses__title label', function(e){
 		e.preventDefault();
         var $check = $(':checkbox', this);
         $check.prop('checked', !$check.prop('checked'));
