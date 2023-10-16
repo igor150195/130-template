@@ -2,7 +2,7 @@
 <html lang="{$site.lang}">
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="{if $page.noindex}none{else}all{/if}">
+<meta name="robots" content="{if $page.noindex==2}noindex,follow{elseif $page.noindex==3}index,nofollow{elseif $page.noindex}none{else}all{/if}">
 <title>{$page.title|strip_tags}</title>
 <meta name="description" content="{$page.description|escape}">
 <meta name="keywords" content="{$page.keywords|escape}">
@@ -83,6 +83,12 @@
 	<div class="site__wrapper">
 
 		{include file="local_site_header.tpl"}
+
+		{if $mode=='main' && $page.plugin_id == '16'} 
+			{if strpos($smarty.server.DOCUMENT_URI, '/p/') === false} 
+				 {*Проверка для скрытия блоков после перехода по пагинации на главной магазина*}
+		   {/if}
+		 {/if}
 
 		<div class="site-container">
 			<div class="site-container__inner">
