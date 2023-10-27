@@ -1727,24 +1727,21 @@ shop2.queue.bonus = function () {
 			/*Автопересчет в корзине*/
 			if (shop2.mode=='cart') {
 				var cartURL = shop2.uri + "/cart",
-			        ajax, hash, $idd,
+					hash = {
+					    del: shop2.apiHash.cartRemoveItem,
+					    up: shop2.apiHash.cartUpdate
+					},
+			        ajax, $idd,
 			        shopCartDiv = $('.cart-page'),
 			        cartPreloader = '<div class="gr-preloader-holder"><div class="gr-preloader"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="26" viewBox="0 0 120 30" fill="#fff"><script xmlns=""></script> <circle cx="15" cy="15" r="15"> <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate> <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate> </circle> <circle cx="60" cy="15" r="9" fill-opacity="0.3"> <animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite"></animate> <animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite"></animate> </circle> <circle cx="105" cy="15" r="15"> <animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite"></animate> <animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite"></animate> </circle></svg></div></div>';
 			        
 			    $('.shop2-order-form ~ .form-item.form-item-submit button.shop2-btn').append(cartPreloader);
-			
-			    $.get(cartURL + "?gethash=1", function(d) {
-			        d = $.trim(d).replace(/<script[\s\S]*/, '');
-			        d = $.trim(d).replace(/.*(\{[^}]*\})/g, "$1");
-			        d = $.trim(d).replace(/<!--(.*?)-->/gm, "");
-			        d = $.trim(d);
-			        hash = JSON.parse(d);
-			        shop2.on("afterCartAddItem", function(d, status) {
-			            if (!d.errstr.length) {
-			                getCart();
-			            };
-			        });
-			    });
+				
+				shop2.on("afterCartAddItem", function(d, status) {
+		            if (!d.errstr.length) {
+		                getCart();
+		            };
+		        });
 			    
 			    $(document).on('click', '#shop2-color-ext-select li.param-value:not(.shop2-color-ext-selected)', function() {
 					clearTimeout($idd);
