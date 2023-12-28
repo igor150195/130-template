@@ -401,13 +401,8 @@ shop2.queue.compare = function() {
 	};
 	
 	let $document = $(document);
-	if ($('html').attr('lang') == 'ru') {
-		var compareBtn = '<a href="' + shop2.uri + '/compare" class="go-to-compare-btn"'+popup_data+' target="_blank">к сравнению'+compare_arrow+'</a>';
-		var compareBtn2 = '<a href="' + shop2.uri + '/compare" class="go-to-compare-btn"'+popup_data+' target="_blank">Перейти к сравнению'+compare_arrow+'</a>';
-	} else {
-		var compareBtn = '<a href="' + shop2.uri + '/compare" class="go-to-compare-btn"'+popup_data+' target="_blank">сompare'+compare_arrow+'</a>';
-		var compareBtn2 = '<a href="' + shop2.uri + '/compare" class="go-to-compare-btn"'+popup_data+' target="_blank">Compare'+compare_arrow+'</a>';
-	};
+	var compareBtn = '<a href="' + shop2.uri + '/compare" class="go-to-compare-btn"'+popup_data+' target="_blank">'+ _s3Lang.SHOP2_ADD_TO_COMPARE3 +' '+compare_arrow+'</a>';
+  	var compareBtn2 = '<a href="' + shop2.uri + '/compare" class="go-to-compare-btn"'+popup_data+' target="_blank">'+ _s3Lang.SHOP2_GO_TO_COMPARE +' '+compare_arrow+'</a>';
 
 	function update(el, res) {
 
@@ -422,11 +417,7 @@ shop2.queue.compare = function() {
 		};
 		
 		if (!$('.compare-remodal').hasClass('remodal-is-opened')) {
-			if ($('html').attr('lang') == 'ru') {
-				shop2.msg('<span class="go-to-compare-count">'+res.count+'</span>' + 'Товар добавлен ' + compareBtn, $('body'));
-			} else {
-				shop2.msg('<span class="go-to-compare-count">'+res.count+'</span>' + 'Added to ' + compareBtn, $('body'));
-			};
+			shop2.msg('<span class="go-to-compare-count">'+res.count+'</span>' + ' '+ _s3Lang.SHOP2_PRODUCT_ADDED +' ' + compareBtn, $('body'));
 		};
 
 		if (res.panel) {
@@ -452,11 +443,7 @@ shop2.queue.compare = function() {
 					update($this, res);
 					
 					if (action == 'del' && !$('.compare-remodal').hasClass('remodal-is-opened')) {
-						if ($('html').attr('lang') == 'ru') {
-							shop2.msg('Товар удален из сравнения', $('body'));
-						} else {
-							shop2.msg('Product removed from comparison', $('body'));
-						};
+						shop2.msg(_s3Lang.SHOP2_PRODUCT_REMOVED_COMPARE, $('body'));
 					}
 				}
 				
