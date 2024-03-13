@@ -271,6 +271,7 @@
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
 
 	<script src="images/js/plugins.js" charset="utf-8"></script>
+	<script src="images/js/shop_settings.js" charset="utf-8"></script>
 	<script src="images/js/shop_main.js" charset="utf-8"></script>
 
 	{if $site.additional_work.search_smart || $smarty.cookies.pro_1696 || $smarty.cookies.gr_full_version}
