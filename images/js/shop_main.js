@@ -970,6 +970,8 @@
 								shop2.queue.edost2();
 								shop2.queue.bonus();
 		                    	shop2.queue.orderGetPayments();
+
+								initDelivery();
 								
 								$('.shop2-order-form input[type="checkbox"]:not(.gr-fixed-checkbox), .shop2-order-form input[type="radio"], .tpl-field-reg input, .gr-authorization-checkbox, .shop2-order-options.shop2-payment-options .payment_methods-column input[type="radio"], #orderForm input[name="personal_data"]').mgStyler();
 							}, 100);
