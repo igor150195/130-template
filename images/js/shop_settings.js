@@ -1,4 +1,3 @@
-//shop2.facets.search.wrapper = "";
 shop2.options.msgTime = 2000;
 
 shop2.queue.kindAvailable = function(){
@@ -479,7 +478,7 @@ shop2.product.getProductListItem = function(product_id, kind_id, func) {
     var gr_mode_catalog = $(".product-list").data("mode-catalog");
 	var url = "/my/s3/api/shop2/?cmd=getProductListItem&hash=" + shop2.apiHash.getProductListItem + "&ver_id=" + shop2.verId + "&gr_images_view=" + gr_images_view + "&gr_images_size=" + gr_images_size + "&gr_mode_catalog=" + gr_mode_catalog;
 	
-    shop2.trigger('beforeGetProductListItem');
+    shop2.trigger('beforeGetProductListItem', kind_id);
 
     $.post(
         url, {
