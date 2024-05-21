@@ -1,92 +1,27 @@
-.product-quick-view2 {
-	@media all and (max-width: 639px) {
-    	position: fixed;
-    	top: 0;
-    	left: 0;
-    	right: 0;
-    	bottom: 0;
-    	overflow: hidden;
-    	overflow-y: auto;
-    	background-color: var(--gr_bg);
-    }
-	    
-	.popover-body {
-	    position: relative;
-	    z-index: 0;
-	    padding: 0;
-	    width: auto;
-	    min-width: 100px;
-	    min-height: 100px;
-	    border-radius: var(--gr_wrap_radius);
-	    background-color: var(--gr_bg);
-	    background-size: 100% 100%;
-	    box-shadow: none;
-	    border: none;
-	    
-	    @media all and (max-width: 639px) {
-	    	top: 0;
-	    	left: 0;
-	    	right: 0;
-	    	bottom: 0;
-	    	border-radius: 0;	
-	    	width: 100%;
-	    }
-	}
-	
-	.popover-close {
-		position: absolute;
-        right: 8px;
-        top: 10px;
+.card-preview-remodal {
+	max-width: 800px;
+	padding: 50px 0 0 0;
+	width: auto;
+	min-width: 100px;
+	min-height: 100px;
+	border-radius: var(--gr_wrap_radius);
+	background-color: var(--gr_bg);
 
-        @extend .gr-icon-btn-3;
-        @extend .gr-small-icon-btn-desktop;
-        @extend .gr-small-icon-btn-tablet;
-        @extend .gr-small-icon-btn-mobile;
-
-        svg {
-            display: none;
-            width: 20px;
-            height: 20px;
-
-            @media all and (max-width: 767px) {
-                display: block;
-            }
-
-            &.gr_big_icon {
-                width: 30px;
-                height: 30px;
-                display: block;
-
-                @media all and (max-width: 767px) {
-                    display: none;
-                }
-            }
-
-            &.gr_small_icon {
-                display: none;
-            }
-        }
-	}
-}
-
-.card-product-preview {
-	width: 800px;
-	padding-top: 50px;
-	
-	@media all and (max-width: 1023px) {
+	@media (max-width: 1023px) {
 		width: 700px;
 		padding-top: 40px;
 	}
-	
-	@media all and (max-width: 767px) {
+	@media (max-width: 767px) {
 		width: 440px;
 		padding-top: 25px;
 	}
-	
-	@media all and (max-width: 639px) {
+	@media (max-width: 639px) {
 		width: 100%;
 	}
-	
+}
+.card-product-preview {
+	width: 100%;
+
 	&__title {
 		@extend .remodal-block-title;
 		

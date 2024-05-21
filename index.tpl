@@ -178,6 +178,14 @@
 		{include file="global:shop2.v2-login.tpl"}
     </div>
 
+	{if $site.additional_work.quick_view || $smarty.cookies.pro_1703 || $smarty.cookies.gr_full_version}
+        {include file="global:shop2.2.130-product-quick-view-remodal.tpl"}
+	{/if}
+	
+	{if $site.additional_work.product_preview_popup || $smarty.cookies.pro_1711 || $smarty.cookies.gr_full_version}
+        {include file="global:shop2.2.130-product-preview-remodal.tpl"}
+	{/if}
+
 		{include file="local_site_footer.tpl"}
 
 	</div> <!-- .site__wrapper -->
@@ -231,14 +239,14 @@
 		<script src="/g/libs/jquery-zoom/1.7.21/js/jquery.zoom.min.js"></script>
 	{/if}
 	{if $site.additional_work.quick_view || $smarty.cookies.pro_1703 || $smarty.cookies.gr_full_version}
-		<script src="/g/templates/shop2/2.130.2/default-3/js/quick_view_popup.js"></script>
+		<script src="/g/templates/shop2/2.130.2/default-3/js/quick_view_popup_new.js"></script>
 	{/if}
-	{if ($site.additional_work.quick_cart || $smarty.cookies.pro_1709 || $smarty.cookies.gr_full_version) && !$shop2.white_cabinet}
-		<script src="/g/templates/shop2/2.130.2/default-2/js/cart_preview_popup.js"></script>
+	{if ($site.additional_work.quick_cart || $smarty.cookies.pro_1709 || $smarty.cookies.gr_full_version) && !$site.gr_settings.mode_catalog}
+		<script src="/g/templates/shop2/2.130.2/default-3/js/cart_preview_popup_new.js"></script>
 	{/if}
 	
 	{if $site.additional_work.product_preview_popup || $smarty.cookies.pro_1711 || $smarty.cookies.gr_full_version}
-		<script src="/g/templates/shop2/2.130.2/default-2/js/product_preview_popup.js"></script>
+		<script src="/g/templates/shop2/2.130.2/default-3/js/product_preview_popup_new.js"></script>
 	{/if}
 	{if $shop2.json.compare}
 		<script src="/g/templates/shop2/2.130.2/default-2/js/compare_preview_popup.js"></script>
