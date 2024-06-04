@@ -283,12 +283,13 @@
 	<script src="images/js/shop_main.js" charset="utf-8"></script>
 
 	{if $site.additional_work.search_smart || $smarty.cookies.pro_1696 || $smarty.cookies.gr_full_version}
-		<script src="/g/templates/shop2/2.130.2/default-2/js/smart_search.js"></script>
-		<script src="/g/templates/shop2/2.130.2/default-2/js/m.smart_search.js"></script>
+		{include file="global:shop2.2.130-search-smart-data.tpl"}
+		<script src="/g/templates/shop2/2.130.2/default-3/js/smart_search_v3.js"></script>
 	{/if}
 	
 	{if $site.additional_work.timer_top || $smarty.cookies.pro_1701 || $smarty.cookies.gr_full_version}
-		<script src="/g/templates/shop2/2.130.2/default-2/js/top_timer.js"></script>
+		<script src="/g/templates/shop2/2.130.2/default-3/js/timer.js"></script>
+		<script src="/g/templates/shop2/2.130.2/default-3/js/top_timer_init.js" async></script>
 	{/if}
 	{if $site.additional_work.popup_timer || $smarty.cookies.pro_1704 || $smarty.cookies.gr_full_version}
 		<script src="/g/templates/shop2/2.130.2/default-2/js/special_timer_popup.js"></script>
