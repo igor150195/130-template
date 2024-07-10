@@ -137,6 +137,9 @@
 	.search-result-right {
 		flex: 1 1 264px;
 		min-width: 264px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 
 		@media all and (max-width: 767px) {
 			min-width: 0;
@@ -311,10 +314,6 @@
 	}
 
 	.result-folders {
-
-		& + .result-vendors {
-			margin-top: 20px;
-		}
 
 		.folders-search-title {
 			margin-bottom: 8px;
