@@ -113,9 +113,15 @@
 
 	.search-result-top {
 		display: flex;
+		gap: 40px;
+		
+		@media all and (max-width: 1023px) {
+			gap: 30px;
+		}
 
 		@media all and (max-width: 767px) {
-			display: block;
+			gap: 20px;
+			flex-direction: column;
 		}
 	}
 
@@ -126,18 +132,6 @@
 
 	.search-result-left {
 		flex: 1 1 auto;
-
-		& + .search-result-right {
-			margin-left: 40px;
-
-			@media all and (max-width: 1023px) {
-				margin-left: 30px;
-			}
-
-			@media all and (max-width: 767px) {
-				margin: 20px 0 0;
-			}
-		}
 	}
 
 	.search-result-right {
