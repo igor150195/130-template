@@ -276,8 +276,6 @@
 		</script>
 	{/if}
 	
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-
 	<script src="images/js/plugins.js" charset="utf-8"></script>
 	<script src="images/js/shop_settings.js" charset="utf-8"></script>
 	<script src="images/js/shop_main.js" charset="utf-8"></script>
