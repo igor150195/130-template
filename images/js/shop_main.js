@@ -838,7 +838,7 @@
 				
 				if (shop2.mode == 'product' && $(this).parents('.kind-item').length<1) {
 					var productAmount = $(this).parents('.shop2-product').find('.shop2-product-amount input').val();
-				} else if ($('.product-quick-view').length>0 && $(this).parents('.kind-item').length<1) {
+				} else if ($('.product-quick-view.remodal-is-opened').length>0 && $(this).parents('.kind-item').length<1) {
 					var productAmount = $(this).parents('.shop2-product').find('.shop2-product-amount input').val();
 				} else if ($(this).parents('.kind-item').length>0) {
 					var productAmount = $(this).parents('.kind-item').find('.shop2-product-amount input').val();
@@ -970,8 +970,8 @@
 								shop2.queue.edost2();
 								shop2.queue.bonus();
 		                    	shop2.queue.orderGetPayments();
-
-								initDelivery();
+		                    	
+		                    	initDelivery();
 								
 								$('.shop2-order-form input[type="checkbox"]:not(.gr-fixed-checkbox), .shop2-order-form input[type="radio"], .tpl-field-reg input, .gr-authorization-checkbox, .shop2-order-options.shop2-payment-options .payment_methods-column input[type="radio"], #orderForm input[name="personal_data"]').mgStyler();
 							}, 100);
