@@ -184,7 +184,7 @@
 				}
 				
 				if (shop2.facets.enabled) {
-		            var url = '/my/s3/xapi/public/?method=shop2/getSearchMatches';
+		            var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
 		            
 		      		var formData = $(shop2.facets.search.wrapper).serialize();
 		        	
@@ -194,7 +194,7 @@
             
             $(document).on('click', '.type-checkbox [data-name]', function(){
             	if (shop2.facets.enabled) {
-		            var url = '/my/s3/xapi/public/?method=shop2/getSearchMatches';
+		            var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
 		            
 		      		var formData = $(shop2.facets.search.wrapper).serialize();
 		        	
@@ -323,7 +323,7 @@
 				searchMoreFields();
 				
 				if (shop2.facets.enabled) {
-		            var url = '/my/s3/xapi/public/?method=shop2/getSearchMatches';
+		            var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
 		            
 		      		var formData = $(shop2.facets.search.wrapper).serialize();
 		        	
@@ -381,7 +381,7 @@
 		        var gr_images_size = $('.product-list').data('images-size');
     			var gr_images_view = $(".product-list").data("images-view");
     			
-    			var url = '/my/s3/xapi/public/?method=shop2/getPromoProducts' + '&param[kind_id]=' + kind_id + '&param[discount_id]=' + discount_id + '&param[is_main]=' + is_main + '&param[page]=' + page;
+    			var url = '/-/x-api/v1/public/?method=shop2/getPromoProducts' + '&param[kind_id]=' + kind_id + '&param[discount_id]=' + discount_id + '&param[is_main]=' + is_main + '&param[page]=' + page;
 
     			if (gr_images_view){
 			    	url += "&gr_images_view=" + gr_images_view;
@@ -1083,7 +1083,7 @@
 				            shop2.trigger('beforeCartRemoveItem');
 				            
 							  $.getJSON(
-							    '/my/s3/xapi/public/?method=cart/removeItem', {
+							    '/-/x-api/v1/public/?method=cart/removeItem', {
 							      param: {
 							      	kind_id: kind_id,
 							      	position: cartItemPos,
@@ -1157,7 +1157,7 @@
 		            $.ajax({
 		                type: "POST",
 		                url: 
-		                '/my/s3/xapi/public/?method=cart/update',
+		                '/-/x-api/v1/public/?method=cart/update',
 		                data,
 		                async: true,
 		                success: function (d, status) {
@@ -1541,7 +1541,7 @@
 				var gr_images_size = slider.dataset["imagesSize"];	
 			    var gr_images_view = slider.dataset["imagesView"];
 			    var gr_mode_catalog = slider.dataset["modeCatalog"];
-			    var url = '/my/s3/xapi/public/?method=shop2/getProductsBySearchMatches';
+			    var url = '/-/x-api/v1/public/?method=shop2/getProductsBySearchMatches';
 			    
 			    if (gr_images_view){
 			    	url += "&gr_images_view=" + gr_images_view;
@@ -2120,7 +2120,7 @@
 	    $(document).on('click', '#shop2-color-ext-select li', function(){
 	        if (shop2.facets.enabled) {
 		        setTimeout(function(){
-		            var url = '/my/s3/xapi/public/?method=shop2/getSearchMatches';
+		            var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
 		            
 		      		var formData = $(shop2.facets.search.wrapper).serialize();
 		      		console.log(formData)
@@ -2133,7 +2133,7 @@
 	    $(document.body).on('change','.shop2-block.search-form #shop2_search_custom_fields select, .shop2-block.search-form #shop2_search_custom_fields input',function(){
 	        if (shop2.facets.enabled) {
 		        setTimeout(function(){
-		            var url = '/my/s3/xapi/public/?method=shop2/getSearchMatches';
+		            var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
 		            
 		      		var formData = $(shop2.facets.search.wrapper).serialize();
 		      		

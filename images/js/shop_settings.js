@@ -3,7 +3,7 @@ shop2.options.msgTime = 2000;
 shop2.queue.kindAvailable = function () {
     var sentAjax_preorder = function (data, callback) {
         $.ajax({
-            url: '/my/s3/xapi/public/?method=shop2/addKindEmailNotification',
+            url: '/-/x-api/v1/public/?method=shop2/addKindEmailNotification',
             method: 'post',
             xhrFields: {
                 withCredentials: true
@@ -54,7 +54,7 @@ shop2.queue.kindAvailable = function () {
 
         let temp_html = `
                     <div class="preorder-form-wrap preorder-block">
-                        <form class="preorder_body" action="/my/s3/xapi/public/?method=shop2/addKindEmailNotification" method="get">
+                        <form class="preorder_body" action="/-/x-api/v1/public/?method=shop2/addKindEmailNotification" method="get">
                             <div class="preorder-title tpl-anketa__title">
                                 ${shop2.my.preorder_form_title || 'Узнать о поступлении'}
                             </div>
@@ -135,7 +135,7 @@ shop2.queue.kindAvailable = function () {
         let valid = _regexEmeil.test(object_preorder.data.email);
 
         if (valid) {
-            $.get('/my/s3/xapi/public/?method=shop2/addKindEmailNotification', function (data) {
+            $.get('/-/x-api/v1/public/?method=shop2/addKindEmailNotification', function (data) {
                 console.log(object_preorder);
 
                 const _regexBody = new RegExp(/<body[^>]*>(.*?)<\/body>/ig);
@@ -192,7 +192,7 @@ shop2.queue.kindAvailable = function () {
     
     if (folder_id > 0) {
         url =
-            "/my/s3/api/shop2/?cmd=getFolderCustomFields" +
+            "/-/shop2-api/?cmd=getFolderCustomFields" +
             "&hash=" +
             shop2.apiHash.getFolderCustomFields +
             "&ver_id=" +
@@ -221,7 +221,7 @@ shop2.search.getParams = function (folder_id, func) {
 
     if (folder_id > 0) {
 
-        $.getJSON('/my/s3/xapi/public/?method=shop2/getFolderCustomFields', {
+        $.getJSON('/-/x-api/v1/public/?method=shop2/getFolderCustomFields', {
             param: {
                 folder_id: folder_id,
                 html: 1
@@ -476,7 +476,7 @@ shop2.product.getProductListItem = function (product_id, kind_id, func) {
     var gr_images_size = $('.product-list').data('images-size');
     var gr_images_view = $(".product-list").data("images-view");
     var gr_mode_catalog = $(".product-list").data("mode-catalog");
-    var url = "/my/s3/api/shop2/?cmd=getProductListItem&hash=" + shop2.apiHash.getProductListItem + "&ver_id=" + shop2.verId + "&gr_images_view=" + gr_images_view + "&gr_images_size=" + gr_images_size + "&gr_mode_catalog=" + gr_mode_catalog;
+    var url = "/-/shop2-api/?cmd=getProductListItem&hash=" + shop2.apiHash.getProductListItem + "&ver_id=" + shop2.verId + "&gr_images_view=" + gr_images_view + "&gr_images_size=" + gr_images_size + "&gr_mode_catalog=" + gr_mode_catalog;
 
     shop2.trigger('beforeGetProductListItem', kind_id);
 
@@ -669,7 +669,7 @@ shop2.cart.add = function (kind_id, a4, params, func) {
     shop2.trigger('beforeCartAddItem');
 
     $.post(
-        '/my/s3/xapi/public/?method=cart/addItem', {
+        '/-/x-api/v1/public/?method=cart/addItem', {
         kind_id,
         amount: a4,
         params
@@ -699,7 +699,7 @@ shop2.cart.addMultiple = function (params, func) {
         items: newParams  // Используем новый массив items
     };
 
-    $.post('/my/s3/xapi/public/?method=cart/addItems', items, function (d, status) {
+    $.post('/-/x-api/v1/public/?method=cart/addItems', items, function (d, status) {
 
         shop2.fire('afterCartAddMultipleItems', func, d, status);
         shop2.trigger('afterCartAddMultipleItems', d, status);
@@ -826,7 +826,7 @@ shop2.cart.applyBonusPoint = function (bonus_points, func) {
     shop2.trigger('beforeCartApplyBonus');
 
     $.getJSON(
-        '/my/s3/xapi/public/?method=cart/applyBonusPoints', {
+        '/-/x-api/v1/public/?method=cart/applyBonusPoints', {
         param: {
             hash: shop2.hash.cart,
             bonus_points: bonus_points
@@ -846,7 +846,7 @@ shop2.cart.removeBonusPoint = function (func) {
     shop2.trigger('beforeCartRemoveCartBonusPoints');
 
     $.getJSON(
-        '/my/s3/xapi/public/?method=cart/RemoveBonusPoints', {
+        '/-/x-api/v1/public/?method=cart/RemoveBonusPoints', {
         param: {
             hash: shop2.hash.cart
         }
@@ -942,7 +942,7 @@ shop2.delivery.calc = function (attach_id, params, func) {
     });
 
     $.getJSON(
-        '/my/s3/xapi/public/?method=delivery/calc', {
+        '/-/x-api/v1/public/?method=delivery/calc', {
         param: {
             attach_id: attach_id,
             params: params,
@@ -1063,7 +1063,7 @@ shop2.queue.cart = function () {
         //$('#form_g-anketa .text-right button').prop('disabled', true).addClass('g-button--disabled');
 
         $.ajax({
-            url: '/my/s3/xapi/public/?method=deligate/calc&param[get_vars][]',
+            url: '/-/x-api/v1/public/?method=deligate/calc&param[get_vars][]',
             type: 'post',
             dataType: 'json',
             data: data,
@@ -1398,7 +1398,7 @@ shop2.filter.count = function (func) {
     shop2.trigger('beforeGetSearchMatches');
 
     $.get(
-        '/my/s3/xapi/public/?method=shop2/getSearchMatches',
+        '/-/x-api/v1/public/?method=shop2/getSearchMatches',
         params,
         function (d, status) {
             if (status == 'success') {
@@ -1496,7 +1496,7 @@ shop2.facets.searchSetup = function () {
 
     var $items = $form.find(this.search.items);
     var self = this;
-    var url = '/my/s3/xapi/public/?method=shop2/getSearchMatches';
+    var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
     var formData = $form.serialize();
 
     this.getDataSearch(url, formData);
