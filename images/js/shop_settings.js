@@ -1502,6 +1502,8 @@ shop2.facets.searchSetup = function () {
     this.getDataSearch(url, formData);
 
     $items.on('change', function (e) {
+    	e.stopPropagation();
+    	
         if (e.target.name == "s[products_per_page]") {
             return;
         }

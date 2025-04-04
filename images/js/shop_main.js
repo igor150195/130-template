@@ -191,16 +191,6 @@
 		            shop2.facets.getDataSearch(url, formData);
 				};
 			});
-            
-            $(document).on('click', '.type-checkbox [data-name]', function(){
-            	if (shop2.facets.enabled) {
-		            var url = '/-/x-api/v1/public/?method=shop2/getSearchMatches';
-		            
-		      		var formData = $(shop2.facets.search.wrapper).serialize();
-		        	
-		            shop2.facets.getDataSearch(url, formData);
-                };
-            });
 		}, /*Допполя в фасетном поиске*/
 
 		headerBlock: function() {
