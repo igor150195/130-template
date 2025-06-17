@@ -937,14 +937,25 @@
 			    function getCart(callback) {
 			        if (ajax) ajax.abort();
 			        ajax = $.ajax({
-			            url: cartURL + "?cart_only=1",
+			            //url: cartURL + "?cart_only=1",
+			            url: `/-/x-api/v1/public/?method=cart/getCartData`,
+			            data: {
+					        param: {
+					            mode:"",
+					            type:"html"
+					        },
+					    },
 			            async: true,
 			            success: function(data) {
-			            	var $shopWarning = $(data).filter('.shop2-warning').clone();
+			            	/*var $shopWarning = $(data).filter('.shop2-warning').clone();
 
 			                $('.cart-page__top').html($(data).find('.cart-page__top').html());
-			                $('.cart-page__bottom').html($(data).find('.cart-page__bottom').html());
+			                $('.cart-page__bottom').html($(data).find('.cart-page__bottom').html());*/
 			                
+			                var $shopWarning = $(data.result.html).find('.shop2-warning').clone();
+
+			                $('.cart-page').html($(data.result.html).find('.cart-page').html());
+
 			                $shopWarning.prependTo('.cart-page__left');
 			                initCart(shopCartDiv);
 			                
