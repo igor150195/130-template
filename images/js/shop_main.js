@@ -113,7 +113,8 @@
 		
 		ajaxCompare: function(){
 			if (shop2.mode=="") {
-				var url = document.location.origin;
+				//var url = document.location.origin;
+				var url = shop2.uri;
 				$.ajax({
 					url: url,
 						success: function(data){
