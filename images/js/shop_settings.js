@@ -1138,8 +1138,8 @@ shop2.queue.cart = function () {
                         });*/
 
                         shop2.delivery.calc(attach_id, 'to=' + to + '&zip=' + zip + '&order_value=' + order_value, function (d) {
-                            if (!d.data && d.errstr) {
-                                shop2.alert(d.errstr);
+                            if (!d.result.data && d.result.errstr) {
+                                shop2.alert(d.result.errstr);
                                 $('#delivery-' + attach_id + '-cost').html(0);
                             } else {
                                 $('#delivery-' + attach_id + '-cost').html(d.result.data.cost);
@@ -1342,8 +1342,8 @@ shop2.queue.delivery = function () {
         });*/
 
         shop2.delivery.calc(attach_id, 'to=' + to + '&zip=' + zip + '&order_value=' + order_value, function (d) {
-            if (!d.data && d.errstr) {
-                shop2.alert(d.errstr);
+            if (!d.result.data && d.result.errstr) {
+                shop2.alert(d.result.errstr);
                 $('#delivery-' + attach_id + '-cost').html(0);
             } else {
                 $('#delivery-' + attach_id + '-cost').html(d.result.data.cost);
