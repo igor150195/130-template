@@ -675,6 +675,14 @@ shop2.cart.add = function (kind_id, a4, params, func) {
         params
     },
         function (d, status) {
+        	if (d.error) {
+                if (d.error.message == "Invalid params value") {
+                    shop2.msg(_s3Lang.SHOP2_PARAMS_ISSUE, $('body'));
+                } else {
+                    shop2.msg(_s3Lang.SHOP2_ADD_ISSUE, $('body'));
+                };
+            };
+            
             shop2.fire('afterCartAddItem', func, d.result, status);
             shop2.trigger('afterCartAddItem', d.result, status);
         },
