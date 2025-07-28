@@ -184,44 +184,15 @@ shop2.queue.kindAvailable = function () {
     };
 })();
 
-/*shop2.search.getParams = function (folder_id, func) {
-    var gr_filter_max_count = shop2.my.gr_filter_max_count;
-    var url;
-
-    shop2.trigger("beforeGetFolderCustomFields");
-    
-    if (folder_id > 0) {
-        url =
-            "/-/shop2-api/?cmd=getFolderCustomFields" +
-            "&hash=" +
-            shop2.apiHash.getFolderCustomFields +
-            "&ver_id=" +
-            shop2.verId +
-            "&folder_id=" +
-            folder_id +
-            "&" +
-            decodeURIComponent(document.location.search).replace(/[^&]*=(&|$)/g,"");
-   
-        if (gr_filter_max_count) {
-            url = url + `gr_filter_max_count=${gr_filter_max_count}&`;
-        };
-
-        $.getJSON(url, function (d, status) {
-            shop2.fire("afterGetFolderCustomFields", func, d, status);
-            shop2.trigger("afterGetFolderCustomFields", d, status);
-        });
-    };
-};*/
-
 shop2.search.getParams = function (folder_id, func) {
-    var gr_filter_max_count = shop2.my.gr_filter_max_count;
-    var url;
+    let gr_filter_max_count = shop2.my.gr_filter_max_count;
+    let url = '/-/x-api/v1/public/?method=shop2/getFolderCustomFields&' + decodeURIComponent(document.location.search).replace(/[^&]*=(&|$)/g,"");
 
     shop2.trigger('beforeGetFolderCustomFields');
 
     if (folder_id > 0) {
 
-        $.getJSON('/-/x-api/v1/public/?method=shop2/getFolderCustomFields', {
+        $.getJSON(url, {
             param: {
                 folder_id: folder_id,
                 html: 1
