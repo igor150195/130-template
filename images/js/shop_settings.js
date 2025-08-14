@@ -50,6 +50,25 @@ shop2.queue.kindAvailable = function () {
                 </div>
             </div>
             `;
+        }        
+        if ($('.gr-agreement-link__text').text().trim() != "") {
+	        var personalNoteText = $('.gr-agreement-link__text').html();
+	        var temp_personal_note = `
+	            <div class="preorder-field tpl-field preorder-personal-note field-required policy_checkbox type-checkbox">
+		            <div class="field-value">
+	            		<ul>
+	                        <li>
+	                    		<label>
+			            			<input required type="checkbox" name="preorder_agreement"  />
+			            			<span>${personalNoteText} <ins class="field-required-mark">*</ins></span>
+	                    		</label>
+	                    	</li>
+	                    </ul>
+		            </div>
+	            </div>       	
+	        `;
+        } else {
+        	var temp_personal_note = ``;
         }
 
         let temp_html = `
@@ -62,6 +81,7 @@ shop2.queue.kindAvailable = function () {
                                 ${shop2.my.preorder_form_text || 'Оставьте почту и мы напишем вам, когда товар появится в наличии.'}
                             </div>
                             ${temp_email}
+                            ${temp_personal_note}
                             <input type="hidden" name="kind_id" value="${object_preorder.data.kind_id}">
                             
                             <div class="preorder-field tpl-field tpl-field-button">
